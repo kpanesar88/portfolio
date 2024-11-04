@@ -1,0 +1,54 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 10px 20px;
+    font-family: 'Fira Sans';
+}
+
+.brand a {
+    color: black;
+    text-decoration: none;
+    font-size: 50px;
+    padding-left: 55px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 1.0rem;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 12px; 
+}
+
+.resume-button {
+    padding: 0.5rem 1rem; 
+    background-color: transparent;
+    border: 2px solid #000000; 
+    border-radius: 4px; 
+    color: black; /* Black text */
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Include transform */
+}
+
+.resume-button:hover {
+    background-color: #000;
+    color: #fff;
+}
