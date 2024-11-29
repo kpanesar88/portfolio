@@ -1,0 +1,205 @@
+:root {
+  --black: #000000; /* Pure black for consistency */
+  --darkblue: #5680E9;
+  --teal: #84CEEB;
+  --aqua: #5AB9EA;
+  --white: #C1C8EA;
+  --purple: #8860D0;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensures the gradient covers the full height */
+  background: linear-gradient(
+    to bottom, /* Direction of the gradient */
+    var(--white), /* Lightest color at the top */
+    var(--teal), /* Soft teal for smooth transition */
+    var(--aqua), /* Lighter aqua for a cool effect */
+    var(--darkblue) /* Deeper dark blue at the bottom */
+  );
+  background-size: cover; /* Ensures the gradient stretches across the entire page */
+  color: var(--black); /* Use pure black for text */
+}
+
+/* Navbar container setup */
+#navbar-container {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    to bottom, /* Direction of the gradient */
+    var(--white), /* Lightest color at the top */
+    var(--teal), /* Soft teal for smooth transition */
+    var(--aqua), /* Lighter aqua for a cool effect */
+  );
+  color: var(--black); /* Navbar text in black */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  border-bottom: 1px solid var(--black); /* Solid black divider */
+}
+
+/* Style for the navbar logo */
+#logo a {
+  text-decoration: none;
+  color: var(--black); /* Black logo for contrast */
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 50px;
+  position: relative;
+}
+
+#navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* Increased space between navbar links */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Divider under the navbar */
+#navbar-divider {
+  width: 100%;
+  border: none;
+  margin-top: 0;
+  border-top: 1px solid var(--black); /* Solid black divider */
+}
+
+/* Styling for individual navbar links */
+.nav-link {
+  text-decoration: none;
+  color: var(--black); /* Default black text */
+  font-size: 16px;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth color transition with transform for subtle animation */
+}
+
+.nav-link:hover {
+  color: #000000; /* Aqua for a fresh hover effect */
+  transform: scale(1.05); /* Slight scale-up animation */
+}
+
+.resume-button {
+  text-decoration: none;
+  color: var(--black); /* Default black text */
+  font-size: 16px;
+  padding: 5px 10px; /* Adjusted padding for better space around text */
+  position: relati1ve;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and background */
+  border: 2px solid var(--black); /* Black border around the button */
+  border-radius: 4px; /* Optional: Add rounded corners */
+  background-color: transparent; /* Keep the background transparent */
+}
+
+.resume-button:hover {
+  color: var(--white); /* Change text color to white */
+  background-color: var(--black); /* Change background to black */
+  transform: translateY(-3px); /* Lift button slightly */
+}
+
+/*
+.resume-container {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  padding: 20px 50px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  font: 16px/24px Arial, sans-serif;
+  background-color: #4973ff;
+  transition: 
+    box-shadow 0.4s ease, 
+    background-color 0.4s ease, 
+    color 0.4s ease;
+  box-shadow: 
+    0 0 2px 0 rgba(73, 115, 255, .1), 
+    0 0 4px 0 rgba(73, 115, 255, .2), 
+    0 0 6px 0 rgba(73, 115, 255, .3), 
+    0 0 8px 0 rgba(73, 115, 255, .4),
+    0 0 12px 0 rgba(73, 115, 255, .5), 
+    0 0 18px 0 rgba(73, 115, 255, .6);
+}
+
+.resume-container:hover{
+  background-color: #ea3c;
+  box-shadow: 
+    0 0 2px 0 rgba(238, 170, 51, 0.1), 
+    0 0 4px 0 rgba(238, 170, 51, 0.2), 
+    0 0 6px 0 rgba(238, 170, 51, 0.3), 
+    0 0 8px 0 rgba(238, 170, 51, 0.4),
+    0 0 12px 0 rgba(238, 170, 51, 0.5), 
+    0 0 18px 0 rgba(238, 170, 51, 0.6),
+    0 0 4px 0 rgba(238, 170, 51, 0.7);
+}
+
+.resume-container span {
+  color: #fff;
+  letter-spacing: 8px;
+}
+
+.resume-container i {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 200px;
+  background-color: inherit;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 
+    transform 0.4s linear, 
+    top 1s linear;
+  overflow: hidden;
+}
+
+.resume-container i:before,
+.resume-container i:after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+.resume-container i:before {
+  border-radius: 46%;
+  background-color: rgba(20, 20, 20, 0.2);
+  animation: animate 5s linear infinite;
+}
+.resume-container i:after {
+  border-radius: 40%;
+  background-color: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: 
+      translate(-50%, -75%) 
+      rotate(0deg);
+  }
+  100% {
+    transform: 
+      translate(-50%, -75%) 
+      rotate(360deg);
+  }
+}
+
+*/
+
