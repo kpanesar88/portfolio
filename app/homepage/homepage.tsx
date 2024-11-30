@@ -47,10 +47,17 @@ const Homepage: React.FC<HomepageProps> = () => {
             <img src="/images/email.png" alt="Mail" />
           </a>
         </div>
+        <div className="btn-group">
+                <a href="#contact" className="btn">Resume</a>
+            
+        </div>
       </div>
+
+     
+
       <div className="home-img">
         {/* Replace with your profile image path */}
-        <img src="path_to_your_image_here" alt="Profile Picture" />
+        <img src="/images/karan.jpg" alt="Profile Picture" />
       </div>
     </section>
   );
