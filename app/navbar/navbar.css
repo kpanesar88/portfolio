@@ -1,18 +1,17 @@
 @import '../static.css';
 
+:root {
+    --black: #000000; /* Black for background and text */
+    --white: #FFFFFF; /* White for text and elements */
+    --red: #FF0000; /* Red for hover and interactive elements */
+}
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%; /* Ensures the gradient covers the full height */
-  background: linear-gradient(
-    to bottom, /* Direction of the gradient */
-    var(--white), /* Lightest color at the top */
-    var(--teal), /* Soft teal for smooth transition */
-    var(--aqua), /* Lighter aqua for a cool effect */
-    var(--darkblue) /* Deeper dark blue at the bottom */
-  );
-  background-size: cover; /* Ensures the gradient stretches across the entire page */
-  color: var(--black); /* Use pure black for text */
+  background: var(--black); /* Black background */
+  color: var(--white); /* White text */
 }
 
 /* Navbar container setup */
@@ -24,21 +23,19 @@ html, body {
   width: 100%;
   padding: 10px 15px;
   box-sizing: border-box;
-  background: linear-gradient(
-    to bottom, /* Direction of the gradient */
-    var(--white), /* Lightest color at the top */
-    var(--teal), /* Soft teal for smooth transition */
-    var(--aqua), /* Lighter aqua for a cool effect */
-  );
-  color: var(--black); /* Navbar text in black */
+  background: var(--black); /* Black background for navbar */
+  color: var(--white); /* White text in navbar */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  border-bottom: 1px solid var(--black); /* Solid black divider */
+  border-bottom: 1px solid var(--white); /* White divider */
+  position: fixed; /* Make navbar stay fixed */
+  top: 0; /* Position it at the top of the viewport */
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 /* Style for the navbar logo */
 #logo a {
   text-decoration: none;
-  color: var(--black); /* Black logo for contrast */
+  color: var(--white); /* White logo */
   font-size: 36px;
   font-weight: bold;
   display: flex;
@@ -64,7 +61,7 @@ html, body {
 
 #navbar-links a {
   text-decoration: none;
-  color: var(--black); /* Default black text */
+  color: var(--white); /* Default white text */
   font-size: 18px;
   padding: 1rem 2rem;
   position: relative;
@@ -79,7 +76,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--black); /* Set black color for the underline effect */
+  background: var(--white); /* White color for the underline effect */
   transform: scaleX(0);
   transition: all 0.5s;
 }
@@ -94,9 +91,14 @@ html, body {
   transform-origin: right;
 }
 
+#navbar-links a:hover {
+  color: var(--red); /* Red text on hover */
+}
+
 #navbar-links a:hover:before,
 #navbar-links a:hover:after {
   transform: scaleX(1); /* Trigger the scaling effect on hover */
+  background: var(--red); /* Red underline on hover */
 }
 
 /* Divider under the navbar */
@@ -104,13 +106,13 @@ html, body {
   width: 100%;
   border: none;
   margin-top: 0;
-  border-top: 1px solid var(--black); /* Solid black divider */
+  border-top: 1px solid var(--white); /* White divider under navbar */
 }
 
 /* Styling for individual navbar links */
 .nav-link {
   text-decoration: none;
-  color: var(--black); /* Default black text */
+  color: var(--white); /* Default white text */
   font-size: 10px;
   padding: 5px 0;
   position: relative;
@@ -118,6 +120,6 @@ html, body {
 }
 
 .nav-link:hover {
-  color: #000000; /* Aqua for a fresh hover effect */
+  color: var(--red); /* Red color on hover */
   transform: scale(1.05); /* Slight scale-up animation */
 }

@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from './navbar/navbar';  // Your Navbar component
 import Homepage from './homepage/homepage';
+import CornerMenu from './cornermenu/cornerMenu';
 
 
 export const metadata = {
@@ -22,6 +23,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         {/* This renders the content of the page */}
         {children}
         <Homepage/>
+        <CornerMenu/>
       </body>
     </html>
   );
