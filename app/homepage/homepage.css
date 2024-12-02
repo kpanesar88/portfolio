@@ -1,144 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import '../static.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", "sans-serif";
+}
+
 :root {
-  --black: #000000; /* Pure black for consistency */
-  --darkblue: #5680E9;
-  --teal: #84CEEB;
-  --aqua: #5AB9EA;
-  --white: #C1C8EA;
-  --purple: #8860D0;
+    --black: #000000; /* Pure black for consistency */
+    --darkblue: #5680E9;
+    --teal: #84CEEB;
+    --aqua: #5AB9EA;
+    --white: #C1C8EA;
+    --purple: #8860D0;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    background: transparent;
+    color: var(--black); /* Set all text to black */
 }
 
 section {
-  min-height: 100vh;
-  padding: 10rem 12% 10rem;
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
 }
 
 .home {
-  padding-top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
 }
 
 .home-content {
-  display:flex;
-  flex-direction: column;
-  align-items: baseline;
-  text-align: left;
-  justify-content: center;
-  margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
 }
 
-span{
-  color: var(--black);
-}
-
-.home-content h3 {
-margin-bottom: 2rem;
-margin-top: 1rem;
-font-size: 3.5rem;
-}
-
-.home-content h1 {
-  font-size: 5rem;
-  font-weight: 700;
-  margin-top: 1.5rem;
-  line-height:1;
+span {
+    color: var(--darkblue); /* Change this to purple */
 }
 
 .home-img {
-  border-radius: 50%;
+    border-radius: 50%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .home-img img {
-  position: relative;
-  width: 32vw;
-  border-radius: 50%;
-  box-shadow: 0 0 25px var(--purple);
-  cursor: pointer;
-  transition: 0.4 ease-in-out;
-  top: 3rem;
+    position: relative;
+    top: 3rem;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--darkblue); /* Change box shadow to purple */
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
 }
 
 .home-img img:hover {
-  box-shadow: 0 0 25px var(--purple),
-              0 0 50px var(--purple),
-              0 0 100px var(--purple);
+    box-shadow: 0 0 25px var(--darkblue),
+                0 0 50px var(--darkblue),
+                0 0 100px var(--darkblue);
+}
+
+.home-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
 }
 
 .home-content p {
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1.8;
-  max-width: 1000px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+
+.social-icons {
+    margin-top: 2rem;
 }
 
 .social-icons a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 4.5rem;
-  height: 4.5rem;
-  background:transparent;
-  border: 2px solid var(--black);
-  font-size: 2.5rem;
-  border-radius: 50%;
-  color: var(--purple);
-  margin: 3rem 1.5rem 3rem 0;
-  transition: 0.3s ease-in-out;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2px solid var(--darkblue); /* Change border to purple */
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--black); /* Change icon color to purple */
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
-  color: var(--purple);
-  transform: scale(1)translateY(-5px);
-  box-shadow: 0 0 25px var(--black);
-  background-color: var(--purple);
+    color: var(--white); /* Change hover color to white */
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px var(--darkblue); /* Change hover shadow to purple */
+    background-color: var(--darkblue); /* Change hover background to purple */
 }
 
 .btn {
-  display: inline-block;
-  padding: 1rem 2.8rem;
-  background:var(--purple);
-  box-shadow: 0 0 25px var(--purple);
-  border-radius: 4rem;
-  font-size: 1.6rem;
-  color: black;
-  border: 2px solid transpraent;
-  letter-spacing: 0.1rem;
-  font-weight: 600;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--purple); /* Change button background to purple */
+    box-shadow: 0 0 25px var(--darkblue); /* Change button shadow to purple */
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: black;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 50px var(--purple);
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--darkblue); /* Change hover shadow to purple */
 }
 
-.btn-group{ 
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+.btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.btn-group a:nth-of-type(2){
-  background-color: black;
-  color: var(--purple);
-  border: 2px solid var(--purple);
-  box-shadow: 0 0 25px transparent;
+.btn-group a:nth-of-type(2) {
+    background-color: black;
+    color: var(--white); /* Change second button text color to purple */
+    border: 2px solid var(--darkblue); /* Change second button border to purple */
+    box-shadow: 0 0 25px transparent;
 }
 
-.btn a:nth-of-type(2):hover {
-  box-shadow: 0 0 25px var(--purple);
-  background-color: var(--aqua);
-  color: black;
-
-
+.btn-group a:nth-of-type(2):hover {
+    box-shadow: 0 0 25px var(--darkblue); /* Change hover shadow to purple */
+    background-color: var(--darkblue); /* Change hover background to purple */
+    color: black;
 }
 
-.social-icons img {
-    width: 40px;  /* Adjust width as needed */
-    height: 40px; /* Adjust height as needed */
-  }
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
 
-  
+.text-animation span {
+    position: relative;
+}
+
+.text-animation span::before {
+    content: "Engineering Student";
+    color: var(--darkblue); /* Keep the text color as purple */
+    animation: words 20s infinite;
+}
+
+.text-animation span::after {
+    content: "";
+    background-color: transparent; /* Make the background transparent for the cursor */
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--black); /* Make the cursor line black */
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid var(--black); /* Cursor line in black */
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Engineering Student";
+    }
+    21%, 40% {
+        content: "Frontend Developer";
+    }
+    41%, 60% {
+        content: "FullStack Developer";
+    }
+    61%, 80% {
+        content: "Software Engineer";
+    }
+    81%, 100% {
+        content: "Hardware Engineer";
+    }
+}
+
+@keyframes typing {
+    0%, 10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+        width: calc(100% + 8px);
+    }
+}

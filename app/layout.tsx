@@ -1,8 +1,8 @@
 // app/layout.tsx
-import './navbar/navbar.css';  // Ensure global styles are imported
 import React from 'react';
 import Navbar from './navbar/navbar';  // Your Navbar component
 import Homepage from './homepage/homepage';
+
 
 export const metadata = {
   title: 'My Next.js App',  // Customize your app's title here

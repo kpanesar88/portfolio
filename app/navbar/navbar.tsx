@@ -23,15 +23,13 @@ const Navbar: React.FC = () => {
           <li><a href="#skills" className="nav-link">Skills</a></li>
           <li><a href="#projects" className="nav-link">Projects</a></li>
           <li><a href="#contact" className="nav-link">Contact</a></li>
-          <li>
-            <div className="resume-container">
+          <li><div className="resume-container">
               <a 
                 href="https://docs.google.com/document/d/1hXIAfesbOFMY2b5rrTsvSImxTnzYOdhR/edit?usp=sharing&ouid=117936281308893913869&rtpof=true&sd=true" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="resume-button"
               ><span>Resume</span>
-              <i></i>
               </a>
             </div>
           </li> 
