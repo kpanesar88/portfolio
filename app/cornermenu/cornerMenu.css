@@ -7,14 +7,20 @@
     align-items: center;
     justify-content: flex-end;
     height: 80vh;
-    position: fixed; 
-
 }
 
 .icon-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.line-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .line {
@@ -24,32 +30,32 @@
 }
 
 .line.short {
+    margin-bottom: 2rem; /* Increase the space between icons */
     height: 2rem;
 }
 
 .line.long {
     height: 8rem;
+    margin-bottom: 0;
 }
 
-.corner-menu .star {
-    font-size: 3rem;
-    color: var(--red);
-    transition: transform 0.5s ease;
-    transform-origin: center center; /* Ensures it rotates around its center */
+.line.horizontal {
+    width: 2.4rem; /* Adjust width for horizontal line */
+    height: 3px; /* Adjust height for horizontal line */
+    background-color: var(--black);
+    position: absolute;
+    top: 0.rem; /* Adjust vertical position */
+    left: -1rem; /* Adjust horizontal position */
 }
 
-.corner-menu .rotate {
-    animation: rotateStar 5s linear infinite; /* Infinite rotation */
-}
-
-
-i {
+.corner-menu-icon {
     font-size: 3rem;
     color: var(--red);
     transition: transform 0.3s, color 0.3s;
+    margin-bottom: 2rem; /* Increase the space between icons */
 }
-
-i:hover {
+.corner-menu-icon:hover {
     transform: scale(1.5);
     color: var(--black);
 }
+

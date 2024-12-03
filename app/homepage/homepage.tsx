@@ -33,49 +33,67 @@ const Homepage: React.FC<HomepageProps> = () => {
   }, []);
 
   return (
-    <section className="home" id="home">
-      <div className="home-content">
-        <h1>Hi, It's <span>Karanveer</span></h1>
-        <h3 className="text-animation">I'm a <span></span></h3> {/* The span will be animated */}
-        <p> ➤ Computer Engineering @ York University</p>
-        <p> ➤ Aspiring Fullstack Developer</p>
+    <div>
+      {/* First Section */}
+      <section className="home" id="home">
+        <div className="home-content">
+          <h1>Hi, It's <span>Karanveer</span></h1>
+          <h3 className="text-animation">I'm a <span></span></h3> {/* The span will be animated */}
+          <p> ➤ Computer Engineering @ York University</p>
+          <p> ➤ Aspiring Fullstack Developer</p>
 
-        <div className="social-icons">
-          <a href="https://www.linkedin.com/in/karanveer-panesar-0203a1247/" target="_blank" rel="noopener noreferrer">
-            <i className='bx bxl-linkedin'></i> {/* Boxicon LinkedIn */}
-          </a>
-          <a href="https://github.com/kpanesar88" target="_blank" rel="noopener noreferrer">
-            <i className='bx bxl-github'></i> {/* Boxicon GitHub */}
-          </a>
-          <a href="mailto:karanveerpanesar04@gmail.com" target="_blank" rel="noopener noreferrer">
-            <i className='bx bxs-envelope'></i>{/* Boxicon Mail */}
-          </a>
-        </div>
+          <div className="social-icons">
+            <a href="https://www.linkedin.com/in/karanveer-panesar-0203a1247/" target="_blank" rel="noopener noreferrer">
+              <i className='bx bxl-linkedin'></i> {/* Boxicon LinkedIn */}
+            </a>
+            <a href="https://github.com/kpanesar88" target="_blank" rel="noopener noreferrer">
+              <i className='bx bxl-github'></i> {/* Boxicon GitHub */}
+            </a>
+            <a href="mailto:karanveerpanesar04@gmail.com" target="_blank" rel="noopener noreferrer">
+              <i className='bx bxs-envelope'></i>{/* Boxicon Mail */}
+            </a>
+          </div>
 
-        <div className="btn-group">
-          <a 
+          <div className="btn-group">
+            <a 
               href="https://docs.google.com/document/d/1hXIAfesbOFMY2b5rrTsvSImxTnzYOdhR/edit?usp=sharing&ouid=117936281308893913869&rtpof=true&sd=true" 
               className="btn" 
               target="_blank" 
               rel="noopener noreferrer">
               Resume
-          </a>
-          <a href="#contact" className="btn">Contact</a>
-
+            </a>
+            <a href="#contact" className="btn">Contact</a>
+          </div>
         </div>
-      </div>
 
-      <div className="home-img">
-        <img src='/images/karan.jpg' alt="Profile Picture" />
-      </div>
+        <div className="home-img">
+          <img src='/images/karan.jpg' alt="Profile Picture" />
+        </div>
 
-      <div className="scroll-down" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
+        <div className="scroll-down" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
           <i className="bx bx-chevron-down"></i>
            {/* Boxicon chevron down */}
-      </div>
+        </div>
+      </section>
 
+      {/* Second Section: Image on Left, Bullet Points on Right */}
+      <section className="about">
+        {/* Left Section: Image */}
+        <div className="home-img">
+          <img src='/images/karan.jpg' alt="Profile Picture" />
+        </div>
 
-    </section>
+        <div className="content-container">
+          <h2>Key Highlights</h2>
+          <ul>
+            <li>Point one explaining something important.</li>
+            <li>Another point with key details.</li>
+            <li>Third point to emphasize an idea.</li>
+            <li>Final point to wrap it up neatly.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
   );
 };
 
