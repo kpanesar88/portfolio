@@ -5,7 +5,6 @@
     justify-content: space-between;
     padding: 5rem 10%; /* Existing padding */
     padding-left: 20rem;
-    padding-top: 12rem; /* Add extra space at the top */
     background-color: var(--white);
     min-height: 100vh;
     gap: 4rem;
@@ -13,7 +12,7 @@
 
 
 .image-container {
-    padding-top: 10rem;
+    padding-top: 8rem;
     width: 625px;
     height: 700px; /* Adjusted height */
     position: relative; /* Allows positioning of arrows */

@@ -1,0 +1,22 @@
+/* Footer Styles */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  
+  .footer-copyright {
+    font-size: 1.5rem;
+    margin-top: 0rem;
+  }
+  
+  .footer-copyright p {
+    margin: 0;
+  }
+  

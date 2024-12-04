@@ -5,6 +5,7 @@ import Navbar from './navbar/navbar';  // Your Navbar component
 import Homepage from './page_one/homepage/homepage';
 import CornerMenu from './cornermenu/cornerMenu';
 import About from './page_one/homepage/about';
+import Footer from './footer/footer';
 
 
 export const metadata = {
@@ -27,6 +28,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <Homepage/>
         <CornerMenu/>
         <About/>
+        <Footer/>
       </body>
     </html>
   );
