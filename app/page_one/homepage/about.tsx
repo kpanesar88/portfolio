@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./about.css";
 
 const About: React.FC = () => {
@@ -20,23 +20,21 @@ const About: React.FC = () => {
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
-  const [fadeKey, setFadeKey] = useState(0); // Used to trigger re-render for fade animation
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFadeKey(prevKey => prevKey + 1); // Trigger fade effect
-      setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
-    }, 10000); // Change image every 10 seconds
+  const handleNext = () => {
+    setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
+  };
 
-    return () => clearInterval(interval); // Clean up interval on component unmount
-  }, [images.length]);
+  const handlePrevious = () => {
+    setCurrentImage((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
 
   return (
     <section className="about">
       <div className="image-container">
+        <button className="arrow left" onClick={handlePrevious}>&lt;</button>
         <div className="image-wrapper">
           <img
-            key={fadeKey}  // Use fadeKey to force re-render when transitioning
             src={images[currentImage].src}
             alt={`Image ${currentImage + 1}`}
             className="fade-image"
@@ -45,15 +43,18 @@ const About: React.FC = () => {
         <div className="caption">
           <p>{images[currentImage].text}</p>
         </div>
+        <button className="arrow right" onClick={handleNext}>&gt;</button>
       </div>
 
       <div className="content-container">
-        <h2>Key Highlights</h2>
+        <h2>About Me!</h2>
         <ul>
           <li>Point one explaining something important.</li>
           <li>Another point with key details.</li>
           <li>Third point to emphasize an idea.</li>
           <li>Final point to wrap it up neatly.</li>
+          <li>Learn more about my interest & hobbies ...</li>
+
         </ul>
       </div>
     </section>

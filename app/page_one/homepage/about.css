@@ -3,30 +3,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5rem 10%;
+    padding: 5rem 10%; /* Existing padding */
     padding-left: 20rem;
+    padding-top: 12rem; /* Add extra space at the top */
     background-color: var(--white);
     min-height: 100vh;
     gap: 4rem;
 }
 
+
 .image-container {
-    width: 625px; /* Fixed width */
-    height: 625px; /* Fixed height */
-    overflow: hidden; /* Ensures any overflowing part of the image is clipped */
+    width: 625px;
+    height: 700px; /* Adjusted height */
+    position: relative; /* Allows positioning of arrows */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Adjust content to the top */
-    background-color: var(--light-gray); /* Placeholder background */
-    border-radius: 10px; /* Slightly rounded corners */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for a cleaner look */
+    justify-content: flex-start;
+    background-color: var(--light-gray);
+    border-radius: 10px;
 }
 
 .image-wrapper {
     width: 100%;
-    height: 100%;
+    height: 90%; /* Reserve space for caption */
     overflow: hidden;
+    position: relative;
 }
 
 .fade-image {
@@ -36,27 +39,62 @@
     transition: opacity 1s ease-in-out;
 }
 
-/* Caption now directly below the image */
+/* Caption directly under the image without padding */
 .caption {
     width: 100%;
+    height: 10%;
+    padding-top: 24px;
     text-align: center;
-    padding: 1rem;
+    margin-top: 0px; /* Adjust to ensure it hugs the image */
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px; /* Rounding only bottom corners to match the image */
 }
 
-/* Styling for the content on the right */
+
+/* Arrow buttons */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .content-container {
     flex: 1;
     padding: 2rem;
     padding-left: 20rem;
+    display: flex; /* Enables Flexbox for this container */
+    flex-direction: column; /* Keeps the content stacked vertically */
+    justify-content: center; /* Centers the content vertically */
 }
-
 .content-container h2 {
-    font-size: 3.5rem; /* Large header size */
+    font-size: 3.5rem;
     margin-bottom: 2rem;
     color: var(--black);
 }
@@ -65,8 +103,8 @@
     list-style: disc;
     margin-left: 2rem;
     color: var(--black);
-    font-size: 2.2rem; /* Larger font size for bullet points */
-    line-height: 3rem; /* Better readability with spacing */
+    font-size: 2.2rem;
+    line-height: 3rem;
 }
 
 .content-container ul li {
