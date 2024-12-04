@@ -13,6 +13,7 @@
 
 
 .image-container {
+    padding-top: 10rem;
     width: 625px;
     height: 700px; /* Adjusted height */
     position: relative; /* Allows positioning of arrows */
@@ -86,14 +87,16 @@
 }
 
 .content-container {
+    
     flex: 1;
     padding: 2rem;
-    padding-left: 20rem;
+    padding-left: 10rem;
     display: flex; /* Enables Flexbox for this container */
     flex-direction: column; /* Keeps the content stacked vertically */
     justify-content: center; /* Centers the content vertically */
 }
 .content-container h2 {
+    padding-top: 8rem;
     font-size: 3.5rem;
     margin-bottom: 2rem;
     color: var(--black);
@@ -107,6 +110,27 @@
     line-height: 3rem;
 }
 
-.content-container ul li {
-    margin-bottom: 1.8rem;
-}
+.about-points {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .point {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    color:black;
+  }
+  
+  .point p {
+    font-size: 2rem; /* Adjust size as needed */
+    margin: 0;
+    padding-left: 3rem;
+    flex-grow: 1;
+  }
+  
+  .point span {
+    font-size: 2rem; /* Adjust size of the emoji */
+  }
+  

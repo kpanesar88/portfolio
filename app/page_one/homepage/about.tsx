@@ -47,16 +47,38 @@ const About: React.FC = () => {
       </div>
 
       <div className="content-container">
-        <h2>About Me!</h2>
-        <ul>
-          <li>Point one explaining something important.</li>
-          <li>Another point with key details.</li>
-          <li>Third point to emphasize an idea.</li>
-          <li>Final point to wrap it up neatly.</li>
-          <li>Learn more about my interest & hobbies ...</li>
+    <h2>About Me</h2>
+    <div className="about-points">
 
-        </ul>
+        
+      <div className="point">
+        <span>📍</span>
+        <p>Based in Toronto, Canada</p>
       </div>
+     
+     
+      <div className="point">
+        <span>💻</span>
+        <p>Computer Engineering @ York University.</p>
+      </div>
+
+      <div className="point">
+      <span>🤖</span>
+        <p>Passionate about AI and hardware implementations.</p>
+      </div>
+
+      <div className="point">
+      <span>🛠️</span>
+        <p>Experienced in both software and hardware development.</p>
+      </div>
+
+      <div className="point">
+      <span>🚀</span>
+        <p>Explore more about my interests and hobbies...</p>
+      </div>
+
+    </div>
+  </div>
     </section>
   );
 };
