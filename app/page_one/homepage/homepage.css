@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
-@import '../static.css';
+@import '../../static.css';
 
 * {
     margin: 0;
@@ -216,54 +216,3 @@ span {
 
 
 
-/* Second Section Styles */
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5rem 10%;
-    background-color: var(--white);
-    min-height: 100vh;
-    gap: 4rem;
-  }
-  
-  /* Styling for the left image */
-  .image-container {
-    flex: 1.2; /* Make the image container take more space */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .template-image {
-    max-width: 100%;
-    max-height: 80vh; /* Constrain height for responsiveness */
-    border-radius: 15px;
-    border: 6px solid var(--primary-color);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-  
-  /* Styling for the content on the right */
-  .content-container {
-    flex: 1;
-    padding: 2rem;
-  }
-  
-  .content-container h2 {
-    font-size: 3.5rem; /* Keep header size large */
-    margin-bottom: 2rem;
-    color: var(--black);
-  }
-  
-  .content-container ul {
-    list-style: disc;
-    margin-left: 2rem;
-    color: var(--black);
-    font-size: 2.2rem; /* Larger font size for bullet points */
-    line-height: 3rem; /* Spaced out for readability */
-  }
-  
-  .content-container ul li {
-    margin-bottom: 1.8rem;
-  }
-  

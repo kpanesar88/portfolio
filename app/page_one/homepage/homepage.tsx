@@ -40,7 +40,11 @@ const Homepage: React.FC<HomepageProps> = () => {
           <h1>Hi, It's <span>Karanveer</span></h1>
           <h3 className="text-animation">I'm a <span></span></h3> {/* The span will be animated */}
           <p> ➤ Computer Engineering @ York University</p>
-          <p> ➤ Aspiring Fullstack Developer</p>
+          <p> ➤ Aspiring Software & Hardware Dev</p>
+          <p> ➤ Passionate for AI Implementation</p>
+
+
+
 
           <div className="social-icons">
             <a href="https://www.linkedin.com/in/karanveer-panesar-0203a1247/" target="_blank" rel="noopener noreferrer">
@@ -76,23 +80,6 @@ const Homepage: React.FC<HomepageProps> = () => {
         </div>
       </section>
 
-      {/* Second Section: Image on Left, Bullet Points on Right */}
-      <section className="about">
-        {/* Left Section: Image */}
-        <div className="home-img">
-          <img src='/images/karan.jpg' alt="Profile Picture" />
-        </div>
-
-        <div className="content-container">
-          <h2>Key Highlights</h2>
-          <ul>
-            <li>Point one explaining something important.</li>
-            <li>Another point with key details.</li>
-            <li>Third point to emphasize an idea.</li>
-            <li>Final point to wrap it up neatly.</li>
-          </ul>
-        </div>
-      </section>
     </div>
   );
 };

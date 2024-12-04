@@ -1,8 +1,10 @@
 // app/layout.tsx
+
 import React from 'react';
 import Navbar from './navbar/navbar';  // Your Navbar component
-import Homepage from './homepage/homepage';
+import Homepage from './page_one/homepage/homepage';
 import CornerMenu from './cornermenu/cornerMenu';
+import About from './page_one/homepage/about';
 
 
 export const metadata = {
@@ -24,6 +26,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         {children}
         <Homepage/>
         <CornerMenu/>
+        <About/>
       </body>
     </html>
   );

@@ -22,9 +22,13 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",  // Set the baseUrl to the current directory
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "jquery": [
+        "node_modules/jquery"
       ]
     },
     "forceConsistentCasingInFileNames": true

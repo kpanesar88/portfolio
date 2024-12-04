@@ -106,7 +106,7 @@ html, body {
   width: 100%;
   border: none;
   margin-top: 0;
-  border-top: 1px solid var(--white); /* White divider under navbar */
+  border-top: 1px solid var(--red); /* White divider under navbar */
 }
 
 /* Styling for individual navbar links */
