@@ -1,7 +1,7 @@
 .corner-menu {
     position: fixed;
-    bottom: 0;
-    left: 65px;
+    bottom: 0;       /* Keeps it aligned to the bottom of the viewport */
+    right: 7rem;     /* Move to the right side of the screen */
     display: flex;
     flex-direction: column;
     align-items: center;
