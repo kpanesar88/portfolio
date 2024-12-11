@@ -1,16 +1,20 @@
+/* Ensure section fills the viewport and aligns content to the left */
 section {
     min-height: 100vh;
-    padding: 10rem 12% 10rem;
-    background-color: var(--white); /* White background */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin */
+    background-color: var(--black); /* White background */
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: flex-start; /* Align content to the left */
 }
 
+/* Center home content and adjust the gap between sections */
 .home {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15rem;
 }
 
+/* Adjust the home content */
 .home-content {
     display: flex;
     flex-direction: column;
@@ -18,10 +22,11 @@ section {
     text-align: left;
     justify-content: center;
     margin-top: 3rem;
+    padding-left: 35rem;
 }
 
 span {
-    color: var(--red); /* Red color for interactive elements */
+    color: var(--purple); /* Red color for interactive elements */
 }
 
 .home-img {
@@ -36,22 +41,22 @@ span {
     top: 3rem;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 10rem var(--red); /* Red box shadow */
+    box-shadow: 0 0 10rem var(--purple); /* Red box shadow */
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
 
 .home-img img:hover {
-    box-shadow: 0 0 5rem var(--red),
-                0 0 10rem var(--red),
-                0 0 20rem var(--red); /* Red box shadow on hover */
+    box-shadow: 0 0 5rem var(--purple),
+                0 0 10rem var(--purple),
+                0 0 15rem var(--purple); /* Red box shadow on hover */
 }
 
 .home-content h3 {
     margin-bottom: 2rem;
     margin-top: 1rem;
     font-size: 3.5rem;
-    color: var(--black); /* Black text */
+    color: var(--lightgray); /* Black text */
 }
 
 .home-content h1 {
@@ -59,7 +64,7 @@ span {
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
-    color: var(--black); /* Black text */
+    color: var(--lightgray); /* Black text */
 }
 
 .home-content p {
@@ -67,7 +72,7 @@ span {
     font-weight: 500;
     line-height: 1.8;
     max-width: 55.6rem;
-    color: var(--black); /* Black text */
+    color: var(--lightgray); /* Black text */
 }
 
 .social-icons a {
@@ -77,30 +82,30 @@ span {
     width: 5rem;
     height: 5rem;
     background: transparent;
-    border: 0.2rem solid var(--red); /* Red border */
+    border: 0.2rem solid var(--purple); /* Red border */
     font-size: 3rem; /* Increase font size here */
     border-radius: 50%;
-    color: var(--black); /* Black icon color */
+    color: var(--purple); /* Black icon color */
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease-in-out;
 }
 
 
 .social-icons a:hover {
-    color: var(--white); /* White icon color on hover */
+    color: var(--black); /* White icon color on hover */
     transform: scale(1.3) translateY(-0.5rem);
-    box-shadow: 0 0 2.5rem var(--red); /* Red box shadow on hover */
-    background-color: var(--red); /* Red background on hover */
+    box-shadow: 0 0 2.5rem var(--purple); /* Red box shadow on hover */
+    background-color: var(--purple); /* Red background on hover */
 }
 
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background: var(--red); /* Red background */
+    background: var(--purple); /* Red background */
     box-shadow: 0 0 2.5rem var(--red); /* Red shadow */
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: var(--white); /* White text */
+    color: var(--black); /* White text */
     border: 0.5rem solid transparent;
     letter-spacing: 0.1rem;
     font-weight: 600;
@@ -110,7 +115,7 @@ span {
 
 .btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 5rem var(--red); /* Red shadow on hover */
+    box-shadow: 0 0 5rem var(--purple); /* Red shadow on hover */
 }
 
 .btn-group {
@@ -121,50 +126,51 @@ span {
 }
 
 .btn-group a:nth-of-type(2) {
-    background-color: var(--black); /* Black background */
-    color: var(--white); /* White text */
+    background-color: var(--purple); /* Black background */
+    color: var(--lightgray); /* White text */
     border: 0.5rem solid transparent;
     box-shadow: 0 0 0.5rem transparent;
 }
 
 .btn-group a:nth-of-type(2):hover {
-    background-color: var(--red); /* Red background on hover */
+    background-color: var(--lightgray); /* Red background on hover */
     color: var(--black); /* Black text on hover */
-    box-shadow: 0 0 1rem var(--red); /* Red shadow on hover */
+    box-shadow: 0 0 1rem var(--lightgray); /* Red shadow on hover */
 }
 
 .home-content p {
     font-size: 2rem; /* Larger font size for paragraph */
     font-weight: 500; /* Slightly bold for emphasis */
     line-height: 1.8; /* Spacing between lines */
-    color: var(--black); /* Black text */
+    color: var(--lightgray); /* Black text */
 }
 
-/* Scroll Icon Container */
 .scroll-down {
-    position: absolute;
-    bottom: 2rem; /* Increased distance from the bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center alignment correction */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack the text and icon vertically */
     align-items: center;
-    justify-content: center;
-    animation: fadeIn 2s ease-in-out infinite; /* Subtle fade-in animation */
+    position: absolute;
+    bottom: 3rem; /* Position near the bottom of the page */
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--lightgray); /* Match text color to the rest of the theme */
+    font-size: 1.2rem; /* Adjust the font size as needed */
     cursor: pointer;
-}
-
-/* Scroll Text */
-.scroll-down span {
-    color: var(--black); /* Text color */
-    margin-bottom: 1rem; /* Increased space between text and icon */
-    font-weight: 600;
-}
-
+  }
+  
+  .scroll-down i {
+    font-size: 3rem; /* Adjust the icon size */
+  }
+  
+  .scroll-down span {
+    font-size: 1.8rem; /* Smaller font size for the text */
+    text-transform: uppercase; /* Optional: Make the text uppercase */
+    letter-spacing: 0.05rem; /* Optional: Add slight letter spacing */
+  }
 /* Scroll Icon */
 .scroll-down i {
     font-size: 8rem; /* Larger icon size */
-    color: var(--red); /* Icon color */
+    color: var(--lightgray); /* Icon color */
     animation: bounce 2s infinite; /* Bouncing animation */
 }
 
@@ -178,29 +184,3 @@ span {
     }
 }
 
-/* Keyframes for fade-in effect */
-@keyframes fadeIn {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
-    }
-}
-
-/* Left Banner */
-.left-banner {
-    position: fixed; /* Fixed to stay on the screen even when scrolling */
-    left: 0; /* Align to the left of the page */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%) rotate(180deg); /* Center vertically and flip 180 degrees */
-    background-color: var(--black); /* Use the black color from your variables */
-    padding: 10px 20px; /* Add some padding for better appearance */
-    color: var(--white); /* White text for contrast */
-    writing-mode: vertical-rl; /* Rotate the text */
-    text-orientation: mixed; /* Ensure proper orientation of letters */
-    font-size: 1.8rem; /* Adjust font size */
-    font-weight: bold; /* Make the text stand out */
-    z-index: 100; /* Ensure it appears above other elements */
-    border-radius: 0 8px 8px 0; /* Rounded edges on the right side */
-  }

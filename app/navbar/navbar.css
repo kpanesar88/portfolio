@@ -1,19 +1,12 @@
 @import '../static.css';
 
-:root {
-    --black: #000000; /* Black for background and text */
-    --white: #FFFFFF; /* White for text and elements */
-    --red: #FF0000; /* Red for hover and interactive elements */
-}
-
 html, body {
   margin: 0;
   padding: 0;
   height: 100%; /* Ensures the gradient covers the full height */
   background: var(--black); /* Black background */
-  color: var(--white); /* White text */
+  color: var(--lightgray); /* White text */
 }
-
 /* Navbar container setup */
 #navbar-container {
   text-decoration: none;
@@ -21,12 +14,13 @@ html, body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 15px;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
+  backdrop-filter: blur(3rem);
   background: var(--black); /* Black background for navbar */
-  color: var(--white); /* White text in navbar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  border-bottom: 1px solid var(--white); /* White divider */
+  color: var(--lightgray); /* White text in navbar */
+  border-bottom: 0.5rem solid var(--blue); /* White divider */
   position: fixed; /* Make navbar stay fixed */
   top: 0; /* Position it at the top of the viewport */
   z-index: 1000; /* Ensure it stays above other content */
@@ -35,14 +29,14 @@ html, body {
 /* Style for the navbar logo */
 #logo a {
   text-decoration: none;
-  color: var(--white); /* White logo */
-  font-size: 36px;
+  color: var(--purple); /* White logo */
+  font-size: 4rem;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding-left: 50px;
+  gap: 2rem;
+  padding-left: 6rem;
   position: relative;
 }
 
@@ -56,13 +50,13 @@ html, body {
 }
 
 #navbar-links li {
-  margin: 0 8px; /* Reduced margin to bring items closer together */
+  margin: 0 2rem; /* Reduced margin to bring items closer together */
 }
 
 #navbar-links a {
   text-decoration: none;
-  color: var(--white); /* Default white text */
-  font-size: 18px;
+  color: var(--lightgray); /* Default white text */
+  font-size: 2rem;
   padding: 1rem 2rem;
   position: relative;
   display: inline-block;
@@ -75,7 +69,7 @@ html, body {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 0.2rem; /* Thinner underline */
   background: var(--white); /* White color for the underline effect */
   transform: scaleX(0);
   transition: all 0.5s;
@@ -92,13 +86,13 @@ html, body {
 }
 
 #navbar-links a:hover {
-  color: var(--red); /* Red text on hover */
+  color: var(--purple); /* Red text on hover */
 }
 
 #navbar-links a:hover:before,
 #navbar-links a:hover:after {
   transform: scaleX(1); /* Trigger the scaling effect on hover */
-  background: var(--red); /* Red underline on hover */
+  background: var(--purple); /* Red underline on hover */
 }
 
 /* Divider under the navbar */
@@ -106,13 +100,13 @@ html, body {
   width: 100%;
   border: none;
   margin-top: 0;
-  border-top: 1px solid var(--red); /* White divider under navbar */
+  border-top: 1px solid var(--purple); /* White divider under navbar */
 }
 
 /* Styling for individual navbar links */
 .nav-link {
   text-decoration: none;
-  color: var(--white); /* Default white text */
+  color: var(--lightgray); /* Default white text */
   font-size: 10px;
   padding: 5px 0;
   position: relative;
@@ -120,6 +114,39 @@ html, body {
 }
 
 .nav-link:hover {
-  color: var(--red); /* Red color on hover */
+  color: var(--purple); /* Red color on hover */
   transform: scale(1.05); /* Slight scale-up animation */
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: var(--lightgray); /* Ensure this color is visible */
+  font-size: 2rem;
+}
+
+@media (max-width: 480px) {
+ 
+}
+
+
+
+/* Small Devices (Tablets & Phones in portrait) */
+@media (max-width: 768px) {
+  /* Styles for tablets */
+}
+
+/* Medium Devices (Tablets in landscape) */
+@media (max-width: 1024px) {
+
+}
+
+/* Large Devices (Desktops & Laptops) */
+@media (max-width: 1200px) {
+  /* Styles for desktops */
+}
+
+/* Extra Large Devices (Wide Screens) */
+@media (min-width: 1400px) {
+  /* Styles for ultra-wide monitors */
 }

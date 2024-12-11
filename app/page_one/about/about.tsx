@@ -6,15 +6,15 @@ import "./about.css";
 const About: React.FC = () => {
   const images = [
     {
-      src: '/images/sampleimg1.jpg',
+      src: '/images/about/sampleimg1.jpg',
       text: 'This is the description for image 1.',
     },
     {
-      src: '/images/sampleimg2.jpg',
+      src: '/images/about/sampleimg2.jpg',
       text: 'This is the description for image 2.',
     },
     {
-      src: '/images/sampleimg3.jpg',
+      src: '/images/about/sampleimg3.jpg',
       text: 'This is the description for image 3.',
     },
   ];

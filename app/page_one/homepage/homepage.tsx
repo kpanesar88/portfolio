@@ -1,4 +1,5 @@
-'use client'; // Marking this component as a client-side component
+
+'use client';
 
 import React, { useEffect } from "react";
 import "./homepage.css"; // Import the CSS file
@@ -37,10 +38,7 @@ const Homepage: React.FC<HomepageProps> = () => {
       {/* First Section */}
       <section className="home" id="home">
   {/* Left Banner */}
-  <div className="left-banner">
-    <p>#whoami</p>
-  </div>
-
+ 
   <div className="home-content">
     <h1>Hi, It's <span>Karanveer</span></h1>
     <h3 className="text-animation">I'm a <span></span></h3>
@@ -73,12 +71,15 @@ const Homepage: React.FC<HomepageProps> = () => {
   </div>
 
   <div className="home-img">
-    <img src='/images/karan.jpg' alt="Profile Picture" />
+    <img src='/images/homepage/karan.jpg' alt="Profile Picture" />
   </div>
 
   <div className="scroll-down" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
-    <i className="bx bx-chevron-down"></i>
-  </div>
+  <i className="bx bx-chevron-down"></i>
+  <span>#ABOUTME</span> {/* Add this line */}
+</div>
+
+
 </section>
 
 

@@ -13,10 +13,11 @@
 }
 
 :root {
-    --black: #000000; /* Black for text */
-    --red: #FF0000; /* Red for hover and interactive elements */
-    --white: #FFFFFF; /* White for background */
-    --earthbrown: #6F4F29; /* Earthy brown for accents */
+    --black: #121212; /* Black for text */
+    --lightgray: #C5C6C7;
+    --purple: #BB86FC;
+    --teal: #03DAC5;
+
 }
 
 html {
