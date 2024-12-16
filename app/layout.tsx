@@ -25,6 +25,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <Navbar />
         {/* This renders the content of the page */}
         {children}
+        <Homepage />
+        <Footer />
      </body>
     </html>
   );

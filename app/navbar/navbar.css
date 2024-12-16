@@ -7,6 +7,7 @@ html, body {
   background: var(--black); /* Black background */
   color: var(--lightgray); /* White text */
 }
+
 /* Navbar container setup */
 #navbar-container {
   text-decoration: none;
@@ -14,7 +15,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem; /* Default padding */
   background: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   backdrop-filter: blur(3rem);
@@ -30,13 +31,13 @@ html, body {
 #logo a {
   text-decoration: none;
   color: var(--purple); /* White logo */
-  font-size: 4rem;
+  font-size: 4rem; /* Default logo size */
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding-left: 6rem;
+  padding-left: 6rem; /* Default padding */
   position: relative;
 }
 
@@ -56,8 +57,8 @@ html, body {
 #navbar-links a {
   text-decoration: none;
   color: var(--lightgray); /* Default white text */
-  font-size: 2rem;
-  padding: 1rem 2rem;
+  font-size: 2rem; /* Default text size */
+  padding: 1rem 2rem; /* Default padding */
   position: relative;
   display: inline-block;
   transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
@@ -125,11 +126,20 @@ html, body {
   font-size: 2rem;
 }
 
-@media (max-width: 480px) {
- 
+/* Media query for screen widths of 1000px or less */
+@media (max-width: 1000px) {
+  #navbar-container {
+    padding: 0.5rem 1rem; /* Reduced padding */
+  }
+
+  #navbar-links a {
+    padding: 0.5rem 1rem; /* Adjusted padding for links */
+  }
+
+  #logo a {
+    padding-left: 3rem; /* Reduce left padding for the logo */
+  }
 }
-
-
 
 /* Small Devices (Tablets & Phones in portrait) */
 @media (max-width: 768px) {
@@ -138,7 +148,7 @@ html, body {
 
 /* Medium Devices (Tablets in landscape) */
 @media (max-width: 1024px) {
-
+  /* Styles for tablets in landscape mode */
 }
 
 /* Large Devices (Desktops & Laptops) */
