@@ -3,45 +3,46 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensures the gradient covers the full height */
-  background: var(--black); /* Black background */
-  color: var(--lightgray); /* White text */
+  height: 100%;
+  background: var(--black);
+  color: var(--lightgray);
 }
 
 /* Navbar container setup */
 #navbar-container {
-  text-decoration: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem 2rem; /* Default padding */
+  padding: 1rem 2rem;
   background: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   backdrop-filter: blur(3rem);
-  background: var(--black); /* Black background for navbar */
-  color: var(--lightgray); /* White text in navbar */
-  border-bottom: 0.5rem solid var(--blue); /* White divider */
-  position: fixed; /* Make navbar stay fixed */
-  top: 0; /* Position it at the top of the viewport */
-  z-index: 1000; /* Ensure it stays above other content */
+  background: var(--black);
+  color: var(--lightgray);
+  border-bottom: 0.5rem solid var(--blue);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Style for the navbar logo */
+/* Logo Style */
+#logo {
+  margin: 0;
+  padding: 0;
+}
+
 #logo a {
   text-decoration: none;
-  color: var(--purple); /* White logo */
-  font-size: 4rem; /* Default logo size */
+  color: var(--purple);
+  font-size: 4rem;
   font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding-left: 6rem; /* Default padding */
-  position: relative;
+  margin: 0;
 }
 
-/* Navbar list */
+/* Navbar Links */
 #navbar-links {
   display: flex;
   align-items: center;
@@ -51,17 +52,17 @@ html, body {
 }
 
 #navbar-links li {
-  margin: 0 2rem; /* Reduced margin to bring items closer together */
+  margin: 0 2rem;
 }
 
 #navbar-links a {
   text-decoration: none;
-  color: var(--lightgray); /* Default white text */
-  font-size: 2rem; /* Default text size */
-  padding: 1rem 2rem; /* Default padding */
+  color: var(--lightgray);
+  font-size: 2rem;
+  padding: 1rem 2rem;
   position: relative;
   display: inline-block;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 #navbar-links a:before,
@@ -70,8 +71,8 @@ html, body {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 0.2rem; /* Thinner underline */
-  background: var(--white); /* White color for the underline effect */
+  height: 0.2rem;
+  background: var(--white);
   transform: scaleX(0);
   transition: all 0.5s;
 }
@@ -87,13 +88,54 @@ html, body {
 }
 
 #navbar-links a:hover {
-  color: var(--purple); /* Red text on hover */
+  color: var(--purple);
 }
 
 #navbar-links a:hover:before,
 #navbar-links a:hover:after {
-  transform: scaleX(1); /* Trigger the scaling effect on hover */
-  background: var(--purple); /* Red underline on hover */
+  transform: scaleX(1);
+  background: var(--purple);
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  color: var(--lightgray);
+  font-size: 2rem;
+}
+
+/* Sliding Menu (Right side, Full height) */
+#menu-slide {
+  position: fixed;
+  top: 0;
+  right: -50%; /* Start off-screen to the right */
+  width: 50%; /* Cover half the width of the screen */
+  height: 100%; /* Full height of the screen */
+  background-color: var(--purple); /* Purple background */
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.5s ease; /* Smooth slide-in effect */
+  z-index: 999; /* Ensure it's above other content */
+}
+
+#menu-slide.active {
+  right: 0; /* Move the menu into view */
+}
+
+#menu-slide a {
+  color: var(--black);
+  font-size: 2rem;
+  padding: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#menu-slide a:hover {
+  color: var(--lightgray);
 }
 
 /* Divider under the navbar */
@@ -101,62 +143,38 @@ html, body {
   width: 100%;
   border: none;
   margin-top: 0;
-  border-top: 1px solid var(--purple); /* White divider under navbar */
+  border-top: 1px solid var(--purple);
 }
 
-/* Styling for individual navbar links */
-.nav-link {
-  text-decoration: none;
-  color: var(--lightgray); /* Default white text */
-  font-size: 10px;
-  padding: 5px 0;
-  position: relative;
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth color transition with transform for subtle animation */
-}
-
-.nav-link:hover {
-  color: var(--purple); /* Red color on hover */
-  transform: scale(1.05); /* Slight scale-up animation */
-}
-
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  color: var(--lightgray); /* Ensure this color is visible */
-  font-size: 2rem;
-}
-
-/* Media query for screen widths of 1000px or less */
-@media (max-width: 1000px) {
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
   #navbar-container {
-    padding: 0.5rem 1rem; /* Reduced padding */
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 1rem;
   }
 
-  #navbar-links a {
-    padding: 0.5rem 1rem; /* Adjusted padding for links */
+  #logo {
+    padding-left: 0;
+    margin-top: 0;
   }
 
   #logo a {
-    padding-left: 3rem; /* Reduce left padding for the logo */
+    padding: 0;
+    margin: 0;
   }
-}
 
-/* Small Devices (Tablets & Phones in portrait) */
-@media (max-width: 768px) {
-  /* Styles for tablets */
-}
+  /* Hamburger Menu */
+  .menu-icon {
+    display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 0;
+  }
 
-/* Medium Devices (Tablets in landscape) */
-@media (max-width: 1024px) {
-  /* Styles for tablets in landscape mode */
-}
-
-/* Large Devices (Desktops & Laptops) */
-@media (max-width: 1200px) {
-  /* Styles for desktops */
-}
-
-/* Extra Large Devices (Wide Screens) */
-@media (min-width: 1400px) {
-  /* Styles for ultra-wide monitors */
+  /* Hide Navbar Links Initially */
+  #navbar-links {
+    display: none;
+  }
 }
