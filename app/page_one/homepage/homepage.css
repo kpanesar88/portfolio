@@ -184,3 +184,159 @@ span {
     }
 }
 
+@media (min-width: 480px) and (max-width: 767px) {
+}
+
+
+@media (min-width: 768px) and (max-width: 853px) {
+    /* Stack items vertically and center */
+    .home-content {
+        padding-left: 3rem; /* Adjust padding */
+        text-align: center; /* Center text */
+    }
+
+    .home-img {
+        padding-right: 5rem;
+    }
+
+    .home-img img {
+        width: 40vw; /* Scale image */
+    }
+
+    .social-icons a {
+        font-size: 2.5rem; /* Adjust icon size */
+    }
+
+    .btn-group a {
+        padding: 1rem 2.5rem; /* Adjust button size */
+        font-size: 1.4rem;
+    }
+
+    
+.home-content h3 {
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: var(--lightgray); /* Black text */
+}
+
+.home-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+    color: var(--lightgray); /* Black text */
+}
+
+.home-content p {
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 55.6rem;
+    color: var(--lightgray); /* Black text */
+}
+}
+
+@media (min-width: 854px) and (max-width: 1024px) {
+    /* Stack items vertically and center */
+    .home-content {
+        padding-left: 5rem; /* Adjust padding */
+        text-align: center; /* Center text */
+    }
+
+    .home-img {
+        padding-right: 5rem;
+    }
+
+    .home-img img {
+        width: 40vw; /* Scale image */
+    }
+
+    .social-icons a {
+        font-size: 2.5rem; /* Adjust icon size */
+    }
+
+    .btn-group a {
+        padding: 1rem 2.5rem; /* Adjust button size */
+        font-size: 1.4rem;
+    }
+
+    
+.home-content h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3rem;
+    color: var(--lightgray); /* Black text */
+}
+
+.home-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+    color: var(--lightgray); /* Black text */
+}
+
+.home-content p {
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 55.6rem;
+    color: var(--lightgray); /* Black text */
+}
+}
+
+  /* Tablets in Landscape */
+@media (min-width: 1025px) and (max-width: 1279px) {
+
+/* Adjust the home content */
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+    padding-left: 5rem;
+}
+
+
+}
+  
+  /* Small Desktops */
+@media (min-width: 1280px) and (max-width: 1440px) {
+
+/* Adjust the home content */
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+    padding-left: 10rem;
+}
+
+}
+  
+  /* Standard Desktops */
+@media (min-width: 1441px) and (max-width: 1920px) {
+/* Adjust the home content */
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+    padding-left: 15rem;
+}
+
+
+}
+
+  /* Large Desktops */
+@media (min-width: 1921px) {
+    /* Styles for screens > 1920px */
+}
+
