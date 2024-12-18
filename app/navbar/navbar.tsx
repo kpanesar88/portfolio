@@ -25,18 +25,9 @@ const Navbar: React.FC = () => {
           aria-label="Toggle menu"
           aria-expanded={isMenuOpen ? 'true' : 'false'}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="45"
-            height="45"
-            viewBox="0 0 24 24"
-            style={{ fill: 'rgba(187, 134, 252, 1)' }}
-          >
-            <path
-              className={`line top ${isMenuOpen ? 'rotate-top' : ''}`}
-              d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"
-            ></path>
-          </svg>
+          <span className="line line1"></span>
+          <span className="line line2"></span>
+          <span className="line line3"></span>
         </div>
 
         {/* Navbar Links */}
@@ -76,7 +67,7 @@ const Navbar: React.FC = () => {
         </ul>
       </div>
 
-      {/* Sliding Menu (Pink Background) */}
+      {/* Sliding Menu */}
       <div id="menu-slide" className={isMenuOpen ? 'active' : ''}>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>

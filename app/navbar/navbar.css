@@ -1,5 +1,6 @@
 @import '../static.css';
 
+
 html, body {
   margin: 0;
   padding: 0;
@@ -164,17 +165,54 @@ html, body {
     margin: 0;
   }
 
-  /* Hamburger Menu */
-  .menu-icon {
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-    margin: 0;
-  }
+ /* Hamburger Menu */
+.menu-icon {
+  display: block;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-icon .line {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: rgba(187, 134, 252, 1); /* Purple */
+  border-radius: 5px;
+  position: absolute;
+  transition: all 0.4s ease;
+}
+
+.menu-icon .line1 {
+  top: 10px;
+}
+
+.menu-icon .line2 {
+  top: 20px;
+}
+
+.menu-icon .line3 {
+  top: 30px;
+}
+
+.menu-icon.open .line1 {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-icon.open .line2 {
+  opacity: 0;
+}
+
+.menu-icon.open .line3 {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
 
   /* Hide Navbar Links Initially */
   #navbar-links {
     display: none;
   }
 }
+
+
