@@ -271,7 +271,6 @@ span {
         bottom: 2rem;           /* Add some space from the bottom */
         display: flex;
         justify-content: center; /* Center icons horizontally */
-        gap: 1rem;              /* Space between icons */
         width: 100%;            /* Make sure they stay centered within the container */
         padding-bottom: 16vh;
     }

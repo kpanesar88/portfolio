@@ -1,17 +1,38 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './navbar.css'; // Ensure the CSS is loaded correctly
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Importing social icons
+import { BsExclamationTriangle } from 'react-icons/bs'; // Importing the warning triangle icon
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Toggle menu visibility
+  // Toggle menu visibility and change navbar background
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
+  // Close the menu when a menu item is clicked
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Close menu when the screen is larger than 768px
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768 && isMenuOpen) {
+        setIsMenuOpen(false); // Close the menu if the screen is wider than 768px
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMenuOpen]); // Effect depends on isMenuOpen state
+
   return (
-    <nav id="navbar">
+    <nav id="navbar" className={isMenuOpen ? 'open' : ''}>
       <div id="navbar-container">
         {/* Logo Section */}
         <div id="logo">
@@ -33,22 +54,22 @@ const Navbar: React.FC = () => {
         {/* Navbar Links */}
         <ul id="navbar-links" className={isMenuOpen ? 'active' : ''}>
           <li>
-            <a href="#about" className="nav-link">
+            <a href="#about" className="nav-link" onClick={closeMenu}>
               About
             </a>
           </li>
           <li>
-            <a href="#skills" className="nav-link">
+            <a href="#skills" className="nav-link" onClick={closeMenu}>
               Skills
             </a>
           </li>
           <li>
-            <a href="#projects" className="nav-link">
+            <a href="#projects" className="nav-link" onClick={closeMenu}>
               Projects
             </a>
           </li>
           <li>
-            <a href="#contact" className="nav-link">
+            <a href="#contact" className="nav-link" onClick={closeMenu}>
               Contact
             </a>
           </li>
@@ -69,18 +90,37 @@ const Navbar: React.FC = () => {
 
       {/* Sliding Menu */}
       <div id="menu-slide" className={isMenuOpen ? 'active' : ''}>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" onClick={closeMenu}>About</a>
+        <a href="#skills" onClick={closeMenu}>Skills</a>
+        <a href="#projects" onClick={closeMenu}>Projects</a>
+        <a href="#contact" onClick={closeMenu}>Contact</a>
         <a
           href="https://docs.google.com/document/d/1hXIAfesbOFMY2b5rrTsvSImxTnzYOdhR/edit?usp=sharing&ouid=117936281308893913869&rtpof=true&sd=true"
           target="_blank"
           rel="noopener noreferrer"
           className="resume-button"
+          onClick={closeMenu}
         >
           Resume
         </a>
+
+        <div className="nav-icons">
+          <a href="https://www.linkedin.com/in/karanveer-panesar-0203a1247/" target="_blank" rel="noopener noreferrer">
+            <i className="bx bxl-linkedin social-icon"></i>
+          </a>
+          <a href="https://github.com/kpanesar88" target="_blank" rel="noopener noreferrer">
+            <i className="bx bxl-github social-icon"></i>
+          </a>
+          <a href="mailto:karanveerpanesar04@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i className="bx bxs-envelope social-icon"></i>
+          </a>
+        </div>
+
+        {/* Disclaimer Text */}
+        <div className="disclaimer">
+          <BsExclamationTriangle className="warning-icon" />
+          <p>For the best experience, view on a desktop.</p>
+        </div>
       </div>
 
       <hr id="navbar-divider" />

@@ -1,6 +1,5 @@
 @import '../static.css';
 
-
 html, body {
   margin: 0;
   padding: 0;
@@ -25,6 +24,8 @@ html, body {
   position: fixed;
   top: 0;
   z-index: 1000;
+  transition: background-color 0.5s ease;
+  overflow: hidden; /* Prevent overflow during animation */
 }
 
 /* Logo Style */
@@ -100,10 +101,15 @@ html, body {
 
 /* Hamburger menu icon */
 .menu-icon {
-  display: none;
+  display: block;
+  width: 45px;
+  height: 45px;
+  position: relative;
   cursor: pointer;
   color: var(--lightgray);
-  font-size: 2rem;
+  font-size: 1.5rem; /* Smaller size */
+  padding: 0.5rem; /* Padding added */
+  padding-right: 1rem; /* Added padding-right */
 }
 
 /* Sliding Menu (Right side, Full height) */
@@ -113,30 +119,39 @@ html, body {
   right: -50%; /* Start off-screen to the right */
   width: 50%; /* Cover half the width of the screen */
   height: 100%; /* Full height of the screen */
-  background-color: var(--purple); /* Purple background */
-  color: var(--black);
+  background-color: var(--purple); /* Light gray background */
+  color: var(--purple);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Center text vertically */
   transition: right 0.5s ease; /* Smooth slide-in effect */
   z-index: 999; /* Ensure it's above other content */
+  clip-path: inset(0 0 0 0); /* Prevent any overlap */
 }
 
+/* When the menu is active and slides in */
 #menu-slide.active {
   right: 0; /* Move the menu into view */
+  color: var(--black);
+}
+
+/* Change color of links when menu is active */
+#menu-slide.active a {
+  color: var(--black); /* Change text color when active */
 }
 
 #menu-slide a {
-  color: var(--black);
+  color: var(--black); /* Default text color in the menu */
   font-size: 2rem;
   padding: 1rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
+/* Remove hover effect */
 #menu-slide a:hover {
-  color: var(--lightgray);
+  color: var(--black); /* No color change on hover */
 }
 
 /* Divider under the navbar */
@@ -147,16 +162,57 @@ html, body {
   border-top: 1px solid var(--purple);
 }
 
+/* Social icons container in the menu */
+#menu-slide .social-hamburger {
+  margin-top: auto; /* Push social icons to the bottom */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0; /* Added padding to make space around the icons */
+}
+
+/* Social icon styling */
+#menu-slide .social-hamburger a {
+  color: var(--lightgray); /* Default color for icons */
+  font-size: 3rem; /* Larger icon size */
+  margin: 0 1.5rem; /* Space out the icons */
+  padding: 1rem; /* Add padding around the icons */
+  background: var(--black); /* Change circle background to black */
+  border-radius: 50%; /* Make the background circular */
+  transition: color 0.3s ease, transform 0.3s ease; /* Hover color and animation */
+}
+
+#menu-slide .social-hamburger a:hover {
+  color: var(--purple); /* Hover color */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Make sure the icons are centered vertically */
+#menu-slide .social-hamburger i {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Animation for icons */
+}
+
+/* Ensure a visible background or spacing if icons are still invisible */
+#menu-slide .social-hamburger a {
+  padding: 1rem; /* Add some padding around the icons */
+  background: var(--black); /* Optionally give a background to icons */
+  border-radius: 50%; /* Make the background circular */
+}
+
+
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
   #navbar-container {
     flex-direction: row;
     align-items: center;
     padding: 0.5rem 1rem;
+    padding-right: 4rem;
+    padding-top: 1em;
   }
 
   #logo {
-    padding-left: 0;
+    padding-left: 1rem;
     margin-top: 0;
   }
 
@@ -165,54 +221,146 @@ html, body {
     margin: 0;
   }
 
- /* Hamburger Menu */
-.menu-icon {
-  display: block;
-  width: 45px;
-  height: 45px;
-  position: relative;
-  cursor: pointer;
-  z-index: 1001;
-}
+  /* Hamburger Menu */
+  .menu-icon {
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+  }
 
-.menu-icon .line {
-  display: block;
-  width: 100%;
-  height: 5px;
-  background: rgba(187, 134, 252, 1); /* Purple */
-  border-radius: 5px;
-  position: absolute;
-  transition: all 0.4s ease;
-}
+  .menu-icon .line {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: var(--purple); /* Purple */
+    border-radius: 5px;
+    position: absolute;
+    transition: all 0.4s ease;
+  }
 
-.menu-icon .line1 {
-  top: 10px;
-}
+  .menu-icon .line1 {
+    top: 10px;
+  }
 
-.menu-icon .line2 {
-  top: 20px;
-}
+  .menu-icon .line2 {
+    top: 20px;
+  }
 
-.menu-icon .line3 {
-  top: 30px;
-}
+  .menu-icon .line3 {
+    top: 30px;
+  }
 
-.menu-icon.open .line1 {
-  transform: rotate(45deg) translate(7px, 7px);
-}
+  .menu-icon.open .line1 {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
 
-.menu-icon.open .line2 {
-  opacity: 0;
-}
+  .menu-icon.open .line2 {
+    opacity: 0;
+  }
 
-.menu-icon.open .line3 {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
+  .menu-icon.open .line3 {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
 
   /* Hide Navbar Links Initially */
   #navbar-links {
     display: none;
   }
+
+  /* Change navbar color when menu is open */
+  #navbar-container.open {
+    background-color: var(--purple);
+    color: var(--black);
+    transform: translateX(100%); /* Slide out effect */
+    transition: transform 0.5s ease; /* Smooth transition */
+  }
+
+  /* Social Icons */
+  .nav-icons {
+    display: flex;
+    justify-content: center; /* Center social icons horizontally */
+    align-items: center; /* Center social icons vertically */
+    flex-wrap: wrap; /* Allow wrapping of icons if space is constrained */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .nav-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.8rem; /* Slightly bigger circle size */
+    height: 4.8rem; /* Slightly bigger circle size */
+    background: transparent;
+    border: 0.2rem solid var(--black); /* Border color */
+    font-size: 2.8rem; /* Slightly bigger icon size */
+    border-radius: 50%;
+    color: var(--black); /* Icon color */
+    margin: 1rem; /* Space out the icons */
+    transition: 0.3s ease-in-out;
+  }
+  
+  .nav-icons a i { /* Specifically target the icon inside the link */
+    font-size: 2.8rem; /* Make the icon slightly bigger */
+  }
+  
+  .nav-icons a:hover {
+    color: var(--white); /* White icon color on hover */
+    transform: scale(1.25) translateY(-0.5rem); /* Slightly bigger scale on hover */
+    box-shadow: 0 0 2.5rem var(--purple); /* Purple box shadow on hover */
+    background-color: var(--purple); /* Purple background on hover */
+  }
+
+  /* Slide-in animation for menu items inside the menu */
+  #menu-slide a {
+    opacity: 0;
+    transform: translateX(20px); /* Start from right */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth animation */
+  }
+
+  #menu-slide.active a {
+    opacity: 1;
+    transform: translateX(0); /* Slide in to original position */
+  }
+
+  /* Disclaimer text */
+.disclaimer {
+  position: absolute;
+  bottom: 0px; /* Keep it higher in the menu */
+  left: 50%;
+  transform: translateX(-50%); /* Center the disclaimer horizontally */
+  width: 100%; /* Adjust width */
+  display: flex;
+  align-items: center;
+  background-color: #FFCC00; /* Yellow background */
+  color: #333; /* Dark text */
+  padding: 20px; /* Increased padding for better spacing */
+  font-size: 1.25rem; /* Larger text size */
+  font-weight: bold;
 }
 
+.warning-icon {
+  margin-right: 20px; /* More space between icon and text */
+  font-size: 3.5rem; /* Larger icon size */
+  color: #9e6b00; /* Dark yellow color for the icon */
+}
 
+.resume-link {
+  margin-bottom: 2rem; /* Increase this value to add more space below the Resume link */
+}
+.nav-icons {
+  margin-top: 2rem; /* Increase this value to add more space above the social icons */
+}
+}
+
+/* For larger screens, above 768px, the menu behaves differently */
+@media (min-width: 769px) {
+  /* Ensure the disclaimer banner is hidden or styled differently on larger screens */
+  .disclaimer {
+    display: none; /* Hide disclaimer on larger screens */
+  }
+
+  
+}
