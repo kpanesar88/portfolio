@@ -50,6 +50,7 @@ span {
     box-shadow: 0 0 10rem var(--purple); /* Red box shadow */
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    max-width: 100%; /* Ensure image doesn't overflow container */
 }
 
 .home-img img:hover {
@@ -126,7 +127,7 @@ span {
 
 .btn-group {
     display: flex;
-    gap: 1.5rem;
+    gap: 3rem;
     align-items: center;
     justify-content: flex-start; /* Align buttons to the left */
     padding-top: 3rem; /* Add space from the top */
@@ -217,15 +218,19 @@ span {
         width: 100%;            /* Ensure text content spans the full width */
     }
 
+
     .home-img {
-        order: 2;               /* Image in the middle */
-        padding-left: 5rem;
+        order: 2;              
+        padding-left: 11vw;
         padding-bottom: 10rem;
     }
+  
 
     .home-img img {
         width: 60vw;
-        height: 60vw;           /* Scale image appropriately */
+        height: 60vw;    
+        max-width: 100%;       
+   
     }
 
     .home-content h3 {
@@ -273,6 +278,7 @@ span {
         justify-content: center; /* Center icons horizontally */
         width: 100%;            /* Make sure they stay centered within the container */
         padding-bottom: 16vh;
+        left: 1.4%;
     }
 
     .scroll-down i {
@@ -306,6 +312,8 @@ span {
 
     .home-img img {
         width: 40vw; /* Scale image */
+        max-width: 100%;       
+
     }
 
     .social-icons a {
@@ -355,6 +363,8 @@ span {
 
     .home-img img {
         width: 40vw; /* Scale image */
+        max-width: 100%;       
+
     }
 
     .social-icons a {

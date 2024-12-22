@@ -31,7 +31,7 @@ html, body {
 /* Logo Style */
 #logo {
   margin: 0;
-  padding: 0;
+  padding-left: 5rem;
 }
 
 #logo a {

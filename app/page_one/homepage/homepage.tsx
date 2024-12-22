@@ -122,7 +122,7 @@ const Homepage: React.FC<HomepageProps> = () => {
             <h3 className="text-animation">I'm a <span></span></h3>
             <p><span className="arrow-icon">➤</span> Computer Engineering @ York University</p>
             <p><span className="arrow-icon">➤</span> Aspiring Software & Hardware Dev</p>
-            <p><span className="arrow-icon">➤</span> Passionate for AI Implementation</p>
+            <p><span className="arrow-icon">➤</span> Learning AI to Shape the Future.</p>
 
             <div className="social-icons">
               <a href="https://www.linkedin.com/in/karanveer-panesar-0203a1247/" target="_blank" rel="noopener noreferrer">

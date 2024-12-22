@@ -8,8 +8,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poppins", "sans-serif";
-    
+    font-family: "Poppins", "sans-serif";    
 }
 
 :root {
@@ -17,10 +16,9 @@
     --lightgray: #C5C6C7;
     --purple: #BB86FC;
     --teal: #03DAC5;
-
 }
 
 html {
     font-size: 60%;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Correct way to prevent horizontal scrolling */
 }
