@@ -6,6 +6,7 @@ html, body {
   height: 100%;
   background: var(--black);
   color: var(--lightgray);
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Navbar container setup */
@@ -25,7 +26,7 @@ html, body {
   top: 0;
   z-index: 1000;
   transition: background-color 0.5s ease;
-  overflow: hidden; /* Prevent overflow during animation */
+  /* Removed overflow: hidden */
 }
 
 /* Logo Style */
@@ -128,6 +129,7 @@ html, body {
   transition: right 0.5s ease; /* Smooth slide-in effect */
   z-index: 999; /* Ensure it's above other content */
   clip-path: inset(0 0 0 0); /* Prevent any overlap */
+  overflow-y: auto; /* Allow vertical scroll if content overflows */
 }
 
 /* When the menu is active and slides in */
@@ -187,19 +189,23 @@ html, body {
   transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
-/* Make sure the icons are centered vertically */
-#menu-slide .social-hamburger i {
-  display: inline-block;
-  transition: transform 0.3s ease; /* Animation for icons */
+/* Danger Icon Styles */
+.danger-icon {
+  color: red; /* Red color for danger icons */
+  font-size: 3rem;
+  margin-right: 0.8rem;
+  transition: transform 0.3s ease;
 }
 
-/* Ensure a visible background or spacing if icons are still invisible */
-#menu-slide .social-hamburger a {
-  padding: 1rem; /* Add some padding around the icons */
-  background: var(--black); /* Optionally give a background to icons */
-  border-radius: 50%; /* Make the background circular */
+/* Yellow Warning Text */
+.warning-text {
+  color: yellow; /* Yellow text for warnings */
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  text-align: center;
 }
-
 
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
@@ -212,12 +218,11 @@ html, body {
   }
 
   #logo {
-    padding-left: 1rem;
+    padding-left: 3rem;
     margin-top: 0;
   }
 
   #logo a {
-    padding: 0;
     margin: 0;
   }
 
@@ -317,15 +322,37 @@ html, body {
   #menu-slide a {
     opacity: 0;
     transform: translateX(20px); /* Start from right */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth animation */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   }
 
   #menu-slide.active a {
     opacity: 1;
-    transform: translateX(0); /* Slide in to original position */
+    transform: translateX(0);
   }
 
-  /* Disclaimer text */
+  /* Adjust text in smaller screen sizes */
+  #navbar-links a {
+    font-size: 1.6rem;
+    padding: 1rem;
+  }
+
+  /* Adjust the Hamburger Icon on Smaller Screens */
+  .menu-icon {
+    font-size: 2.2rem;
+  }
+
+  /* Social Hamburger Menu */
+  .social-hamburger {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-hamburger a {
+    margin: 1.2rem 0;
+    font-size: 2rem;
+  }
+
+    /* Disclaimer text */
 .disclaimer {
   position: absolute;
   bottom: 0px; /* Keep it higher in the menu */
@@ -364,3 +391,6 @@ html, body {
 
   
 }
+
+
+

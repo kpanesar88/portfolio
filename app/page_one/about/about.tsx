@@ -91,14 +91,14 @@ const About: React.FC = () => {
 
               {/* "Another One" Button */}
               <button className="another-quote-button" onClick={() => setCurrentQuote((prevIndex) => (prevIndex + 1) % quotes.length)}>
-                Another One
+                Randomize
               </button>
             </div>
             
             {/* Scroll Down Section */}
             <div className="scrollabout-down" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
               <i className="bx bx-chevron-down"></i>
-              <span>#INTERESTS</span>
+              <span>#HOBBIES</span>
             </div>
           </div>
         </div>

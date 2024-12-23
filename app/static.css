@@ -11,6 +11,7 @@
     font-family: "Poppins", "sans-serif";    
 }
 
+  
 :root {
     --black: #121212; /* Black for text */
     --lightgray: #C5C6C7;
@@ -21,4 +22,6 @@
 html {
     font-size: 60%;
     overflow-x: hidden; /* Correct way to prevent horizontal scrolling */
+    width: 100%;
+    height: 100%;
 }

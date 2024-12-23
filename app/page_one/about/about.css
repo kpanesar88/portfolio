@@ -1,149 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
 .about-page {
-    padding-top:13rem; /* Space at the top of the page */
-    padding-bottom: 25rem; /* Space at the bottom of the page */
-  }
+  padding-top: 13rem; /* Space at the top of the page */
+  padding-bottom: 25rem; /* Space at the bottom of the page */
+}
 
-  
 .about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3rem;
-    background-color: var(--white);
-    min-height: 20vh; /* Set a smaller height */
-    gap: 4rem;
-    border: 2px solid var(--purple);
-    border-radius: 2rem;
-    width: 75%;
-    height: auto;
-    margin: 0 auto;
-    padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: var(--white);
+  min-height: 20vh; /* Set a smaller height */
+  gap: 4rem;
+  border: 2px solid var(--purple);
+  border-radius: 2rem;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 10rem;
+  box-sizing: border-box;
 }
 
 .content-container {
-    flex: 1;
-    padding: 2rem;
-    padding-left: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    margin-left: 10rem; /* Add margin to push the content further to the right */
+  flex: 1;
+  padding: 2rem;
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  margin-left: 10rem; /* Add margin to push the content further to the right */
 }
 
-
 .content-container h2 {
-    padding-top: 8rem;
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
-    color: white; /* Make h2 text white */
+  padding-top: 8rem;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  color: white;
 }
 
 .content-container ul {
-    list-style: disc;
-    margin-left: 2rem;
-    color: white; /* Make list text white */
-    font-size: 2.2rem;
-    line-height: 3rem;
+  list-style: disc;
+  margin-left: 2rem;
+  color: white;
+  font-size: 2.2rem;
+  line-height: 3rem;
 }
 
-
 .image-container {
-    padding-top: 8rem;
-    width: 75rem;
-    height: 80rem;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: var(--light-gray);
-    border-radius: 1rem;
-    padding-left: 5rem; /* Adjust this value to control how much you want to move the image */
+  padding-top: 8rem;
+  width: 100%; /* Ensure image container uses full width */
+  height: 70vh; /* Set a fixed height */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--light-gray);
+  border-radius: 1rem;
+  padding-left: 5rem;
 }
 
 .image-wrapper {
-    width: 100%;
-    height: 90%;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .fade-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
 }
 
 .caption {
-    width: 100%;
-    height: 10%;
-    padding-top: 2.5rem;
-    text-align: center;
-    margin-top: 0rem;
-    background-color: var(--light-gray);
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 0 0 1rem 1rem;
+  width: 100%;
+  height: 10%;
+  padding-top: 2.5rem;
+  text-align: center;
+  margin-top: 0rem;
+  background-color: var(--light-gray);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 0 0 1rem 1rem;
 }
 
 /* Arrow buttons */
 .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--purple);
-    border: none;
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--purple);
+  border: none;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.5rem;
 }
 
 .arrow.left {
-    left: 7rem;
+  left: 7rem;
 }
 
 .arrow.right {
-    right: 3rem;
+  right: 3rem;
 }
 
 .arrow:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .about-points {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .point {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 1rem 0;
-    color: white; /* Make point text white */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  color: white;
 }
 
 .point p {
-    font-size: 2rem;
-    margin: 0;
-    padding-left: 3rem;
-    flex-grow: 1;
+  font-size: 2rem;
+  margin: 0;
+  padding-left: 3rem;
+  flex-grow: 1;
 }
 
 .point span {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .scrollabout-down {
@@ -151,61 +161,59 @@
   flex-direction: column;
   align-items: center;
   position: absolute;
-  padding-top: 17%;
-  bottom: -103%;
+  bottom: -120%;
   left: 50%;
   transform: translateX(-50%);
+  color: var(--lightgray);
+  font-size: 1.2rem;
   cursor: pointer;
-  margin-bottom: 6rem;
 }
 
 .scrollabout-down i {
-  font-size: 8rem;
-  color: lightgray !important;
+  font-size: 3rem;
+  color: var(--purple);
   animation: bounce 2s infinite;
 }
 
-
 .scrollabout-down span {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  color: var(--purple); /* Ensure the span text is purple */
 }
-  
+
 /* Quotes Section */
 .quotes-section {
-  margin-top: 12rem; /* Adjust the top margin to control the gap */
+  margin-top: 12rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Aligns content to the left */
+  align-items: flex-start;
 }
 
 .quote {
-  font-size: 2.5rem; /* Increased font size */
+  font-size: 2.5rem;
   font-style: italic;
   color: var(--purple);
   display: flex;
   align-items: center;
-  margin-bottom: 1.5rem; /* Increased space between quote and button */
+  margin-bottom: 1.5rem;
 }
 
 .big-quote {
-  font-size: 5rem; /* Increased size of quotation mark */
+  font-size: 5rem;
   margin-right: 1rem;
   color: var(--purple);
 }
 
 .another-quote-button {
   padding: 0.8rem 2rem;
-  font-size: 1.8rem; /* Increased font size */
+  font-size: 1.8rem;
   background-color: var(--purple);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-left: 1.5rem; /* Adjusted to give some space from the quote */
+  margin-left: 1.5rem;
 }
 
 .another-quote-button:hover {
@@ -216,64 +224,125 @@
   outline: none;
 }
 
-/* Other existing styles */
-.scrollabout-down {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  padding-top: 17%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--purple);
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin-bottom: 6rem;
+/* Keyframes for bouncing effect */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2rem);
+  }
 }
 
-.scrollabout-down i {
-  font-size: 8rem;
-  color: var(--purple);
-  animation: bounce 2s infinite;
-}
-
-.scrollabout-down span {
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-}
-
-
-  /* Keyframes for bouncing effect */
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-2rem); /* Larger bounce */
-    }
+@media (min-width: 0px) and (max-width: 767px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    border: 2px solid var(--purple);
+    border-radius: 2rem;
+    padding: 0 5%;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
+  .about h2 {
+    font-size: 5vw;
+    text-align: center;
+  }
 
+  .quote {
+    font-size: 3vw;
+    text-align: center;
+  }
 
-@media (max-width: 480px) {
-}
+  .big-quote {
+    padding-bottom: 2vh;
+    font-size: 6vw;
+  }
 
+  .another-quote-button {
+    font-size: 2.5vw;
+    margin-top: 2rem;
+    display: block;
+    margin: 1.5rem auto;
+    padding: 0.8rem 2rem;
+    background-color: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
 
-@media (min-width: 481px) and (max-width: 767px) {
-}
+  .image-container {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-}
+  .fade-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
 
-@media (min-width: 1025px) and (max-width: 1279px) {
-}
+  .content-container {
+    width: 100%;
+    text-align: left;
+    padding: 0 5%;
+    box-sizing: border-box;
+  }
 
-@media (min-width: 1280px) and (max-width: 1440px) {
-}
+  .content-container h2 {
+    font-size: 4.5vw;
+    margin-bottom: 1rem;
+  }
 
-@media (min-width: 1441px) and (max-width: 1920px) {
-}
+  .content-container ul {
+    font-size: 3.5vw;
+    line-height: 3rem;
+    margin-left: 0;
+    padding-left: 2rem;
+  }
 
-@media (min-width: 1921px) {
+  .about {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .scrollabout-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: -120%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--lightgray);
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .scrollabout-down i {
+    font-size: 3rem;
+    color: var(--purple);
+    animation: bounce 2s infinite;
+  }
+
+  .scrollabout-down span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+  }
 }
