@@ -200,96 +200,130 @@
     }
   }
 
-  @media (min-width: 0px) and (max-width: 767px) {
+  @media (max-width: 767px) {
     .about {
       display: flex;
-      flex-direction: column; /* Stack elements vertically */
-      align-items: center; /* Center elements horizontally */
-      justify-content: center; /* Center elements vertically */
-      width: 100%; /* Set the about container to take up full width of the screen */
-      height: 100vh; /* Make the about container take up full viewport height */
-      border: 2px solid var(--purple); /* Purple border */
-      border-radius: 2rem; /* Rounded corners */
-      padding: 0 5%; /* Equal padding on left and right */
-      margin: 0; /* Remove margin on the outside */
-      box-sizing: border-box; /* Include padding and border in width/height calculations */
-      overflow-x: hidden; /* Prevent horizontal scrolling */
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      width: 90%;
+      height: auto;
+      padding: 2rem 1rem;
+      margin: 0 auto;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+  
+    .image-container {
+      width: 100%; /* Set width to 100% to scale with the screen width */
+      height: auto; /* Remove fixed height for responsive scaling */
+      padding-right: 6vw;
+      position: relative;
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--light-gray);
+      border-radius: 1rem;
+    }
+  
+    /* Arrow Buttons */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: var(--purple);
+      border: none;
+      border-radius: 50%;
+      width: 6rem; /* Increased size of the arrows */
+      height: 6rem; /* Increased size of the arrows */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      font-size: 3rem; /* Larger icon size */
+    }
+  
+    .arrow.left {
+      left: -2rem; /* Position the left arrow on the left outside the image */
+    }
+  
+    .arrow.right {
+      right: -2rem; /* Position the right arrow on the right outside the image */
+    }
+  
+    /* Remove hover effect */
+    .arrow:hover {
+      background-color: rgba(0, 0, 0, 0.5); /* Keep the same background color */
+    }
+  
+    .fade-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      transition: opacity 1s ease-in-out;
     }
   
     .about h2 {
-      font-size: 5vw; /* Adjusted font size */
-      text-align: center; /* Center the heading */
+      font-size: 5vw;
+      text-align: left;
+      font-weight: bold;
     }
   
     .quote {
-      font-size: 3vw; /* Smaller responsive font size based on viewport width */
-      text-align: center; /* Center-align the quote */
-      padding-bottom: 0vh;
+      font-size: 4vw;
+      text-align: left;
     }
   
     .big-quote {
-      padding-bottom: 2vh;
-      font-size: 6vw; /* Smaller big quote size based on viewport width */
+      font-size: 5vw;
+      text-align: left;
     }
   
     .another-quote-button {
-      font-size: 2.5vw; /* Smaller font size for the button */
-      margin-top: 2rem; /* Adjust the space above the button */
-      display: block; /* Ensure it's a block element for centering */
-      margin: 1.5rem auto; /* Center horizontally by setting margin to auto */
-      padding: 0.8rem 2rem;
+      font-size: 3vw;
+      margin-top: 1rem;
+      padding: 1rem 2.5rem;
       background-color: var(--purple);
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
-    }
-  
-    .image-container {
-      order: 1; /* Place the image first */
-      width: 100%; /* Set width to 100% of the screen */
-      height: 70vh; /* Increase height to make the image taller (70% of the viewport height) */
-      overflow: hidden; /* Prevent image overflow if it exceeds container */
-      position: relative; /* Ensure the image positioning remains controlled */
-      margin-bottom: 2rem; /* Space between image and content */
-      display: flex;
-      justify-content: center; /* Center the image */
-      align-items: center;
-    }
-  
-    .fade-image {
-      width: 100%; /* Ensure the image fills the width of the container */
-      height: 100%; /* Ensure the image fills the entire container vertically */
-      object-fit: cover; /* Ensures the image covers the container */
-      object-position: center top; /* Focus the image vertically towards the top */
-      transition: opacity 1s ease-in-out;
+      display: block;
+      margin: 1.5rem auto;
     }
   
     .content-container {
-      order: 2; /* Place content below the image */
-      width: 100%; /* Make content container take up full width */
-      text-align: left; /* Align text to the left */
-      padding: 0 5%; /* Add padding on both sides to give more space */
-      box-sizing: border-box; /* Include padding in width calculations */
+      padding-left: 5vw;
+      width: 100%;
+      text-align: left;
+      box-sizing: border-box;
+      margin-left: 0;
     }
   
     .content-container h2 {
-      font-size: 4.5vw; /* Smaller font size for heading */
-      margin-bottom: 1rem; /* Decreased space between heading and list */
-    }
+      font-size: 3.5rem;
+      color: white;
+      text-align: center; /* Centers the text horizontally */
+  }
+  
   
     .content-container ul {
-      font-size: 3.5vw; /* Smaller text size for list items */
-      line-height: 3rem; /* Increased line-height to adjust gap between bullet points */
-      margin-left: 0; /* Align list to the left without additional margin */
-      padding-left: 2rem; /* Add some padding to the left of list items */
-    }
-  
-    /* Adjust the purple box to shift it slightly right */
-    .about {
-      margin-left: 5%; /* Move the entire about section to the right */
-      margin-right: 5%; /* Ensure some space on the right */
+      font-size: 3.5vw;
+      line-height: 2.5rem;
+      margin-left: 0;
+      padding-left: 0;
     }
   }
   
+
+  @media (min-width: 768px) and (max-width: 853px) {
+  
+  
+  
+  }

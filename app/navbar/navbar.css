@@ -382,9 +382,21 @@ html, body {
 }
 }
 
+@media (min-width: 768px) and (max-width: 1068 ){
+  #navbar-links a {
+    text-decoration: none;
+    color: var(--lightgray);
+    font-size: 1vw;
+    padding: 1rem 2rem;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+}
 /* For larger screens, above 768px, the menu behaves differently */
 @media (min-width: 769px) {
-  /* Ensure the disclaimer banner is hidden or styled differently on larger screens */
+
   .disclaimer {
     display: none; /* Hide disclaimer on larger screens */
   }
