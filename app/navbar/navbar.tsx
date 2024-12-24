@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import './navbar.css'; // Ensure the CSS is loaded correctly
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'; // Importing social icons
 import { BsExclamationTriangle } from 'react-icons/bs'; // Importing the warning triangle icon
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,22 +56,26 @@ const Navbar: React.FC = () => {
         {/* Navbar Links */}
         <ul id="navbar-links" className={isMenuOpen ? 'active' : ''}>
           <li>
-            <a href="#about" className="nav-link" onClick={closeMenu}>
-              About
-            </a>
+          <a href="#about" className="nav-link" onClick={closeMenu}>
+             <i className="bi bi-person" style={{ marginRight: '8px' , fontSize: '23px' }}></i> About
+          </a>
+
           </li>
           <li>
             <a href="#skills" className="nav-link" onClick={closeMenu}>
+            <i className="bi bi-tools" style={{ marginRight: '15px' , fontSize: '23px' }}></i>
               Skills
             </a>
           </li>
           <li>
             <a href="#projects" className="nav-link" onClick={closeMenu}>
+            <i className="bi bi-code-slash" style={{ marginRight: '15px' , fontSize: '23px' }}></i>
               Projects
             </a>
           </li>
           <li>
             <a href="#contact" className="nav-link" onClick={closeMenu}>
+            <i className="bi bi-chat-square-text"style={{ marginRight: '15px' , fontSize: '20px' }}></i>
               Contact
             </a>
           </li>
@@ -81,7 +87,9 @@ const Navbar: React.FC = () => {
                 rel="noopener noreferrer"
                 className="resume-button"
               >
-                <span>Resume</span>
+                <span>
+                <i className="bi bi-file-code"style={{ marginRight: '15px' , fontSize: '23px' }}></i>
+                  Resume</span>
               </a>
             </div>
           </li>
