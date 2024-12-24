@@ -155,14 +155,7 @@ const Homepage: React.FC<HomepageProps> = () => {
           </div>
 
         
-          {/* Scroll Down Section */}
-          <div 
-            className="scroll-down" 
-            onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
-          >
-            <i className="bx bx-chevron-down"></i>
-            <span>#ABOUTME</span>
-          </div>
+
         </section>
       )}
     </div>

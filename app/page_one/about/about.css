@@ -146,33 +146,6 @@
     font-size: 2rem;
 }
 
-.scrollabout-down {
-  display: flex;
-  flex-direction: column; /* Stack the text and icon vertically */
-  align-items: center;
-  position: absolute;
-  bottom: -127rem; /* Position near the bottom of the page */
-  left: 50%;
-  transform: translateX(5%);
-  color: var(--lightgray); /* Match text color to the rest of the theme */
-  font-size: 1.2rem; /* Adjust the font size as needed */
-  cursor: pointer;
-}
-
-.scrollabout-down i {
-  font-size: 8rem;
-  color: lightgray !important;
-  animation: bounce 2s infinite;
-}
-
-
-.scrollabout-down span {
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  color: var(--purple); /* Ensure the span text is purple */
-}
-  
 /* Quotes Section */
 .quotes-section {
   margin-top: 12rem; /* Adjust the top margin to control the gap */
@@ -318,31 +291,5 @@
       margin-left: 5%; /* Move the entire about section to the right */
       margin-right: 5%; /* Ensure some space on the right */
     }
-  
-    .scrollabout-down {
-      display: flex;
-      flex-direction: column; /* Stack the text and icon vertically */
-      align-items: center; /* Center horizontally */
-      position: absolute;
-      bottom: -120%; /* Adjust to position it closer to the bottom */
-      left: 50%;
-      transform: translateX(-50%); /* Center it horizontally */
-      color: var(--lightgray); /* Match text color to the rest of the theme */
-      font-size: 1.2rem; /* Adjust the font size as needed */
-      cursor: pointer;
-    }
-  
-    .scrollabout-down i {
-      font-size: 3rem;
-      color: var(--purple);
-      animation: bounce 2s infinite;
-    }
-  
-    .scrollabout-down span {
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05rem;
-    }
   }
-  
   

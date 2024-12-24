@@ -95,11 +95,7 @@ const About: React.FC = () => {
               </button>
             </div>
             
-            {/* Scroll Down Section */}
-            <div className="scrollabout-down" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
-              <i className="bx bx-chevron-down"></i>
-              <span>#HOBBIES</span>
-            </div>
+           
           </div>
         </div>
       </section>

@@ -157,35 +157,6 @@ span {
     color: var(--lightgray); /* Black text */
 }
 
-.scroll-down {
-    display: flex;
-    flex-direction: column; /* Stack the text and icon vertically */
-    align-items: center;
-    position: absolute;
-    bottom: 3rem; /* Position near the bottom of the page */
-    left: 50%;
-    transform: translateX(-50%);
-    color: var(--lightgray); /* Match text color to the rest of the theme */
-    font-size: 1.2rem; /* Adjust the font size as needed */
-    cursor: pointer;
-  }
-  
-.scroll-down i {
-    font-size: 3rem; /* Adjust the icon size */
-  }
-  
-.scroll-down span {
-    font-size: 1.8rem; /* Smaller font size for the text */
-    text-transform: uppercase; /* Optional: Make the text uppercase */
-    letter-spacing: 0.05rem; /* Optional: Add slight letter spacing */
-  }
-
-  .scroll-down i {
-    font-size: 8rem; /* Larger icon size */
-    color: var(--lightgray); /* Icon color */
-    animation: bounce 2s infinite; /* Bouncing animation */
-}
-
 /* Keyframes for bouncing effect */
 @keyframes bounce {
     0%, 100% {
@@ -281,18 +252,6 @@ span {
         left: 1.4%;
     }
 
-    .scroll-down i {
-        font-size: 3rem; /* Larger icon size */
-        color: var(--lightgray); /* Icon color */
-        animation: bounce 2s infinite; /* Bouncing animation */
-    }   
-
-    .scroll-down span {
-        font-size: 1.5rem; /* Smaller font size for the text */
-        text-transform: uppercase; /* Optional: Make the text uppercase */
-        letter-spacing: 0.05rem; /* Optional: Add slight letter spacing */
-        padding-bottom: vh;
-    }
     
     .arrow-icon {
         display: none;
