@@ -200,7 +200,7 @@
     }
   }
 
-  @media (max-width: 767px) {
+@media (max-width: 767px) {
     .about {
       display: flex;
       flex-direction: column;
@@ -321,9 +321,129 @@
     }
   }
   
+@media (min-width: 768px) and (max-width: 1024px) {
+      .about {
+        width: 80%;
+        padding: 2rem;
+        gap: 2rem;
+        margin: 2rem auto;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .content-container {
+        padding: 2rem;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+    
+      .content-container h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0.8rem;
+        color: var(--purple);
+      }
+    
+      .content-container ul {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        padding-left: 2rem;
+        text-align: left;
+      }
+    
+      .image-container {
+        width: 100%;
+        max-width: 60rem; /* Larger image size */
+        height: auto;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Required for arrow positioning */
+        border-radius: 1rem;
+        background-color: var(--light-gray);
+        padding: 0; /* Ensures no extra padding on either side */
+      }
+    
+      .fade-image {
+        width: 100%;
+        max-width: 100%; /* Ensures the image takes up full width */
+        height: auto;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+    
+      .arrow {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5); /* Adds contrast to arrows */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute; /* Ensures arrows stay on top of the image */
+        top: 50%; /* Centers arrows vertically */
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    
+      .arrow.left {
+        left: 1rem; /* Position the left arrow inside the image */
+      }
+    
+      .arrow.right {
+        right: 1rem; /* Position the right arrow inside the image */
+      }
+    
+      .quotes-section {
+        margin: 3rem auto;
+        width: 90%;
+        text-align: center;
+      }
+    
+      .quote {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--purple);
+      }
+    
+      .big-quote {
+        font-size: 3.5rem;
+        margin-right: 0.5rem;
+      }
+    
+      .another-quote-button {
+        font-size: 1.5rem;
+        padding: 0.8rem 1.5rem;
+        margin-top: 1rem;
+        display: inline-block;
+        background-color: var(--purple);
+        color: white;
+        margin: 0 auto;
+        text-align: center;
+      }
+    
+      .about-points {
+        gap: 1rem;
+        padding: 1rem 2rem;
+        text-align: left;
+      }
+    
+      .point p {
+        font-size: 1.8rem;
+        padding-left: 0;
+        text-align: left;
+      }
+    
+      .point span {
+        font-size: 1.8rem;
+      }
+    }
+    
 
-  @media (min-width: 768px) and (max-width: 853px) {
   
   
+
   
-  }
