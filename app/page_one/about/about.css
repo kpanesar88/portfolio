@@ -44,7 +44,7 @@
     list-style: disc;
     margin-left: 2rem;
     color: white; /* Make list text white */
-    font-size: 2.2rem;
+    font-size: 5rem;
     line-height: 3rem;
 }
 
@@ -136,7 +136,7 @@
 }
 
 .point p {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin: 0;
     padding-left: 3rem;
     flex-grow: 1;
@@ -321,7 +321,7 @@
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1279px) {
+@media (min-width: 768px) and (max-width: 1279px) {
     .about {
         width: 80%;
         padding: 2rem;
@@ -455,11 +455,400 @@
     }
 }
 
+/* Media Query for screens between 1280px and 1920px */
+@media (min-width: 1280px) and (max-width: 1920px) {
+  /* About Page */
+  .about-page {
+      padding-top: 10rem; /* Adjusted top padding */
+      padding-bottom: 15rem; /* Adjusted bottom padding */
+  }
 
+  /* About Section */
+  .about {
+      display: flex;
+      flex-direction: row; /* Keep the layout horizontal */
+      justify-content: space-between;
+      padding: 2rem;
+      width: 80%; /* Adjusted width to be responsive */
+      min-height: 25vh;
+      gap: 3rem;
+      margin: 0 auto; /* Center the box */
+      height: auto; /* Allow height to adjust naturally */
+      border-radius: 2rem;
+      border: 2px solid var(--purple);
+  }
 
-  
-  
-  
+  .content-container {
+      flex: 1; /* Allow content to grow within the container */
+      padding: 2rem;
+      padding-left: 3rem; /* Adjust left padding for better spacing */
+      margin-left: 0; /* Remove large margin */
+      color: white;
+  }
 
+  .content-container h2 {
+      font-size: 3rem; /* Adjust font size for scalability */
+      margin-bottom: 2rem;
+      color: white;
+  }
 
-  
+  .content-container ul {
+      font-size: 3rem; /* Adjusted font size for lists */
+      line-height: 2.5rem;
+  }
+
+  /* Image Section */
+  .image-container {
+      width: 50%; /* Make sure image doesn't take too much width */
+      height: auto; /* Allow height to adjust automatically */
+      padding-top: 4rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      background-color: var(--light-gray);
+      border-radius: 1rem;
+  }
+
+  .image-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+  }
+
+  .fade-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 1s ease-in-out;
+  }
+
+  .caption {
+      width: 100%;
+      text-align: center;
+      background-color: var(--light-gray);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 1rem;
+      border-radius: 0 0 1rem 1rem;
+  }
+
+  /* Arrow buttons */
+  .arrow {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+  }
+
+  .arrow.left {
+      left: 5rem;
+  }
+
+  .arrow.right {
+      right: 2rem;
+  }
+
+  /* Points Section */
+  .about-points {
+      margin-top: 4rem;
+  }
+
+  .point {
+      font-size: 2rem;
+  }
+
+  /* Quotes Section */
+  .quotes-section {
+      margin-top: 10rem;
+  }
+
+  .quote {
+      font-size: 2rem;
+  }
+
+  .big-quote {
+      font-size: 4rem;
+  }
+
+  .another-quote-button {
+      padding: 0.7rem 1.8rem;
+      font-size: 1.6rem;
+  }
+}
+
+/* Media Query for screens larger than 1920px */
+@media (min-width: 1921px) {
+    /* About Page */
+    .about-page {
+        padding-top: 12rem; /* Increased top padding */
+        padding-bottom: 18rem; /* Increased bottom padding */
+    }
+
+    /* About Section */
+    .about {
+        display: flex;
+        flex-direction: row; /* Keep the layout horizontal */
+        justify-content: space-between;
+        padding: 3rem;
+        width: 85%; /* Increased width for larger screens */
+        min-height: 30vh; /* Increased minimum height */
+        gap: 4rem;
+        margin: 0 auto; /* Center the box */
+        height: auto; /* Allow height to adjust naturally */
+        border-radius: 2rem;
+        border: 2px solid var(--purple);
+    }
+
+    .content-container {
+        flex: 1;
+        padding: 2rem;
+        padding-left: 3rem;
+        margin-left: 0;
+        color: white;
+    }
+
+    .content-container h2 {
+        font-size: 3.5rem; /* Larger font size */
+        margin-bottom: 2rem;
+        color: white;
+    }
+
+    .content-container ul {
+        font-size: 3.5rem; /* Larger list font size */
+        line-height: 2.8rem;
+    }
+
+    /* Image Section */
+    .image-container {
+        width: 55%; /* Increased image width */
+        height: 80rem; /* Increased image height */
+        padding-top: 5rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        background-color: var(--light-gray);
+        border-radius: 1rem;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .fade-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .caption {
+        width: 100%;
+        text-align: center;
+        background-color: var(--light-gray);
+        color: white;
+        font-size: 1.5rem; /* Increased caption font size */
+        font-weight: bold;
+        padding: 1.5rem;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    /* Arrow buttons */
+    .arrow {
+        width: 4rem; /* Increased arrow size */
+        height: 4rem;
+        font-size: 2rem;
+    }
+
+    .arrow.left {
+        left: 6rem;
+    }
+
+    .arrow.right {
+        right: 3rem;
+    }
+
+    /* Points Section */
+    .about-points {
+        margin-top: 5rem;
+    }
+
+    .point {
+        font-size: 2.5rem; /* Larger point text */
+    }
+
+    /* Quotes Section */
+    .quotes-section {
+        margin-top: 14rem; /* Increased margin */
+    }
+
+    .quote {
+        font-size: 2.5rem; /* Larger font size */
+    }
+
+    .big-quote {
+        font-size: 5rem; /* Larger quotation mark */
+    }
+
+    .another-quote-button {
+        padding: 1rem 2.2rem;
+        font-size: 1.8rem; /* Larger button font */
+    }
+}
+
+/* Media Query for screens larger than 1920px */
+@media (min-width: 1921px) {
+    /* About Page */
+    .about-page {
+        padding-top: 12rem; /* Increased top padding */
+        padding-bottom: 18rem; /* Increased bottom padding */
+    }
+
+    /* About Section */
+    .about {
+        display: flex;
+        flex-direction: row; /* Keep the layout horizontal */
+        justify-content: space-between;
+        padding: 3rem;
+        width: 85%; /* Increased width for larger screens */
+        min-height: 30vh; /* Increased minimum height */
+        gap: 4rem;
+        margin: 0 auto; /* Center the box */
+        height: auto; /* Allow height to adjust naturally */
+        border-radius: 2rem;
+        border: 2px solid var(--purple);
+    }
+
+    .content-container {
+        flex: 1;
+        padding: 2rem;
+        padding-left: 3rem;
+        margin-left: 0;
+        color: white;
+    }
+
+    .content-container h2 {
+        font-size: 3.5rem; /* Larger font size */
+        margin-bottom: 2rem;
+        color: white;
+    }
+
+    .content-container ul {
+        font-size: 3.5rem; /* Larger list font size */
+        line-height: 2.8rem;
+    }
+
+    /* Image Section */
+    .image-container {
+        width: 55%; /* Increased image width */
+        height: 80rem; /* Increased image height */
+        padding-top: 5rem;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        background-color: var(--light-gray);
+        border-radius: 1rem;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .fade-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .caption {
+        width: 100%;
+        text-align: center;
+        background-color: var(--light-gray);
+        color: white;
+        font-size: 1.5rem; /* Increased caption font size */
+        font-weight: bold;
+        padding: 1.5rem;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    /* Arrow buttons */
+    .arrow {
+        width: 4rem; /* Increased arrow size */
+        height: 4rem;
+        font-size: 2rem;
+    }
+
+    .arrow.left {
+        left: 6rem;
+    }
+
+    .arrow.right {
+        right: 3rem;
+    }
+
+    /* Points Section */
+    .about-points {
+        margin-top: 5rem;
+    }
+
+    .point {
+        font-size: 2.5rem; /* Larger point text */
+    }
+
+    /* Quotes Section */
+    .quotes-section {
+        margin-top: 14rem; /* Increased margin */
+    }
+
+    .quote {
+        font-size: 2.5rem; /* Larger font size */
+    }
+
+    .big-quote {
+        font-size: 5rem; /* Larger quotation mark */
+    }
+
+    .another-quote-button {
+        padding: 1rem 2.2rem;
+        font-size: 1.8rem; /* Larger button font */
+    }
+  }
+
+/* Media Query for screens larger than 1920px */
+@media (min-width: 1921px) {
+  /* About Section */
+  .about {
+      width: 90%; /* Keep the width of the outer box */
+      min-height: 30vh; /* Increase the height for more space */
+      padding: 4rem; /* Adjust padding to add more space inside the box */
+      display: flex; /* Use flex to align the content and image side by side */
+      justify-content: space-between; /* Ensure content and image are spaced evenly */
+  }
+
+  /* Content Section */
+  .content-container {
+      width: 50%; /* Take 50% of the outer box width */
+      padding-left: 4rem; /* Adjust the left padding */
+  }
+
+  /* Image Section */
+  .image-container {
+      width: 50%; /* Take 50% of the outer box width */
+      height: 85rem; /* Keep the height of the image container */
+  }
+
+  .image-wrapper {
+      width: 100%;
+      height: 100%;
+  }
+}
