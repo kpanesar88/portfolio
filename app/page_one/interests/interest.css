@@ -1,0 +1,136 @@
+/* Background images for items with color overlay */
+.item1 {
+    background-image: url('/images/interest/snow.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.item2 {
+    background-image: url('/images/interest/kane.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.item3 {
+    background-image: url('/images/interest/volley.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.item4 {
+    background-image: url('/images/interest/akali.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.item5 {
+    background-image: url('/images/interest/windbreaker.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container styles */
+.container-interest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Full width of the viewport */
+    min-height: 100vh; /* Full height of the viewport */
+    overflow: hidden;
+    padding-top: 10vh; /* Add padding to the top */
+}
+
+/* Accordion gallery layout */
+.accordion_gallery {
+    width: 100vw;
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+    flex-direction: row; /* Default layout is horizontal */
+    color: #fff;
+    line-height: 1.6rem;
+    transition: all 0.4s ease;
+    padding-top: 5vh; /* Add some padding at the top of the accordion gallery */
+}
+
+/* Individual item styles */
+.item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    cursor: pointer;
+    position: relative;
+    flex: 1 1 0%;
+    overflow: hidden;
+    transition: flex 0.4s, filter 0.4s;
+    filter: grayscale(1); /* Default grayscale effect */
+    height: 100%; /* Ensures the image takes up the full height of the container */
+}
+
+/* Add color overlay with a slight color tint */
+.item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay to give the image color */
+    transition: all 0.4s ease;
+}
+
+/* Add color on hover and remove grayscale */
+.item:hover {
+    flex: 3 1 0%;
+    filter: grayscale(0); /* Remove grayscale effect */
+}
+
+/* Show color overlay on hover */
+.item:hover:before {
+    background: rgba(0, 0, 0, 0.2); /* Lighter overlay on hover */
+}
+
+/* Content container */
+.content {
+    position: absolute;
+    bottom: 5vh; /* Add space from the bottom */
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+    transition: visibility 0.3s;
+}
+
+/* Show content on hover */
+.item:hover .content {
+    visibility: visible;
+}
+
+/* Title styles */
+.title {
+    font-size: 3vw; /* Font size scales with screen width */
+    color: #fff;
+    opacity: 1; /* Title is always visible */
+    transform: translateY(0);
+    transition: transform 0.3s, opacity 0.3s;
+    position: relative;
+    top: -10px; /* Position text slightly higher */
+}
+
+/* Description text styles */
+.description {
+    font-size: 1.5vw;
+    color: #fff;
+    opacity: 0; /* Hide by default */
+    transition: opacity 0.3s ease;
+    padding: 0 10px;
+    margin-top: 10px;
+}
+
+/* Make title visible on hover */
+.item:hover .title {
+    transform: translateY(0);
+}
+
+/* Make description visible on hover */
+.item:hover .description {
+    opacity: 1; /* Show the description on hover */
+}

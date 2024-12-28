@@ -6,6 +6,7 @@ import Homepage from './page_one/homepage/homepage';
 import CornerMenu from './cornermenu/cornerMenu';
 import About from './page_one/about/about';
 import Footer from './footer/footer';
+import Interests from './page_one/interests/interest';
 
 export const metadata = {
   title: 'My Next.js App',  // Customize your app's title here
@@ -26,6 +27,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         {children}
         <Homepage/>
         <About/>
+        <Interests/>
      </body>
     </html>
   );
