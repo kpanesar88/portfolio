@@ -44,12 +44,11 @@
 .accordion_gallery {
     width: 100vw;
     display: flex;
-    height: 100vh; /* Full height of the viewport */
+    height: 80vh; /* Adjusted height */
     flex-direction: row; /* Default layout is horizontal */
     color: #fff;
     line-height: 1.6rem;
     transition: all 0.4s ease;
-    padding-top: 5vh; /* Add some padding at the top of the accordion gallery */
 }
 
 /* Individual item styles */
@@ -61,9 +60,11 @@
     position: relative;
     flex: 1 1 0%;
     overflow: hidden;
-    transition: flex 0.4s, filter 0.4s;
+    transition: flex 0.4s, filter 0.4s, border 0.4s ease;
     filter: grayscale(1); /* Default grayscale effect */
-    height: 100%; /* Ensures the image takes up the full height of the container */
+    height: 100%; /* Make image take up full container height */
+    padding-top: 5vh; /* Reduced padding to make it less tall */
+    border: 2px solid transparent; /* Start with no border */
 }
 
 /* Add color overlay with a slight color tint */
@@ -82,55 +83,58 @@
 .item:hover {
     flex: 3 1 0%;
     filter: grayscale(0); /* Remove grayscale effect */
+    border: 2px solid var(--purple); /* Add pink border on hover */
 }
 
-/* Show color overlay on hover */
-.item:hover:before {
-    background: rgba(0, 0, 0, 0.2); /* Lighter overlay on hover */
-}
-
-/* Content container */
+/* Content container (black opacity banner) */
 .content {
     position: absolute;
-    bottom: 5vh; /* Add space from the bottom */
+    top: 0;
+    height: 15%; /* Reduced height for a smaller banner */
     width: 100%;
     text-align: center;
     visibility: hidden;
-    transition: visibility 0.3s;
+    transition: visibility 0.3s, height 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark opacity */
+    display: flex;
+    align-items: flex-end; /* Align content at the bottom */
+    justify-content: center; /* Center content horizontally */
 }
 
-/* Show content on hover */
+/* Show title only on hover */
 .item:hover .content {
-    visibility: visible;
+    visibility: visible; /* Title visible only when item is hovered */
+}
+
+/* Adjusted input box styles for the bottom text */
+.input-box {
+    position: absolute;
+    bottom: 5%; /* Position text box near the bottom */
+    left: 50%; /* Center the text box horizontally */
+    transform: translateX(-50%); /* Center it precisely */
+    padding: 15px 30px; /* Add padding for space */
+    visibility: hidden; /* Hidden by default */
+    background-color: rgba(0, 0, 0, 0.4); /* Black opacity behind the text box */
+    color: #fff;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.5rem; /* Increase text size */
+    max-width: 90%; /* Make the box wider */
+    text-align: center; /* Center-align text */
+    line-height: 1.8; /* Add line spacing */
+}
+
+/* Show the bottom text only on hover */
+.item:hover .input-box {
+    visibility: visible; /* Show on hover */
 }
 
 /* Title styles */
 .title {
     font-size: 3vw; /* Font size scales with screen width */
-    color: #fff;
-    opacity: 1; /* Title is always visible */
-    transform: translateY(0);
-    transition: transform 0.3s, opacity 0.3s;
+    color: var(--purple); /* Change text color to purple */
+    z-index: 1; /* Ensure it appears above the background */
     position: relative;
-    top: -10px; /* Position text slightly higher */
-}
-
-/* Description text styles */
-.description {
-    font-size: 1.5vw;
-    color: #fff;
-    opacity: 0; /* Hide by default */
-    transition: opacity 0.3s ease;
-    padding: 0 10px;
-    margin-top: 10px;
-}
-
-/* Make title visible on hover */
-.item:hover .title {
-    transform: translateY(0);
-}
-
-/* Make description visible on hover */
-.item:hover .description {
-    opacity: 1; /* Show the description on hover */
+    margin-top: 10px; /* Add space above the title */
+    padding: 10px 20px; /* Add padding around the title for breathing room */
+    line-height: 1.5; /* Increase line spacing for better readability */
 }
