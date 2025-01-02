@@ -352,27 +352,29 @@ html, body {
     font-size: 2rem;
   }
 
-    /* Disclaimer text */
+    /* 
 .disclaimer {
   position: absolute;
-  bottom: 0px; /* Keep it higher in the menu */
+  bottom: 0px; 
   left: 50%;
-  transform: translateX(-50%); /* Center the disclaimer horizontally */
-  width: 100%; /* Adjust width */
+  transform: translateX(-50%);
+  width: 100%; 
   display: flex;
   align-items: center;
-  background-color: #FFCC00; /* Yellow background */
-  color: #333; /* Dark text */
-  padding: 20px; /* Increased padding for better spacing */
-  font-size: 1.25rem; /* Larger text size */
+  background-color: #FFCC00; 
+  color: #333;
+  padding: 20px; 
+  font-size: 1.25rem; 
   font-weight: bold;
 }
 
 .warning-icon {
-  margin-right: 20px; /* More space between icon and text */
-  font-size: 3.5rem; /* Larger icon size */
-  color: #9e6b00; /* Dark yellow color for the icon */
+  margin-right: 20px; 
+  font-size: 3.5rem; 
+  color: #9e6b00;
+  
 }
+  */
 
 .resume-link {
   margin-bottom: 2rem; /* Increase this value to add more space below the Resume link */

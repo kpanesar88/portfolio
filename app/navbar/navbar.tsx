@@ -124,12 +124,14 @@ const Navbar: React.FC = () => {
           </a>
         </div>
 
-        {/* Disclaimer Text */}
+        {/* Disclaimer Text 
         <div className="disclaimer">
           <BsExclamationTriangle className="warning-icon" />
           <p>For the best experience, view on a desktop.</p>
         </div>
+        */}
       </div>
+      
 
       <hr id="navbar-divider" />
     </nav>

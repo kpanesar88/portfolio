@@ -24,7 +24,7 @@
 }
 
 .item5 {
-    background-image: url('/images/interest/windbreaker.jpg');
+    background-image: url('/images/interest/skating.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -95,7 +95,6 @@
     text-align: center;
     visibility: hidden;
     transition: visibility 0.3s, height 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.4); /* Dark opacity */
     display: flex;
     align-items: flex-end; /* Align content at the bottom */
     justify-content: center; /* Center content horizontally */
@@ -106,35 +105,93 @@
     visibility: visible; /* Title visible only when item is hovered */
 }
 
-/* Adjusted input box styles for the bottom text */
-.input-box {
-    position: absolute;
-    bottom: 5%; /* Position text box near the bottom */
-    left: 50%; /* Center the text box horizontally */
-    transform: translateX(-50%); /* Center it precisely */
-    padding: 15px 30px; /* Add padding for space */
-    visibility: hidden; /* Hidden by default */
-    background-color: rgba(0, 0, 0, 0.4); /* Black opacity behind the text box */
-    color: #fff;
-    border-radius: 10px; /* Rounded corners */
-    font-size: 1.5rem; /* Increase text size */
-    max-width: 90%; /* Make the box wider */
-    text-align: center; /* Center-align text */
-    line-height: 1.8; /* Add line spacing */
-}
-
-/* Show the bottom text only on hover */
-.item:hover .input-box {
-    visibility: visible; /* Show on hover */
-}
-
-/* Title styles */
 .title {
     font-size: 3vw; /* Font size scales with screen width */
-    color: var(--purple); /* Change text color to purple */
+    color: var(--purple); /* Purple text color */
     z-index: 1; /* Ensure it appears above the background */
     position: relative;
     margin-top: 10px; /* Add space above the title */
     padding: 10px 20px; /* Add padding around the title for breathing room */
     line-height: 1.5; /* Increase line spacing for better readability */
+    text-shadow: 
+        -1px -1px 0 #000, /* Top-left shadow */
+        1px -1px 0 #000,  /* Top-right shadow */
+        -1px 1px 0 #000,  /* Bottom-left shadow */
+        1px 1px 0 #000;   /* Bottom-right shadow */
+}
+
+@media (max-width: 768px) {
+    /* Container for all images */
+    .accordion_gallery {
+        display: flex;
+        flex-direction: column; /* Stack images vertically */
+        gap: 0; /* No space between items */
+        width: 100vw; /* Full viewport width */
+        height: 100vh; /* Full viewport height */
+        padding: 0; /* Remove any padding */
+        margin: 0; /* Remove any margin */
+        overflow: hidden; /* Hide any overflow to prevent gaps */
+    }
+
+    /* Individual item styles */
+    .item {
+        width: 100%; /* Full width for each image */
+        height: 100%; /* Full height of the container */
+        aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+        position: relative;
+        overflow: hidden; /* Prevent content from overflowing */
+        margin: 0; /* No margin between items */
+    }
+
+    /* Image settings */
+    .item img {
+        width: 100%; /* Ensure image takes the full width */
+        height: 100%; /* Ensure image takes the full height */
+        object-fit: cover; /* Fill the container without distorting */
+        object-position: top; /* Show the top half of the image */
+    }
+
+    /* Content (title) in the middle of the item */
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the text */
+        width: 100%;
+        text-align: center;
+        visibility: hidden; /* Hidden by default */
+        opacity: 0; /* Hidden by default */
+        transition: visibility 0.3s, opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Title styling */
+    .title {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+        color: var(--purple); /* Text color */
+        text-shadow: 
+            -1px -1px 0 #000, /* Top-left shadow */
+            1px -1px 0 #000,  /* Top-right shadow */
+            -1px 1px 0 #000,  /* Bottom-left shadow */
+            1px 1px 0 #000;   /* Bottom-right shadow */
+    }
+
+    /* On hover, expand the image and show title */
+    .item:hover {
+        height: 120%; /* Make the hovered item bigger */
+        transform: scaleY(1.2); /* Increase height */
+    }
+
+    .item:hover .content {
+        visibility: visible;
+        opacity: 1; /* Show content */
+    }
+
+    /* Squish the other items when one is hovered */
+    .accordion_gallery .item:not(:hover) {
+        transform: scaleY(0.9); /* Reduce size of non-hovered items */
+        transition: all 0.3s ease;
+    }
 }
