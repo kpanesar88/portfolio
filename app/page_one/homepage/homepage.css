@@ -1,4 +1,6 @@
-/* Ensure section fills the viewport and aligns content to the left */
+@import '../../static.css';
+
+
 section {
     min-height: 100vh;
     padding: 0; /* No padding */

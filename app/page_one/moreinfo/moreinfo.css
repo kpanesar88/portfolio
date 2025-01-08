@@ -1,0 +1,68 @@
+@import '../../static.css';
+
+/* Main container */
+.moreinfo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%; /* 90% of the viewport width */
+  max-width: 1200px;
+  height: 50vh; /* Use 50% of the viewport height */
+  gap: 10rem; /* Space between left and right sides */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  position: relative; /* Position relative to the closest positioned ancestor */
+  
+  /* Adjust the vertical positioning */
+  top: 40rem; /* Move it up slightly (adjust from 50%) */
+  bottom: 50rem;
+  left: 50%;
+  transform: translate(-50%, -50%); /* This will keep it horizontally centered */
+
+  /* Add more padding for top and bottom */
+  padding-top: 4rem; /* More padding at the top */
+  padding-bottom: 4rem; /* More padding at the bottom */
+  
+  /* Add margin to the top and bottom to increase space between sections */
+  margin-top: 5rem; /* Space between the current and previous section */
+  margin-bottom: 30rem; /* Space between the current and next section (same as top) */
+}
+
+
+/* Left Section */
+.moreinfo-left {
+  flex: 1;
+  text-align: center;
+  font-size: 2.5vw; /* Font size relative to the viewport width */
+}
+
+.moreinfo-left h1 {
+  margin: 0;
+  color: #333;
+}
+
+/* Right Section */
+.moreinfo-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Gap between the cards */
+  align-items: center; /* Center the cards horizontally */
+}
+
+/* Card Styles */
+.card {
+  width: 80%; /* Card width relative to the container */
+  max-width: 350px; /* Max card width */
+  height: 20vh; /* Card height relative to the viewport height */
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5vw; /* Font size relative to the viewport width */
+  color: #555;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

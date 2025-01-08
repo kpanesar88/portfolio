@@ -1,4 +1,6 @@
-/* Background images for items with color overlay */
+@import '../../static.css';
+
+
 .item1 {
     background-image: url('/images/interest/snow.jpg');
     background-size: cover;
