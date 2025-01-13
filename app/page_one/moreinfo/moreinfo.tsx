@@ -11,9 +11,21 @@ const MoreInfo: React.FC = () => {
 
       {/* Right Side Cards */}
       <div className="moreinfo-right">
-        <div className="card">Card 1</div>
-        <div className="card">Card 2</div>
-        <div className="card">Card 3</div>
+        <div className="card">
+        <i className="bi bi-tools" style={{ marginRight: '15px' , fontSize: '25px' }}></i>
+        Skills
+        </div>
+
+        <div className="card">
+        <i className="bi bi-code-slash" style={{ marginRight: '15px' , fontSize: '25px' }}></i>
+        Projects
+        </div>
+        
+        <div className="card">
+            <i className="bi bi-chat-square-text"style={{ marginRight: '15px' , fontSize: '23px' }}></i>
+        Contact
+        </div>
+
       </div>
     </div>
   );

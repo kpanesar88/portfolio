@@ -2,44 +2,47 @@
 
 /* Main container */
 .moreinfo-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%; /* 90% of the viewport width */
-  max-width: 1200px;
-  height: 50vh; /* Use 50% of the viewport height */
-  gap: 10rem; /* Space between left and right sides */
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  position: relative; /* Position relative to the closest positioned ancestor */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* 90% of the viewport width */
+    max-width: 1200px;
+    height: 50vh; /* Use 50% of the viewport height */
+    gap: 10rem; /* Space between left and right sides */
+    background-color: var(--black); /* Set background color to black */
+    border-radius: 8px;
+    border: 4px solid var(--purple); /* Purple outer border */
+    position: relative; /* Position relative to the closest positioned ancestor */
+    
+    /* Adjust the vertical positioning */
+    top: 40rem; /* Move it up slightly (adjust from 50%) */
+    bottom: 50rem;
+    left: 50%;
+    transform: translate(-50%, -50%); /* This will keep it horizontally centered */
   
-  /* Adjust the vertical positioning */
-  top: 40rem; /* Move it up slightly (adjust from 50%) */
-  bottom: 50rem;
-  left: 50%;
-  transform: translate(-50%, -50%); /* This will keep it horizontally centered */
-
-  /* Add more padding for top and bottom */
-  padding-top: 4rem; /* More padding at the top */
-  padding-bottom: 4rem; /* More padding at the bottom */
-  
-  /* Add margin to the top and bottom to increase space between sections */
-  margin-top: 5rem; /* Space between the current and previous section */
-  margin-bottom: 30rem; /* Space between the current and next section (same as top) */
+    /* Add more padding for top and bottom */
+    padding-top: 4rem; /* More padding at the top */
+    padding-bottom: 4rem; /* More padding at the bottom */
+    
+    /* Add margin to the top and bottom to increase space between sections */
+    margin-top: 5rem; /* Space between the current and previous section */
+    margin-bottom: 30rem;/* Space between the current and next section (same as top) */
+    color:  #C5C6C7;
 }
-
-
+ 
+  
+  
 /* Left Section */
 .moreinfo-left {
   flex: 1;
-  text-align: center;
+  text-align: left;
+  padding-left: 10rem;
   font-size: 2.5vw; /* Font size relative to the viewport width */
 }
 
 .moreinfo-left h1 {
   margin: 0;
-  color: #333;
+  color: var(--lightgray);
 }
 
 /* Right Section */
@@ -54,15 +57,40 @@
 /* Card Styles */
 .card {
   width: 80%; /* Card width relative to the container */
-  max-width: 350px; /* Max card width */
+  max-width: 700px; /* Max card width */
   height: 20vh; /* Card height relative to the viewport height */
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  background-color: var(--black);
+  border: 5px solid var(--purple);
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5vw; /* Font size relative to the viewport width */
-  color: #555;
+  color: var(--lightgray);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Card hover effect */
+.card {
+  width: 80%; /* Card width relative to the container */
+  max-width: 700px; /* Max card width */
+  height: 20vh; /* Card height relative to the viewport height */
+  background-color: var(--black);
+  border: 5px solid var(--purple);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw; /* Font size relative to the viewport width */
+  color: var(--lightgray);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift the card slightly */
+  box-shadow: 0 10px 20px rgba(128, 0, 128, 0.5); /* Add a purple glow effect */
+  background-color: var(--purple); /* Change background color on hover */
+  color: var(--black); /* Change text color */
+}
+
