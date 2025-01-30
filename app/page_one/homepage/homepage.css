@@ -28,7 +28,7 @@ section {
     text-align: left;
     justify-content: center;
     margin-top: 3rem;
-    padding-left: 40rem;
+    padding-left: 30rem;
     flex:1;
 }
 
@@ -41,7 +41,7 @@ span {
     flex: 1;
     display: flex;
     justify-content: center;
-    padding-right: 10vw;
+    padding-right: 13vw;
 }
 
 .home-img img {
