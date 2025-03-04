@@ -114,7 +114,7 @@ span {
     box-shadow: 0 0 2.5rem var(--red); /* Red shadow */
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: var(--black); /* White text */
+    color: black; /* White text */
     border: 0.5rem solid transparent;
     letter-spacing: 0.1rem;
     font-weight: 600;
@@ -138,13 +138,13 @@ span {
 }  
 
 
-
 .btn-group a:nth-of-type(2) {
     background-color: var(--purple); /* Black background */
-    color: var(--lightgray); /* White text */
+    color: black; /* Set text color to black */
     border: 0.5rem solid transparent;
     box-shadow: 0 0 0.5rem transparent;
 }
+
 
 .btn-group a:nth-of-type(2):hover {
     background-color: var(--lightgray); /* Red background on hover */

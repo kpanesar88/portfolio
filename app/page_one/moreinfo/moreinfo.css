@@ -5,10 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%; /* 90% of the viewport width */
+    width: 60%; /* 90% of the viewport width */
     max-width: 1200px;
     height: 50vh; /* Use 50% of the viewport height */
-    gap: 10rem; /* Space between left and right sides */
+    gap: 5rem; /* Space between left and right sides */
     background-color: var(--black); /* Set background color to black */
     border-radius: 8px;
     border: 4px solid var(--purple); /* Purple outer border */
@@ -103,7 +103,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1rem; /* Adjust space below title */
+    margin-top: 2rem; /* Adjust space below title */
     padding-bottom: 4.5rem;
   }
 
@@ -115,12 +115,13 @@
     background-color: var(--purple); /* Purple fill */
     color: var(--black);
     margin-bottom: 1.5rem; /* Increase space between cards */
-    display: block; /* Ensure cards are always visible */
-    opacity: 1; /* Make cards fully visible */
-    padding: 1.5rem; /* Increase padding to make cards bigger */
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     border-radius: 10px; /* Optionally, make the corners rounded */
     transition: none; /* Disable transition effect */
-  }
+}
+
   /* Card hover effect */
   .card:hover {
     transform: none; /* Lift the card slightly */
