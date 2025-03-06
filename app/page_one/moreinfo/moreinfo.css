@@ -1,163 +1,73 @@
-@import '../../static.css';
-
-/* Main container */
-.moreinfo-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60%; /* 90% of the viewport width */
-    max-width: 1200px;
-    height: 50vh; /* Use 50% of the viewport height */
-    gap: 5rem; /* Space between left and right sides */
-    background-color: var(--black); /* Set background color to black */
-    border-radius: 8px;
-    border: 4px solid var(--purple); /* Purple outer border */
-    position: relative; /* Position relative to the closest positioned ancestor */
-    
-    /* Adjust the vertical positioning */
-    top: 40rem; /* Move it up slightly (adjust from 50%) */
-    bottom: 50rem;
-    left: 50%;
-    transform: translate(-50%, -50%); /* This will keep it horizontally centered */
-  
-    /* Add more padding for top and bottom */
-    padding-top: 4rem; /* More padding at the top */
-    padding-bottom: 4rem; /* More padding at the bottom */
-    
-    /* Add margin to the top and bottom to increase space between sections */
-    margin-top: 5rem; /* Space between the current and previous section */
-    margin-bottom: 30rem;/* Space between the current and next section (same as top) */
-    color:  #C5C6C7;
-}
- 
-/* Left Section */
-.moreinfo-left {
-  flex: 1;
-  text-align: left;
-  padding-left: 10rem;
-  font-size: 2.5vw; /* Font size relative to the viewport width */
-}
-
-.moreinfo-left h1 {
-  margin: 0;
-  color: var(--lightgray);
-}
-
-/* Right Section */
-.moreinfo-right {
-  flex: 1;
+.more-info-container {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh; /* Full page height */
+  background: linear-gradient(135deg, var(--black), var(--darkblack)); /* Black to black gradient */
+  color: var(--lightgray); /* Light gray text */
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Gap between the cards */
-  align-items: center; /* Center the cards horizontally */
+  justify-content: center;
+  align-items: center;
 }
 
-/* Card Styles */
+.more-info-container h1 {
+  font-size: 6rem; /* Very large text size */
+  margin-bottom: 60px; /* Increased margin for spacing */
+  color: var(--purple); /* Purple heading */
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+  font-weight: bold; /* Bold text */
+  letter-spacing: 2px; /* Slightly spaced letters */
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px; /* Limit container width */
+}
+
 .card {
-  width: 80%; /* Card width relative to the container */
-  max-width: 700px; /* Max card width */
-  height: 20vh; /* Card height relative to the viewport height */
-  background-color: var(--black);
-  border: 5px solid var(--purple);
-  border-radius: 15px;
+  background-color: rgba(18, 18, 18, 0.8); /* Semi-transparent black */
+  border: 2px solid var(--purple); /* Purple border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 40px 20px; /* Increased padding for emphasis */
+  width: 30%;
+  margin: 10px;
+  box-shadow: 0 4px 15px rgba(187, 134, 252, 0.2); /* Purple shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  color: var(--lightgray); /* Light gray text */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5vw; /* Font size relative to the viewport width */
-  color: var(--lightgray);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  text-align: center;
 }
 
-/* Card hover effect */
 .card:hover {
-  transform: translateY(-10px); /* Lift the card slightly */
-  box-shadow: 0 10px 20px rgba(128, 0, 128, 0.5); /* Add a purple glow effect */
-  background-color: var(--purple); /* Change background color on hover */
-  color: var(--black); /* Change text color */
+  transform: translateY(-10px) scale(1.05); /* Lift and scale up on hover */
+  box-shadow: 0 8px 25px rgba(187, 134, 252, 0.4); /* Stronger shadow on hover */
+  background-color: rgba(18, 18, 18, 0.9); /* Slightly darker background on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 767px) {
-  .moreinfo-container {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    gap: 2rem;
-    text-align: center;
-    border: none; /* Remove pink border */
-    background-color: transparent;
-    margin-bottom: 4rem;
-    position: relative; /* Allow absolute positioning inside */
-  }
-
-  .moreinfo-left {
-    text-align: center;
-    font-size: 5vw; /* Make title bigger */
-    width: 100%; /* Take up full width */
-    padding-left: 0;
-    margin-bottom: 2rem; /* Add space between title and cards */
-  }
-
-  .moreinfo-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem; /* Adjust space below title */
-    padding-bottom: 4.5rem;
-  }
-
-  .card {
-    width: 50vw; /* Max width */
-    height: 9rem;
-    font-size: 6vw; /* Increase font size for bigger text */
-    border: 7px solid var(--purple); /* Make border thicker */
-    background-color: var(--purple); /* Purple fill */
-    color: var(--black);
-    margin-bottom: 1.5rem; /* Increase space between cards */
-    display: flex; /* Use Flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    border-radius: 10px; /* Optionally, make the corners rounded */
-    transition: none; /* Disable transition effect */
+.card h2 {
+  font-size: 2rem; /* Larger font size for emphasis */
+  color: var(--purple); /* Purple title */
+  transition: color 0.3s ease;
 }
 
-  /* Card hover effect */
-  .card:hover {
-    transform: none; /* Lift the card slightly */
+.card:hover h2 {
+  color: var(--lightgray); /* Change text color on hover */
 }
 
-}
-
-@media (min-width: 768px) and (max-width: 1279px) {
-  .moreinfo-container {
-    width: 95%;
-    gap: 5rem;
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  .moreinfo-left {
-    font-size: 3vw;
-  }
-  .card {
-    width: 85%;
-    font-size: 2vw;
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1920px) {
-  .moreinfo-container {
-    width: 90%;
-    max-width: 1400px;
-  }
-  .moreinfo-left {
-    font-size: 2.5vw;
-  }
-}
-
-@media (min-width: 1921px) {
-  .moreinfo-container {
-    max-width: 1600px;
-  }
-  .moreinfo-left {
-    font-size: 2vw;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
