@@ -1,6 +1,5 @@
 'use client';
 
-
 import React, { useState, useEffect } from "react";
 import "./about.css";
 
@@ -44,7 +43,13 @@ const About: React.FC = () => {
     <div className="about-page">
       <section className="about">
         <div className="image-container">
-          <button className="arrow left" onClick={() => setCurrentImage((prevIndex) => (prevIndex - 1 + images.length) % images.length)}>&lt;</button>
+          <button
+            className="arrow left"
+            onClick={() => setCurrentImage((prevIndex) => (prevIndex - 1 + images.length) % images.length)}
+            aria-label="Previous Image"
+          >
+            &lt;
+          </button>
           <div className="image-wrapper">
             <img
               src={images[currentImage].src}
@@ -55,11 +60,17 @@ const About: React.FC = () => {
           <div className="caption">
             <p>{images[currentImage].text}</p>
           </div>
-          <button className="arrow right" onClick={() => setCurrentImage((prevIndex) => (prevIndex + 1) % images.length)}>&gt;</button>
+          <button
+            className="arrow right"
+            onClick={() => setCurrentImage((prevIndex) => (prevIndex + 1) % images.length)}
+            aria-label="Next Image"
+          >
+            &gt;
+          </button>
         </div>
 
         <div className="content-container">
-          <h2>About Me</h2>
+          <h2></h2>
           <div className="about-points">
             <div className="point">
               <span>📍</span>
@@ -81,21 +92,22 @@ const About: React.FC = () => {
               <span>🚀</span>
               <p>Ready to take on new roles and shape the future of tech.</p>
             </div>
-            
-            {/* Quotes Section */}
-            <div className="quotes-section">
-              <div className="quote">
-                <span className="big-quote">“</span>
-                <p>"{quotes[currentQuote].text}" — {quotes[currentQuote].author}</p>
-              </div>
+          </div>
 
-              {/* "Another One" Button */}
-              <button className="another-quote-button" onClick={() => setCurrentQuote((prevIndex) => (prevIndex + 1) % quotes.length)}>
-                Randomize
-              </button>
+          {/* Quotes Section */}
+          <div className="quotes-section">
+            <div className="quote">
+              <span className="big-quote">“</span>
+              <p>"{quotes[currentQuote].text}" — {quotes[currentQuote].author}</p>
             </div>
-            
-           
+
+            {/* "Randomize" Button */}
+            <button
+              className="another-quote-button"
+              onClick={() => setCurrentQuote((prevIndex) => (prevIndex + 1) % quotes.length)}
+            >
+              Randomize
+            </button>
           </div>
         </div>
       </section>

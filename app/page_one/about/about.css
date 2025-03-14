@@ -1,26 +1,8 @@
 @import '../../static.css';
 
-
 .about-page {
-    padding-top:13rem; /* Space at the top of the page */
+    padding-top: 13rem; /* Space at the top of the page */
     padding-bottom: 25rem; /* Space at the bottom of the page */
-  }
-
-  
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3rem;
-    background-color: var(--white);
-    min-height: 10vh; /* Set a smaller height */
-    gap: 4rem;
-    border: 2px solid var(--purple);
-    border-radius: 2rem;
-    width: 75%;
-    height: auto;
-    margin: 0 auto;
-    padding-bottom: 10rem;
 }
 
 .content-container {
@@ -34,9 +16,7 @@
     margin-left: 10rem; /* Add margin to push the content further to the right */
 }
 
-
 .content-container h2 {
-    padding-top: 8rem;
     font-size: 3.5rem;
     margin-bottom: 2rem;
     color: white; /* Make h2 text white */
@@ -44,15 +24,13 @@
 
 .content-container ul {
     list-style: disc;
-    margin-left: 2rem;
+    margin-left: 3rem;
     color: white; /* Make list text white */
     font-size: 5rem;
     line-height: 3rem;
 }
 
-
 .image-container {
-    padding-top: 8rem;
     width: 75rem;
     height: 80rem;
     position: relative;
@@ -138,9 +116,9 @@
 }
 
 .point p {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin: 0;
-    padding-left: 3rem;
+    padding-left: 3.5rem;
     flex-grow: 1;
 }
 
@@ -150,7 +128,7 @@
 
 /* Quotes Section */
 .quotes-section {
-  margin-top: 12rem; /* Adjust the top margin to control the gap */
+  margin-top: 6rem; /* Reduced from 12rem to 6rem */
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Aligns content to the left */
@@ -191,16 +169,15 @@
   outline: none;
 }
 
-
-  /* Keyframes for bouncing effect */
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-2rem); /* Larger bounce */
-    }
+/* Keyframes for bouncing effect */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-2rem); /* Larger bounce */
+  }
+}
 
 @media (max-width: 767px) {
     .about {
@@ -214,6 +191,8 @@
       margin: 0 auto;
       box-sizing: border-box;
       overflow-x: hidden;
+      border: 2px solid var(--purple); /* Add pink border for mobile */
+      border-radius: 2rem; /* Consistent border radius */
     }
   
     .image-container {
@@ -312,8 +291,7 @@
       font-size: 3.5rem;
       color: white;
       text-align: center; /* Centers the text horizontally */
-  }
-  
+    }
   
     .content-container ul {
       font-size: 3.5vw;
@@ -321,7 +299,7 @@
       margin-left: 0;
       padding-left: 0;
     }
-  }
+}
 
 @media (min-width: 768px) and (max-width: 1279px) {
     .about {
@@ -331,6 +309,8 @@
         margin: 2rem auto;
         flex-direction: column;
         align-items: center;
+        border: 2px solid var(--purple); /* Add pink border for tablets */
+        border-radius: 2rem; /* Consistent border radius */
     }
 
     .content-container {
@@ -344,7 +324,8 @@
       font-size: 4rem; /* Increase font size */
       margin-bottom: 0.8rem;
       color: var(--light-gray); /* Change text color to --light-gray */
-  }
+    }
+
     /* Centering the bullet point container while keeping text left-aligned */
     .about-points {
         display: flex;
@@ -471,13 +452,14 @@
       flex-direction: row; /* Keep the layout horizontal */
       justify-content: space-between;
       padding: 2rem;
-      width: 80%; /* Adjusted width to be responsive */
-      min-height: 25vh;
+      width: 90%; /* Adjusted width to be responsive */
+      min-height: 4rem;
       gap: 3rem;
       margin: 0 auto; /* Center the box */
       height: auto; /* Allow height to adjust naturally */
       border-radius: 2rem;
-      border: 2px solid var(--purple);
+      border: 2px solid var(--purple); /* Ensure pink border for laptops/desktops */
+      border-radius: 2rem; /* Consistent border radius */
   }
 
   .content-container {
@@ -563,7 +545,7 @@
 
   /* Quotes Section */
   .quotes-section {
-      margin-top: 10rem;
+      margin-top: 6rem; /* Reduced from 10rem to 6rem */
   }
 
   .quote {
@@ -580,7 +562,6 @@
   }
 }
 
-
 /* Media Query for screens larger than 1920px */
 @media (min-width: 1921px) {
   /* About Section */
@@ -590,6 +571,8 @@
       padding: 4rem; /* Adjust padding to add more space inside the box */
       display: flex; /* Use flex to align the content and image side by side */
       justify-content: space-between; /* Ensure content and image are spaced evenly */
+      border: 2px solid var(--purple); /* Ensure pink border for large desktops */
+      border-radius: 2rem; /* Consistent border radius */
   }
 
   /* Content Section */

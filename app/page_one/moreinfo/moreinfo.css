@@ -71,3 +71,54 @@
     transform: translateY(0);
   }
 }
+
+
+/* Media Queries for Responsive Design */
+
+/* For screens smaller than 1200px (e.g., tablets) */
+@media (max-width: 1200px) {
+  .more-info-container h1 {
+    font-size: 4.5rem; /* Slightly smaller heading */
+    margin-bottom: 40px; /* Reduced margin */
+  }
+
+  .card {
+    width: 45%; /* Two cards per row */
+    padding: 30px 15px; /* Slightly reduced padding */
+  }
+}
+
+/* For screens smaller than 768px (e.g., smaller tablets) */
+@media (max-width: 768px) {
+  .more-info-container h1 {
+    font-size: 3.5rem; /* Smaller heading */
+    margin-bottom: 30px; /* Further reduced margin */
+  }
+
+  .card {
+    width: 80%; /* One card per row */
+    margin: 10px auto; /* Center cards */
+    padding: 20px 10px; /* Smaller padding */
+  }
+
+  .card h2 {
+    font-size: 1.75rem; /* Smaller font size for card titles */
+  }
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .more-info-container h1 {
+    font-size: 2.5rem; /* Even smaller heading */
+    margin-bottom: 20px; /* Minimal margin */
+  }
+
+  .card {
+    width: 90%; /* Slightly narrower cards */
+    padding: 15px 10px; /* Minimal padding */
+  }
+
+  .card h2 {
+    font-size: 1.5rem; /* Smaller font size for card titles */
+  }
+}
