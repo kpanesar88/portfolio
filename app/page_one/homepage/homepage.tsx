@@ -101,14 +101,6 @@ const Homepage: React.FC<HomepageProps> = () => {
             <a href="#contact" className="btn">Contact</a>
           </div>
 
-          {/* Scroll Down Section */}
-          <div 
-            className="scroll-down" 
-            onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
-          >
-            <i className="bx bx-chevron-down"></i>
-            <span>#ABOUTME</span>
-          </div>
         </section>
       ) : (
         // Content for larger screen sizes (isMobile: false)
@@ -153,10 +145,10 @@ const Homepage: React.FC<HomepageProps> = () => {
           <div className="home-img">
             <img src="/images/homepage/karan.jpg" alt="Profile Picture" />
           </div>
-
-        
-
         </section>
+          
+
+
       )}
     </div>
   );

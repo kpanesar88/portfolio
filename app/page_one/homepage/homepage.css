@@ -28,7 +28,6 @@ section {
     text-align: left;
     justify-content: center;
     margin-top: 3rem;
-    padding-left: 30rem;
     flex:1;
 }
 
@@ -41,7 +40,7 @@ span {
     flex: 1;
     display: flex;
     justify-content: center;
-    padding-right: 13vw;
+    padding-right: 5rem;
 }
 
 .home-img img {
@@ -129,12 +128,12 @@ span {
 
 .btn-group {
     display: flex;
-    gap: 3rem;
+    gap: 1.5rem;
     align-items: center;
     justify-content: flex-start; /* Align buttons to the left */
-    padding-top: 3rem; /* Add space from the top */
     position: relative; /* Allow for positioning relative to the section */
     width: 100%; /* Ensure it spans the width of the section */
+    margin-left: 0;
 }  
 
 
@@ -159,16 +158,41 @@ span {
     color: var(--lightgray); /* Black text */
 }
 
-/* Keyframes for bouncing effect */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
+.scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffffff; /* Change this to your preferred text color */
+    font-size: px;
+    text-decoration: none;
+    margin-top: 20px; /* Adjust this to control spacing from the content above */
+    margin-bottom: 20px; /* Adjust this to control spacing from the content below */
+  }
+  
+  .scroll-down i {
+    font-size: 24px; /* Adjust the size of the icon */
+    margin-bottom: 5px; /* Space between the icon and the text */
+    animation: bounce 2s infinite; /* Optional: Add a bounce animation */
+  }
+  
+  .scroll-down span {
+    font-size: 14px; /* Adjust the size of the text */
+  }
+  
+  /* Optional: Add a bounce animation */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
     }
-    50% {
-        transform: translateY(-2rem); /* Larger bounce */
+    40% {
+      transform: translateY(-10px);
     }
-}
-
+    60% {
+      transform: translateY(-5px);
+    }
+  }
 
 
 @media (min-width: 0px) and (max-width: 768px) {

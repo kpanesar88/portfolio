@@ -8,6 +8,7 @@ import About from './page_one/about/about';
 import Footer from './footer/footer';
 import Interests from './page_one/interests/interest';
 import MoreInfo from './page_one/moreinfo/moreinfo';
+import SectionDivider from './sectiondivider/divider';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -20,7 +21,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <body>
         <Navbar />
         <Homepage/>
+        <SectionDivider text="$WHOAMI"/>
         <About/>
+        <SectionDivider text="$INTERESTS"/>
         <Interests/>
         <MoreInfo/>
         <Footer/>
