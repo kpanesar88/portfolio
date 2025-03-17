@@ -6,25 +6,25 @@ import "./about.css";
 const About: React.FC = () => {
   const images = [
     {
-      src: '/images/about/sampleimg1.jpg',
-      text: 'This is the description for image 1.',
+      src: '/images/about/ctrlhackdel.jpg',
+      text: 'CtrlHackDel 2024 @ YorkU.',
     },
     {
-      src: '/images/about/sampleimg2.jpg',
-      text: 'This is the description for image 2.',
+      src: '/images/about/hackthehill.jpg',
+      text: 'Hack the Hill 2024 @ uOttawa.',
     },
     {
-      src: '/images/about/sampleimg3.jpg',
-      text: 'This is the description for image 3.',
+      src: '/images/about/starterhacks.png',
+      text: 'StarterHacks 2024 @ uWaterloo.',
     },
   ];
 
   const quotes = [
-    { text: "The only limit to our realization of tomorrow is our doubts of today.", author: "Franklin D. Roosevelt" },
-    { text: "Success is not final, failure is not fatal: It is the courage to continue that counts.", author: "Winston Churchill" },
-    { text: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt" },
-    { text: "It always seems impossible until it’s done.", author: "Nelson Mandela" },
-    { text: "Do not go where the path may lead, go instead where there is no path and leave a trail.", author: "Ralph Waldo Emerson" },
+    { text: "No great invention ever came without sacrifice.", author: "Jayce (Arcane)" },
+    { text: "The grind never stops.", author: "Sett" },
+    { text: "It ain't about how hard you can hit. It's about how hard you can get hit and keep moving forward.", author: "Rocky Balboa" },
+    { text: "Eighty percent of success is showing up.", author: "Woody Allen" },
+    { text: "It is never too late to be what you might have been.", author: "George Eliot" },
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
