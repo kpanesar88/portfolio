@@ -17,6 +17,14 @@ const About: React.FC = () => {
       src: '/images/about/starterhacks.png',
       text: 'StarterHacks 2024 @ uWaterloo.',
     },
+    {
+      src: '/images/about/cat1.png',
+      text: 'My Cat!.',
+    },
+    {
+      src: '/images/about/cat2.png',
+      text: 'My Cat x2!',
+    },
   ];
 
   const quotes = [

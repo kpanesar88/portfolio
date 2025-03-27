@@ -219,7 +219,7 @@ span {
 
     .home-img {
         order: 2;              
-        padding-left: 11vw;
+        padding-left: 5rem;
         padding-bottom: 10rem;
     }
   
@@ -290,10 +290,6 @@ span {
     .home-content {
         padding-left: 2rem; /* Adjust padding */
         text-align: center; /* Center text */
-    }
-
-    .home-img {
-        padding-right: 5rem;
     }
 
     .home-img img {
@@ -415,11 +411,10 @@ span {
     text-align: left;
     justify-content: center;
     margin-top: 3rem;
-    padding-left: 10rem;
+    padding-left: 5rem;
 }
 
 }
-  
   /* Standard Desktops */
 @media (min-width: 1441px) and (max-width: 1921px) {
 /* Adjust the home content */
