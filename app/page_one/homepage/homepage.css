@@ -46,7 +46,7 @@ span {
 .home-img img {
     position: relative;
     top: 3rem;
-    width: 32vw;
+    width: 55rem;
     border-radius: 50%;
     box-shadow: 0 0 10rem var(--purple); /* Red box shadow */
     cursor: pointer;
