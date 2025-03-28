@@ -1,35 +1,23 @@
 // app/layout.tsx
-
-import React from 'react';
-import Navbar from './navbar/navbar';  // Your Navbar component
-import Homepage from './page_one/homepage/homepage';
-import CornerMenu from './cornermenu/cornerMenu';
-import About from './page_one/about/about';
+import Navbar from './navbar/navbar';
 import Footer from './footer/footer';
-import Interests from './page_one/interests/interest';
-import MoreInfo from './page_one/moreinfo/moreinfo';
-import SectionDivider from './sectiondivider/divider';
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Add any additional head tags here */}
       </head>
       <body>
         <Navbar />
-        <Homepage/>
-        <SectionDivider text="$WHOAMI"/>
-        <About/>
-        <SectionDivider text="$INTERESTS"/>
-        <Interests/>
-        <MoreInfo/>
-        <Footer/>
-     </body>
+        {children} {/* Your homepage/content goes here */}
+        <Footer />
+      </body>
     </html>
   );
-};
-
-export default RootLayout;
+}
