@@ -1,6 +1,8 @@
 // app/layout.tsx
 import Navbar from './navbar/navbar';
 import Footer from './footer/footer';
+import Template from 'app/template';
+
 
 export default function RootLayout({
   children,
@@ -8,6 +10,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <Template>
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
@@ -19,5 +22,6 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
+    </Template>
   );
 }

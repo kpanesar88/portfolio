@@ -51,17 +51,17 @@ const Navbar = () => {
         {/* Navbar Links */}
         <ul id="navbar-links" className={isMenuOpen ? 'active' : ''}>
           <li>
-            <Link href="/#about" className="nav-link" onClick={closeMenu}> {/* Added #about for section link */}
+            <Link href="/about" className="nav-link" onClick={closeMenu}> {/* Added #about for section link */}
               <i className="bi bi-person" style={{ marginRight: '8px', fontSize: '23px' }}></i> 
               About
             </Link>
           </li>
           <li>
-  <Link href="/skills#skills-page" className="nav-link" onClick={closeMenu}>
-    <i className="bi bi-tools" style={{ marginRight: '15px', fontSize: '23px' }}></i>
-    Skills
-  </Link>
-</li>
+             <Link href="/skills" className="nav-link" onClick={closeMenu}>
+             <i className="bi bi-person" style={{ marginRight: '8px', fontSize: '23px' }}></i> 
+             Skills
+             </Link>
+         </li>
           <li>
             <Link href="/projects" className="nav-link" onClick={closeMenu}>
               <i className="bi bi-code-slash" style={{ marginRight: '15px', fontSize: '23px' }}></i>
@@ -95,7 +95,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div id="menu-slide" className={isMenuOpen ? 'active' : ''}>
         <Link href="/#about" onClick={closeMenu}>About</Link>
-        <Link href="/skills#skills-page" onClick={closeMenu}>Skills</Link>
+        <Link href="/skills" onClick={closeMenu}>Skills</Link>
         <Link href="/projects" onClick={closeMenu}>Projects</Link>
         <Link href="/contact" onClick={closeMenu}>Contact</Link>
         
