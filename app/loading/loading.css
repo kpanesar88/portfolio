@@ -1,39 +1,56 @@
 @import '../static.css';
 
 .loading-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--black);
-    z-index: 9999;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+  z-index: 9999;
+  /* Prevent scrolling when loader is active */
+  overflow: hidden;
+  touch-action: none;
+}
+
+.spinner {
+  width: clamp(40px, 10vw, 60px); /* Responsive sizing */
+  height: clamp(40px, 10vw, 60px);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--purple);
+  animation: spin 1s ease-in-out infinite;
+  will-change: transform; /* Optimize animation performance */
+  backface-visibility: hidden; /* Fix potential flickering */
+}
+
+/* Mobile-first media queries */
+@media (max-width: 768px) {
   .spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    border-top-color: var(--purple);
-    animation: spin 1s ease-in-out infinite;
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
   }
-  
-  .progress-bar {
-    height: 4px;
-    background: var(--purple);
-    margin: 20px 0;
-    transition: width 0.3s ease;
+}
+
+@media (min-width: 1200px) {
+  .spinner {
+    width: 60px;
+    height: 60px;
+    border-width: 5px;
   }
-  
-  .loading-text {
-    color: var(--lightgray);
-    font-family: monospace;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation: spin 2s linear infinite;
   }
-  
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
+}

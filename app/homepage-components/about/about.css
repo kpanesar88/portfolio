@@ -12,20 +12,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
+    color: var(--light-gray);
     margin-left: 10rem; /* Add margin to push the content further to the right */
 }
 
 .content-container h2 {
     font-size: 3.5rem;
     margin-bottom: 2rem;
-    color: white; /* Make h2 text white */
+    color: var(--light-gray); /* Make h2 text white */
 }
 
 .content-container ul {
     list-style: disc;
     margin-left: 3rem;
-    color: white; /* Make list text white */
+    color: var(--light-gray); /* Make list text white */
     font-size: 5rem;
     line-height: 3rem;
 }
@@ -65,7 +65,7 @@
     text-align: center;
     margin-top: 0rem;
     background-color: var(--light-gray);
-    color: white;
+    color: var(--light-gray);
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 0 0 1rem 1rem;
@@ -112,7 +112,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 1rem 0;
-    color: white; /* Make point text white */
+    color: var(--light-gray); /* Make point text white */
 }
 
 .point p {
@@ -153,7 +153,7 @@
   padding: 0.8rem 2rem;
   font-size: 1.8rem; /* Increased font size */
   background-color: var(--purple);
-  color: white;
+  color: var(--black);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -270,7 +270,7 @@
       margin-top: 1rem;
       padding: 1rem 2.5rem;
       background-color: var(--purple);
-      color: white;
+      color: var(--light-gray);
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -289,7 +289,7 @@
   
     .content-container h2 {
       font-size: 3.5rem;
-      color: white;
+      color: var(--light-gray);
       text-align: center; /* Centers the text horizontally */
     }
   
@@ -373,7 +373,7 @@
         width: 3rem;
         height: 3rem;
         font-size: 1.5rem;
-        color: white;
+        color: var(--light-gray);
         background-color: rgba(0, 0, 0, 0.5); /* Adds contrast to arrows */
         display: flex;
         justify-content: center;
@@ -416,7 +416,7 @@
         margin-top: 1rem;
         display: inline-block;
         background-color: var(--purple);
-        color: white;
+        color: var(--light-gray);
         margin: 0 auto;
         text-align: center;
     }
@@ -467,13 +467,13 @@
       padding: 2rem;
       padding-left: 3rem; /* Adjust left padding for better spacing */
       margin-left: 0; /* Remove large margin */
-      color: white;
+      color: var(--light-gray); /* Change text color to --light-gray */
   }
 
   .content-container h2 {
       font-size: 3rem; /* Adjust font size for scalability */
       margin-bottom: 2rem;
-      color: white;
+      color: var(--light-gray);
   }
 
   .content-container ul {
@@ -512,7 +512,7 @@
       width: 100%;
       text-align: center;
       background-color: var(--light-gray);
-      color: white;
+      color: var(--light-gray);
       font-size: 1.2rem;
       font-weight: bold;
       padding: 1rem;
