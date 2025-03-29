@@ -1,3 +1,5 @@
+@import '../static.css';
+
 .loading-container {
     position: fixed;
     top: 0;
@@ -7,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fffefe;
+    background: var(--black);
     z-index: 9999;
   }
   
@@ -16,19 +18,19 @@
     height: 50px;
     border: 5px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    border-top-color: #4fc3f7;
+    border-top-color: var(--purple);
     animation: spin 1s ease-in-out infinite;
   }
   
   .progress-bar {
     height: 4px;
-    background: #4fc3f7;
+    background: var(--purple);
     margin: 20px 0;
     transition: width 0.3s ease;
   }
   
   .loading-text {
-    color: white;
+    color: var(--lightgray);
     font-family: monospace;
   }
   

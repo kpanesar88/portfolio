@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import "./homepage.css"; // Import the CSS file
 import 'boxicons/css/boxicons.min.css';
 import Typed from "typed.js"; // Import Typed.js
+import Link from 'next/link';
+
 
 interface HomepageProps {}
 
@@ -72,7 +74,7 @@ const Homepage: React.FC<HomepageProps> = () => {
             <p><span className="arrow-icon">➤</span> Passionate for AI Implementation</p>
 
             <div className="social-icons">
-              <a href="https://www.linkedin.com/in/karanveer-panesar-0203a1247/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/kpanesar88/" target="_blank" rel="noopener noreferrer">
                 <i className='bx bxl-linkedin'></i>
               </a>
               <a href="https://github.com/kpanesar88" target="_blank" rel="noopener noreferrer">
@@ -98,7 +100,7 @@ const Homepage: React.FC<HomepageProps> = () => {
               rel="noopener noreferrer">
               Resume
             </a>
-            <a href="#contact" className="btn">Contact</a>
+            <Link href="/contact" className="btn">Contact</Link>
           </div>
 
         </section>
@@ -117,7 +119,7 @@ const Homepage: React.FC<HomepageProps> = () => {
             <p><span className="arrow-icon">➤</span> Learning AI to Shape the Future.</p>
 
             <div className="social-icons">
-              <a href="https://www.linkedin.com/in/karanveer-panesar-0203a1247/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/kpanesar88/" target="_blank" rel="noopener noreferrer">
                 <i className='bx bxl-linkedin'></i>
               </a>
               <a href="https://github.com/kpanesar88" target="_blank" rel="noopener noreferrer">
@@ -136,7 +138,7 @@ const Homepage: React.FC<HomepageProps> = () => {
               rel="noopener noreferrer">
               Resume
             </a>
-            <a href="#contact" className="btn">Contact</a>
+            <Link href="/contact" className="btn">Contact</Link>
           </div>
           
           </div>
@@ -147,8 +149,6 @@ const Homepage: React.FC<HomepageProps> = () => {
           </div>
         </section>
           
-
-
       )}
     </div>
   );

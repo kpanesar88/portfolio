@@ -1,7 +1,9 @@
-/* Footer Styles */
+@import '../static.css';
+
+
 .footer {
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--lightgray);
     padding: 2rem 0;
     text-align: center;
     display: flex;
