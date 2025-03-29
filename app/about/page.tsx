@@ -1,9 +1,9 @@
 // app/page.tsx
-import Homepage from 'app/homepage-components/homepage/homepage';
+import Homepage from 'app/page-components/homepage-components/homepage/homepage'
 import SectionDivider from 'app/sectiondivider/divider';
-import About from 'app/homepage-components/about/about';
-import Interests from 'app/homepage-components/interests/interest';
-import MoreInfo from 'app/homepage-components/moreinfo/moreinfo';
+import About from 'app/page-components/homepage-components/about/about';
+import Interests from 'app/page-components/homepage-components/interests/interest';
+import MoreInfo from 'app/page-components/homepage-components/moreinfo/moreinfo';
 
 export default function Home() {
   return (
