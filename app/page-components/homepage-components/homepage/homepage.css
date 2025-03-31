@@ -428,5 +428,81 @@ span {
     padding-left: 14rem;
 }
 
-
 }
+
+/* Ultra-Wide Screens (1921px and above) */
+@media (min-width: 1921px) {
+    section {
+      justify-content: center;
+      padding-left: 25rem; /* Increased left padding */
+    }
+  
+    .home {
+      max-width: 2000px; /* Increased max width */
+      padding: 4rem; /* Larger padding */
+    }
+  
+    /* Super-sized text */
+    .home-content h3 {
+      font-size: 5rem; /* 42% larger */
+      margin-bottom: 3rem;
+    }
+  
+    .home-content h1 {
+      font-size: 10rem; /* 43% larger */
+      line-height: 1.1;
+    }
+  
+    .home-content p {
+      font-size: 2.5rem; /* 67% larger */
+      max-width: 80rem;
+      line-height: 2;
+    }
+  
+    /* Massive profile image */
+    .home-img img {
+      width: 70rem; /* 27% larger */
+      height: 70rem;
+      box-shadow: 0 0 20rem var(--purple); /* More intense glow */
+    }
+  
+    /* Enlarged interactive elements */
+    .social-icons a {
+      width: 7rem;
+      height: 7rem;
+      font-size: 4rem;
+      margin: 4rem 2rem 4rem 0;
+    }
+  
+    .btn {
+      padding: 1.8rem 4rem;
+      font-size: 2.2rem;
+      border-radius: 5rem;
+    }
+  
+    .btn-group {
+      gap: 3rem;
+      padding-top: 4rem;
+    }
+  
+    /* Enhanced hover effects */
+    .home-img img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15rem var(--purple),
+                  0 0 25rem var(--purple),
+                  0 0 35rem var(--purple);
+    }
+  
+    .social-icons a:hover {
+      transform: scale(1.5) translateY(-0.5rem);
+    }
+  
+    /* Larger scroll indicator */
+    .scroll-down i {
+      font-size: 3.5rem;
+    }
+  
+    .scroll-down span {
+      font-size: 2rem;
+    }
+  }

@@ -1,0 +1,240 @@
+@import '../../../static.css';
+
+/* Main Section Styles */
+.contact-section {
+    min-height: 93vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 2rem;
+    background-color: var(--black);
+    color: var(--light-gray);
+    scroll-margin-top: 80px;
+  }
+  
+  .contact-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  @media (min-width: 768px) {
+    .contact-content {
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+    }
+  }
+  
+  /* Left Side Content */
+  .contact-left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title-wrapper {
+    margin-bottom: 3rem;
+  }
+  .section-title {
+    font-size: clamp(4rem, 10vw, 6rem);
+    font-weight: 700;
+    line-height: 1;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .contact-title-part {
+    color: #ffffff;
+  }
+  
+  .me-title-part {
+    color: #8a2be2;
+  }
+  
+  .title-line {
+    height: 6px;
+    width: 75%;
+    background: #8a2be2;
+    margin-top: 1.5rem;
+  }
+
+  /* Bullet Points List */
+  .contact-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .contact-bullets li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+    line-height: 1.6;
+    color: #b3b3b3;
+  }
+  
+  .contact-bullets li span {
+    color: #ffffff;
+    font-weight: 500;
+  }
+  
+  .contact-bullets li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #8a2be2;
+    font-size: 2.5rem;
+  }
+
+  .social-buttons {
+    display: flex;
+    gap: 1rem;
+    padding-left: 0rem;
+    padding-top: 2rem;
+    margin-top: 0.2rem;
+  }
+  
+  .social-button {
+    width: 130px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black); /* White background by default */
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    color: #8a2be2; /* Purple icon by default */
+    text-decoration: none;
+    border: 2px solid #8a2be2; /* Purple border */
+  }
+  
+  .social-button:hover {
+    background-color: #8a2be2; /* Purple background on hover */
+    color: white; /* White icon on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(138, 43, 226, 0.3);
+  }
+  
+  .social-icon {
+    font-size: 3.5rem; /* Adjusted from 3rem to fit better in the button */
+  }
+  
+  .social-icon i {
+    color: inherit; /* Makes the icon inherit the parent color */
+  }
+  
+  /* Right Side Form */
+  .contact-right {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    position: relative;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 1.1rem;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: inherit;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #8a2be2;
+    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.3);
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 160px;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    padding: 1.1rem 2rem;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--purple);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.2);
+  }
+  
+  .submit-btn:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  
+  /* Status Messages */
+  .status-message {
+    text-align: center;
+    padding: 0.9rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+  
+  .status-message.success {
+    background-color: rgba(46, 125, 50, 0.2);
+    color: #81c784;
+  }
+  
+  .status-message.error {
+    background-color: rgba(211, 47, 47, 0.2);
+    color: #e57373;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .contact-left {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .contact-right {
+    animation: fadeIn 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
