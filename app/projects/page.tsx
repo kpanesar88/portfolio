@@ -1,9 +1,9 @@
-export default function Projects() {
+import Projects from "../page-components/projectspage-components/projects";
+
+export default function ProjectsPage() {
     return (
       <div>
-        <h1>Projects</h1>
-        <p>Project 1: Portfolio Website</p>
-        <p>Project 2: E-commerce App</p>
+       <Projects />
       </div>
     );
   }

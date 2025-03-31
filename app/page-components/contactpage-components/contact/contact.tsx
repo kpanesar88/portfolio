@@ -3,8 +3,6 @@ import { useRef, useState } from 'react';
 import './contact.css';
 import 'boxicons/css/boxicons.min.css';
 
-
-
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
@@ -40,15 +38,15 @@ const Contact = () => {
     <section className="contact-section" id="contact">
       <div className="contact-container">
         <div className="contact-content">
-          {/* Left Side */}
+          {/* Left Side - Always Visible */}
           <div className="contact-left">
-          <div className="title-wrapper">
-             <h2 className="section-title">
-             <span className="contact-title-part">$CONTACT</span>
-             <span className="me-title-part">ME</span>
-            </h2>
-            <div className="title-line"></div>
-                </div>
+            <div className="title-wrapper">
+              <h2 className="section-title">
+                <span className="contact-title-part">$CONTACT</span>
+                <span className="me-title-part">ME</span>
+              </h2>
+              <div className="title-line"></div>
+            </div>
             
             <ul className="contact-bullets">
               <li><span>Project collaborations</span> - Let's build something amazing</li>
@@ -69,7 +67,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right Side - Form Only */}
+          {/* Right Side - Form (Hidden on Mobile) */}
           <div className="contact-right">
             <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
               <div className="form-group">
