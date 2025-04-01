@@ -6,7 +6,7 @@ export default function Loading() {
   const [showLoader, setShowLoader] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowLoader(true), 500); // Show after 500ms delay
+    const timer = setTimeout(() => setShowLoader(true), 2000); // Show after 500ms delay
     
     // Detect browser refresh
     const handleBeforeUnload = () => setShowLoader(true);
