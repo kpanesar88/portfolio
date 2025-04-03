@@ -65,10 +65,8 @@ const ProjectsDisplay: React.FC = () => {
                   className="project-image"
                 />
                 <div className="project-text-overlay">
-                  <div className="text-content">
-                    <h3 className="project-title">{project.title}</h3>
-                    <p className="project-description">{project.description}</p>
-                  </div>
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
                 </div>
               </div>
               <div className="project-hover-footer">
