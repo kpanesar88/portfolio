@@ -15,7 +15,7 @@ const ProjectsDisplay: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'E-COMMERCE PLATFORM',
+      title: 'PERSONAL PORTFOLIO',
       description: 'Full-stack solution with payment integration and admin dashboard.',
       technologies: ['REACT', 'NODE.JS', 'MONGODB', 'STRIPE', 'EXPRESS', 'JWT', 'REDUX', 'AWS'],
       imageUrl: 'https://via.placeholder.com/300x400',
@@ -24,7 +24,7 @@ const ProjectsDisplay: React.FC = () => {
     },
     {
       id: 2,
-      title: 'TASK MANAGER',
+      title: 'VOICEMEDIC',
       description: 'Productivity app with drag-and-drop functionality.',
       technologies: ['TYPESCRIPT', 'REACT', 'FIREBASE', 'TAILWIND', 'CONTEXT API', 'DRAG & DROP'],
       imageUrl: 'https://via.placeholder.com/300x400',
@@ -33,13 +33,40 @@ const ProjectsDisplay: React.FC = () => {
     },
     {
       id: 3,
-      title: 'WEATHER DASHBOARD',
+      title: 'BRAINUP',
       description: 'Real-time forecasts with interactive maps.',
       technologies: ['JAVASCRIPT', 'API', 'CSS3', 'GEOLOCATION', 'CHART.JS', 'OPENWEATHER'],
       imageUrl: 'https://via.placeholder.com/300x400',
       devpostUrl: '#',
       codeUrl: '#'
-    }
+    },
+    {
+        id: 4,
+        title: 'PRODUCTIVITY EXTENSION',
+        description: 'Full-stack solution with payment integration and admin dashboard.',
+        technologies: ['REACT', 'NODE.JS', 'MONGODB', 'STRIPE', 'EXPRESS', 'JWT', 'REDUX', 'AWS'],
+        imageUrl: 'https://via.placeholder.com/300x400',
+        devpostUrl: '#',
+        codeUrl: '#'
+      },
+    {
+        id: 4,
+        title: 'FITNESS WATCH',
+        description: 'Full-stack solution with payment integration and admin dashboard.',
+        technologies: ['REACT', 'NODE.JS', 'MONGODB', 'STRIPE', 'EXPRESS', 'JWT', 'REDUX', 'AWS'],
+        imageUrl: 'https://via.placeholder.com/300x400',
+        devpostUrl: '#',
+        codeUrl: '#'
+      },
+      {
+        id: 4,
+        title: 'AUTOMATED WATERING SYSTEM',
+        description: 'Full-stack solution with payment integration and admin dashboard.',
+        technologies: ['REACT', 'NODE.JS', 'MONGODB', 'STRIPE', 'EXPRESS', 'JWT', 'REDUX', 'AWS'],
+        imageUrl: 'https://via.placeholder.com/300x400',
+        devpostUrl: '#',
+        codeUrl: '#'
+      },
   ];
 
   const splitTechnologies = (techs: string[]) => {
