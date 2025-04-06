@@ -134,8 +134,32 @@
   .project-links {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    flex-wrap: wrap;
     margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  /* Single button (any type) - centered with padding */
+  .project-links:has(.project-link:only-child) {
+    padding: 0 2rem;
+  }
+  
+  /* Two buttons - GitHub on right */
+  .project-links:has(.github-link):has(.project-link:nth-child(2)) {
+    justify-content: center;
+  }
+  .project-links:has(.github-link):has(.project-link:nth-child(2)) .github-link {
+    order: 2; /* Force GitHub to right */
+    margin-left: 1.5rem; /* Add space between buttons */
+  }
+  .project-links:has(.github-link):has(.project-link:nth-child(2)) .project-link:not(.github-link) {
+    order: 1; /* Force other button to left */
+    margin-right: 1.5rem; /* Add space between buttons */
+  }
+  
+  /* Three buttons - equal spacing */
+  .project-links:has(.project-link:nth-child(3)) {
+    justify-content: space-between;
   }
   
   .project-link {
@@ -149,14 +173,10 @@
     letter-spacing: 1px;
     min-width: 110px;
     text-align: center;
+    flex: 0 1 auto;
   }
   
-  .devpost-link {
-    background: #333333;
-    color: white;
-    border: 2px solid #666666;
-  }
-  
+  /* GitHub button */
   .github-link {
     background: #8a2be2;
     color: white;
@@ -164,9 +184,23 @@
     box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
   }
   
+  /* Non-GitHub buttons */
+  .devpost-link,
+  .live-link {
+    background: #2d3748;
+    color: white;
+    border: 2px solid #4a5568;
+  }
+  
   .project-link:hover {
     transform: scale(1.05);
     filter: brightness(1.1);
+  }
+  
+  .devpost-link:hover,
+  .live-link:hover {
+    background: #3a4558;
+    box-shadow: 0 0 10px rgba(74, 85, 104, 0.5);
   }
   
   .github-link:hover {
@@ -201,6 +235,7 @@
     white-space: nowrap;
   }
   
+  /* RESPONSIVE STYLES */
   @media (max-width: 1024px) {
     .projects-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -277,7 +312,18 @@
     
     .project-links {
       flex-direction: column;
+      align-items: center;
       gap: 1rem;
+      padding: 0 1.5rem !important;
+    }
+  
+    /* Reset ordering and margins on mobile */
+    .github-link,
+    .devpost-link,
+    .live-link {
+      order: 0 !important;
+      margin: 0 !important;
+      width: 100%;
     }
   
     .project-title {
@@ -291,5 +337,10 @@
     .technology-tag {
       font-size: 0.95rem;
       padding: 0.5rem 0.9rem;
+    }
+    
+    /* Single button in mobile */
+    .project-links:has(.project-link:only-child) {
+      padding: 0 3rem !important;
     }
   }
