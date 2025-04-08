@@ -3,7 +3,7 @@
   padding: 3rem;
   box-sizing: border-box;
   background-color: #000000;
-  min-height: 100vh;
+  min-height: 120vh;
 }
 
 .projects-title {
@@ -29,6 +29,7 @@
 }
 
 .project-card {
+  width: 350px;
   background: #111111;
   border-radius: 12px;
   overflow: hidden;
@@ -41,71 +42,109 @@
   position: relative;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(138, 43, 226, 0.4);
+.project-card.hackathon-winner {
+  position: relative;
 }
 
-.project-card:hover::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+/* Purple Gradient for Regular Cards */
+.project-card:hover:not(.hackathon-winner) {
+  transform: translateY(-8px);
+  border-color: #b57aff;
+  box-shadow: 0 12px 24px rgba(138, 43, 226, 0.6);
   background: linear-gradient(
-    135deg, 
-    rgba(138, 43, 226, 0.15) 0%, 
-    rgba(138, 43, 226, 0.4) 50%,
-    rgba(138, 43, 226, 0.15) 100%
+    145deg,
+    rgba(98, 0, 234, 0.15) 0%,
+    rgba(138, 43, 226, 0.25) 50%,
+    rgba(177, 111, 252, 0.15) 100%
   );
-  z-index: 1;
+}
+
+/* Gold Gradient for Winner Cards */
+.project-card.hackathon-winner:hover {
+  transform: translateY(-8px);
+  border-color: gold;
+  box-shadow: 0 12px 24px rgba(255, 215, 0, 0.6);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 215, 0, 0.15) 0%,
+    rgba(255, 215, 0, 0.25) 50%,
+    rgba(255, 230, 100, 0.15) 100%
+  );
+}
+
+.winner-tag {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid gold;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  color: gold;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.project-card.hackathon-winner:hover .winner-tag {
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
 }
 
 .project-image-container {
   position: relative;
-  height: 100%;
+  height: 180px;
+  width: 90%;
+  margin: 1rem auto 0;
   overflow: hidden;
   z-index: 2;
 }
 
 .project-image {
+  padding: 2rem 2rem 0 2rem;
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-image {
-  transform: scale(1.05);
-}
-
-.project-text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  text-align: center;
+.project-content {
+  position: relative;
+  width: 100%;
   z-index: 3;
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-title {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.1rem;
+  margin: 0 auto 1rem;
   color: #8a2be2;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  width: 90%;
 }
 
 .project-description {
   color: #ffffff;
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   line-height: 1.5;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-  margin-bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  padding-bottom: 1rem;
 }
 
 .project-hover-footer {
@@ -137,26 +176,7 @@
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
   width: 100%;
-}
-
-.project-links:has(.project-link:only-child) {
-  padding: 0 2rem;
-}
-
-.project-links:has(.github-link):has(.project-link:nth-child(2)) {
-  justify-content: center;
-}
-.project-links:has(.github-link):has(.project-link:nth-child(2)) .github-link {
-  order: 2;
-  margin-left: 1.5rem;
-}
-.project-links:has(.github-link):has(.project-link:nth-child(2)) .project-link:not(.github-link) {
-  order: 1;
-  margin-right: 1.5rem;
-}
-
-.project-links:has(.project-link:nth-child(3)) {
-  justify-content: space-between;
+  gap: 1rem;
 }
 
 .project-link {
@@ -228,64 +248,15 @@
   letter-spacing: 0.5px;
   backdrop-filter: blur(5px);
   white-space: nowrap;
-}
-
-/* Crown Styles */
-.crown-icon {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 2.5rem;
-  color: gold;
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: all 0.4s ease;
-  z-index: 4;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
-  cursor: pointer;
-}
-
-.project-card:hover .crown-icon {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hackathon-tooltip {
-  position: absolute;
-  top: 60px;
-  right: 15px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 1rem;
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateY(-10px);
   transition: all 0.3s ease;
-  z-index: 4;
-  border: 1px solid gold;
-  pointer-events: none;
 }
 
-.crown-icon:hover + .hackathon-tooltip,
-.crown-icon:focus + .hackathon-tooltip {
-  opacity: 1;
-  transform: translateY(0);
+.technology-tag:hover {
+  background: rgba(138, 43, 226, 0.2);
+  box-shadow: 0 0 12px rgba(138, 43, 226, 0.4);
+  color: #e2c4ff;
 }
 
-.hackathon-tooltip::after {
-  content: '';
-  position: absolute;
-  bottom: 100%;
-  right: 20px;
-  border-width: 8px;
-  border-style: solid;
-  border-color: transparent transparent gold transparent;
-}
-
-/* RESPONSIVE STYLES */
 @media (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -304,6 +275,10 @@
   .project-description {
     font-size: 1.2rem;
   }
+  
+  .project-image-container {
+    height: 160px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -314,10 +289,6 @@
   
   .project-card {
     height: 450px;
-  }
-  
-  .project-text-overlay {
-    top: 45%;
   }
   
   .projects-grid {
@@ -336,6 +307,16 @@
   .technology-tag {
     font-size: 1rem;
     padding: 0.6rem 1rem;
+  }
+  
+  .project-image-container {
+    height: 140px;
+  }
+
+  .winner-tag {
+    right: 10px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -356,23 +337,9 @@
     height: 400px;
   }
   
-  .project-text-overlay {
-    top: 40%;
-  }
-  
   .project-links {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 0 1.5rem !important;
-  }
-
-  .github-link,
-  .devpost-link,
-  .live-link {
-    order: 0 !important;
-    margin: 0 !important;
-    width: 100%;
   }
 
   .project-title {
@@ -388,7 +355,8 @@
     padding: 0.5rem 0.9rem;
   }
   
-  .project-links:has(.project-link:only-child) {
-    padding: 0 3rem !important;
+  .winner-tag {
+    top: -10px;
+    font-size: 0.8rem;
   }
 }
