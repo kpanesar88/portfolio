@@ -1,23 +1,11 @@
 'use client';
-import SectionDivider from 'app/sectiondivider/divider';
+import SimpleSkillsGrid from '../page-components/skillspage-components/skillspage';
 
-export default function SkillsPage() {
+export default function Skills() {
   return (
     <main className="skills-page">
-      <SectionDivider text="$SKILLS" />
+      <SimpleSkillsGrid/>
       
-      <div className="skills-container">
-        {/* Your skills content */}
-        <div className="skill-category">
-          <h2 className="category-title">
-            <i className="bi bi-code-square"></i>
-            Frontend
-          </h2>
-          <div className="skills-grid">
-            {/* Skill items here */}
-          </div>
-        </div>
-      </div>
     </main>
   );
 }
