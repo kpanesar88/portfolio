@@ -21,11 +21,11 @@ const skills = [
 const SimpleSkillsGrid = () => {
   return (
     <div className="skills-container">
-      <h1>My Skills</h1>
+      <h1>$SKILLS</h1>
       
       {/* Languages */}
       <div className="category-section">
-        <h2>Languages</h2>
+        <h2>&lt;<span>Languages/</span>&gt;</h2>
         <div className="skills-grid">
           {skills
             .filter((skill) => skill.category === "language")
@@ -37,7 +37,7 @@ const SimpleSkillsGrid = () => {
 
       {/* Tools */}
       <div className="category-section">
-        <h2>Tools</h2>
+        <h2>&lt;<span>Tools/</span>&gt;</h2>
         <div className="skills-grid">
           {skills
             .filter((skill) => skill.category === "tool")
@@ -49,7 +49,7 @@ const SimpleSkillsGrid = () => {
 
       {/* Learning */}
       <div className="category-section">
-        <h2>Currently Learning</h2>
+        <h2>&lt;<span>Curiosities/</span>&gt;</h2>
         <div className="skills-grid">
           {skills
             .filter((skill) => skill.category === "learning")
