@@ -26,6 +26,7 @@ h2 {
 /* ===== SKILLS SECTION ===== */
 .skills-grid {
   display: flex;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
@@ -51,6 +52,7 @@ h2 {
   font-size: 3.5rem;
   color: #ffffff;
 }
+
 
 .skill-name {
   display: none;
