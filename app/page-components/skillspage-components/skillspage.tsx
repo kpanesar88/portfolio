@@ -38,7 +38,6 @@ const skills = [
   // ===== TOOLS =====
   { name: "VS Code", icon: <SiVisualstudiocode color="white" />, category: "tool" },
   { name: "Tailwind", icon: <SiTailwindcss color="white" />, category: "tool" },
-  { name: "Bootstrap", icon: <SiBootstrap color="white" />, category: "tool" },
   { name: "Node.js", icon: <FaNodeJs color="white" />, category: "tool" },
   { name: "Next.js", icon: <SiNextdotjs color="white" />, category: "tool" },
   { name: "React", icon: <FaReact color="white" />, category: "tool" },
