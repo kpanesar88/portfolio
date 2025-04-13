@@ -1,39 +1,65 @@
 /* ===== GLOBAL STYLES ===== */
-.portfolio-container {
+.skills-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 3rem 2rem; /* Increased vertical padding */
+  padding: 3rem 2rem;
   font-family: 'Arial', sans-serif;
   color: hsl(0, 0%, 100%);
   background: #121212;
 }
 
-h1 {
-  color: #8a2be2;
+/* ===== MAIN TITLE ===== */
+.skills-title-container {
   text-align: center;
   margin: 3rem 0;
-  font-size: 8rem; /* Increased from 7rem */
-  padding-top: 60px; /* Increased from 40px */
+  padding-top: 60px;
+}
+
+.skills-main-title {
+  font-size: 6rem;
   line-height: 1.1;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1rem;
 }
 
-h2 {
+.dollar-my {
+  color: white;
+}
+
+.skills-text {
   color: #8a2be2;
-  font-size: 2.5rem; /* Increased from 1.8rem */
-  margin: 3rem 0 2rem; /* Increased vertical margins */
-  text-align: center;
-  line-height: 1.2;
-  padding: 0.5rem 0; /* Added vertical padding */
 }
 
-/* ===== SKILLS SECTION ===== */
+.skills-underline {
+  height: 3px;
+  background: #8a2be2;
+  width: 25%;
+  margin: 0 auto;
+  margin-top: -5px;
+}
+
+/* ===== CATEGORY TITLES ===== */
+.category-section h2 {
+  padding-top: 5rem;
+  color: #8a2be2;
+  font-size: 2.5rem;
+  margin: 3rem 0 2rem;
+  text-align: center;
+}
+
+.category-section h2 span {
+  color: white;
+}
+
+/* ===== SKILLS GRID ===== */
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 220px);
-  gap: 1.5rem;
-  margin: 3rem 0 5rem; /* Increased vertical margins */
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 1rem 0; /* Added vertical padding */
+  gap: 1.5rem;
+  margin: 3rem 0 5rem;
+  padding: 1rem 0;
 }
 
 .skill-card {
@@ -41,7 +67,7 @@ h2 {
   border: 2px solid #8a2be2;
   border-radius: 15px;
   width: 220px;
-  height: 160px; /* Increased height */
+  height: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,101 +75,68 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   text-align: center;
-  padding: 1.5rem 0; /* Added vertical padding */
-}
-
-.skill-card:nth-child(6) {
-  grid-column: 3;
+  padding: 1.5rem 0;
 }
 
 .skill-icon {
-  font-size: 6rem; /* Increased from 5rem */
+  font-size: 6rem;
   color: #ffffff;
-  margin-bottom: 15px; /* Increased spacing */
+  margin-bottom: 15px;
 }
 
 .skill-name {
   display: none;
-  font-size: 2rem; /* Increased from 1.7rem */
+  font-size: 2rem;
   color: white;
   position: absolute;
-  bottom: 20px; /* Adjusted position */
+  bottom: 20px;
   width: 100%;
-  padding: 0.5rem 0; /* Added padding */
+  padding: 0.5rem 0;
 }
 
 .skill-card:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 20px 7px rgba(138, 43, 226, 0.7); /* Enhanced glow */
+  box-shadow: 0 0 20px 7px rgba(138, 43, 226, 0.7);
 }
 
 .skill-card:hover .skill-name {
   display: block;
 }
 
-.category-section {
-  text-align: center;
-  width: 100%;
-  padding: 2rem 0; /* Added vertical padding */
-}
-
-/* Responsive adjustments */
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: 1300px) {
   .skills-grid {
-    grid-template-columns: repeat(4, 220px);
-  }
-  .skill-card:nth-child(6) {
-    grid-column: 2;
+    max-width: 1100px;
   }
 }
 
 @media (max-width: 1000px) {
-  h1 {
-    font-size: 6rem;
-    padding-top: 40px;
-  }
-  h2 {
-    font-size: 2.2rem;
+  .skills-main-title {
+    font-size: 5rem;
   }
   .skills-grid {
-    grid-template-columns: repeat(3, 220px);
-  }
-  .skill-card:nth-child(4) {
-    grid-column: 2;
-  }
-  .skill-icon {
-    font-size: 5.5rem;
+    max-width: 800px;
   }
 }
 
 @media (max-width: 750px) {
-  h1 {
-    font-size: 5rem;
+  .skills-main-title {
+    font-size: 4rem;
   }
   .skills-grid {
-    grid-template-columns: repeat(2, 220px);
-  }
-  .skill-card {
-    height: 150px;
-  }
-  .skill-icon {
-    font-size: 5rem;
+    max-width: 500px;
   }
 }
 
 @media (max-width: 500px) {
-  .portfolio-container {
+  .skills-container {
     padding: 2rem 1.5rem;
   }
-  h1 {
-    font-size: 4rem;
-    padding-top: 30px;
+  .skills-main-title {
+    font-size: 3.5rem;
   }
-  h2 {
-    font-size: 2rem;
-  }
-  .skills-grid {
-    grid-template-columns: 220px;
+  .skills-underline {
+    width: 60%;
   }
   .skill-card {
     width: 200px;

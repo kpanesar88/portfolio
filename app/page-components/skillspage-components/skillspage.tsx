@@ -9,10 +9,9 @@ import { SiVisualstudiocode } from "@react-icons/all-files/si/SiVisualstudiocode
 // Tool Icons
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { DiEclipse } from 'react-icons/di';
-import { FaGithub } from 'react-icons/fa'; // Add with other Fa* imports
-
-
-// Simple Icons (Tools & Learning)
+import { FaGithub } from 'react-icons/fa';
+import { SiArduino } from "react-icons/si";
+// Simple Icons
 import { 
   SiTypescript, 
   SiCplusplus,
@@ -27,7 +26,6 @@ import {
 } from 'react-icons/si';
 
 const skills = [
-  // ===== LANGUAGES =====
   { name: "HTML", icon: <FaHtml5 color="white" />, category: "language" },
   { name: "CSS", icon: <FaCss3Alt color="white" />, category: "language" },
   { name: "JavaScript", icon: <FaJs color="white" />, category: "language" },
@@ -35,16 +33,15 @@ const skills = [
   { name: "Java", icon: <FaJava color="white" />, category: "language" },
   { name: "Python", icon: <FaPython color="white" />, category: "language" },
 
-  // ===== TOOLS =====
   { name: "VS Code", icon: <SiVisualstudiocode color="white" />, category: "tool" },
   { name: "Tailwind", icon: <SiTailwindcss color="white" />, category: "tool" },
+  { name: "Bootstrap", icon: <SiBootstrap color="white" />, category: "tool" },
   { name: "Node.js", icon: <FaNodeJs color="white" />, category: "tool" },
   { name: "Next.js", icon: <SiNextdotjs color="white" />, category: "tool" },
   { name: "React", icon: <FaReact color="white" />, category: "tool" },
-  { name: "GitHub", icon: <FaGithub color="white" />, category: "tool" }, 
+  { name: "GitHub", icon: <FaGithub color="white" />, category: "tool" },
+  { name: "Arduino", icon: <SiArduino color="white" />, category: "tool" },
 
-
-  // ===== LEARNING =====
   { name: "C++", icon: <SiCplusplus color="white" />, category: "learning" },
   { name: "Linux", icon: <SiLinux color="white" />, category: "learning" },
   { name: "Unity", icon: <SiUnity color="white" />, category: "learning" },
@@ -55,7 +52,13 @@ const skills = [
 const SimpleSkillsGrid = () => {
   return (
     <div className="skills-container">
-      <h1>$SKILLS</h1>
+      <div className="skills-title-container">
+        <h1 className="skills-main-title">
+          <span className="dollar-my">$MY</span>
+          <span className="skills-text">SKILLS</span>
+        </h1>
+        <div className="skills-underline"></div>
+      </div>
       
       {/* Languages */}
       <div className="category-section">
