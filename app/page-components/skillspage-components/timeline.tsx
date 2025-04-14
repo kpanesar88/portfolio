@@ -44,7 +44,7 @@ const CenteredTimeline = () => {
     <div className="timeline-container">
       <h1 className="timeline-main-title">
         <span className="dollar-sign">$</span>
-        <span className="title-text">CURRENT</span>
+        <span className="title-text"></span>
       </h1>
       <div className="centered-timeline">
         <div className="timeline-line"></div>
