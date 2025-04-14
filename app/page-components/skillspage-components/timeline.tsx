@@ -1,65 +1,75 @@
 import React from "react";
-import "./Timeline.css";
+import { FaGraduationCap, FaBriefcase, FaBook } from "react-icons/fa";
+import "./timeline.css";
 
-interface TimelineItem {
-  id: number;
-  date: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  type: 'education' | 'work';
-}
+const timelineData = [
+  {
+    type: "experience",
+    year: "Future",
+    title: "Software Engineer",
+    description: "Your dream position",
+    icon: <FaBriefcase />,
+    key: 1
+  },
+  {
+    type: "education",
+    year: "2022 - Present",
+    title: "Computer Science BSc",
+    description: "University of XYZ | GPA: 3.8/4.0",
+    icon: <FaGraduationCap />,
+    key: 2,
+    courses: ["Data Structures", "Algorithms", "Web Development", "Database Systems"]
+  },
+  {
+    type: "experience",
+    year: "Future",
+    title: "Open Source Contributor",
+    description: "Potential projects",
+    icon: <FaBriefcase />,
+    key: 3
+  },
+  {
+    type: "education",
+    year: "Summer 2023",
+    title: "Frontend Bootcamp",
+    description: "CodeMaster Academy | 300 hours",
+    icon: <FaGraduationCap />,
+    key: 4,
+    courses: ["React Fundamentals", "Advanced CSS", "UI/UX Principles"]
+  }
+];
 
-const Timeline = () => {
-  const timelineData: TimelineItem[] = [
-    {
-      id: 1,
-      date: "2018-2022",
-      title: "Computer Science Degree",
-      subtitle: "University of Technology",
-      description: "Specialized in Web Development and AI. Graduated with honors.",
-      type: 'education'
-    },
-    {
-      id: 2,
-      date: "2020-2021",
-      title: "Frontend Developer Intern",
-      subtitle: "Tech Solutions Inc.",
-      description: "Developed responsive UIs using React and TypeScript.",
-      type: 'work'
-    },
-    {
-      id: 3,
-      date: "2022-Present",
-      title: "Software Engineer",
-      subtitle: "Digital Innovations LLC",
-      description: "Leading frontend development for enterprise applications.",
-      type: 'work'
-    },
-    {
-      id: 4,
-      date: "2023",
-      title: "Advanced React Certification",
-      subtitle: "Online Learning Platform",
-      description: "Mastered advanced React patterns and performance optimization.",
-      type: 'education'
-    }
-  ];
-
+const CenteredTimeline = () => {
   return (
     <div className="timeline-container">
-      <h2 className="timeline-title">My Journey</h2>
-      <div className="timeline">
+      <h1 className="timeline-main-title">
+        <span className="dollar-sign">$</span>
+        <span className="title-text">CURRENT</span>
+      </h1>
+      <div className="centered-timeline">
+        <div className="timeline-line"></div>
+        
         {timelineData.map((item) => (
-          <div 
-            key={item.id} 
-            className={`timeline-item ${item.type}`}
-            data-date={item.date}
-          >
-            <div className="timeline-content">
+          <div key={item.key} className={`timeline-item ${item.type}`}>
+            <div className="timeline-icon">{item.icon}</div>
+            <div className="timeline-card">
+              <span className="timeline-year">{item.year}</span>
               <h3>{item.title}</h3>
-              <h4>{item.subtitle}</h4>
               <p>{item.description}</p>
+              
+              {item.courses && (
+                <div className="courses-section">
+                  <div className="courses-header">
+                    <FaBook className="course-icon" />
+                    <span>Relevant Courses</span>
+                  </div>
+                  <ul className="courses-list">
+                    {item.courses.map((course, i) => (
+                      <li key={i}>{course}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -68,4 +78,4 @@ const Timeline = () => {
   );
 };
 
-export default Timeline;
+export default CenteredTimeline;
