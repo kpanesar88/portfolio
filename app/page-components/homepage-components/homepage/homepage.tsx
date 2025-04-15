@@ -93,12 +93,16 @@ const Homepage: React.FC<HomepageProps> = () => {
 
           {/* Button Section */}
           <div className="btn-group">
-            <Link
-              href="/resume" 
-              className="btn" 
-              rel="noopener noreferrer">
-              Resume
-            </Link>
+          <a
+            href="/resume/Karanveer_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+          >
+         Resume
+          </a>
+
+          
             <Link href="/contact" className="btn">Contact</Link>
           </div>
 
@@ -130,12 +134,14 @@ const Homepage: React.FC<HomepageProps> = () => {
             </div>
 
             <div className="btn-group">
-            <Link
-              href="/resume"
-              className="btn" 
-              rel="noopener noreferrer">
-              Resume
-            </Link>
+            <a
+              href="/resume/Karanveer_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+              >
+                Resume
+            </a>
             <Link href="/contact" className="btn">Contact</Link>
           </div>
           

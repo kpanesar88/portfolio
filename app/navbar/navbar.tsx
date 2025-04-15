@@ -33,7 +33,7 @@ const Navbar = () => {
       <div id="navbar-container">
         {/* Logo Section */}
         <div id="logo">
-          <Link href="/">#</Link> {/* Changed to href */}
+          <Link href="/">#</Link>
         </div>
 
         {/* Hamburger Menu */}
@@ -51,17 +51,17 @@ const Navbar = () => {
         {/* Navbar Links */}
         <ul id="navbar-links" className={isMenuOpen ? 'active' : ''}>
           <li>
-            <Link href="/about" className="nav-link" onClick={closeMenu}> {/* Added #about for section link */}
-              <i className="bi bi-person" style={{ marginRight: '8px', fontSize: '23px' }}></i> 
+            <Link href="/about" className="nav-link" onClick={closeMenu}>
+              <i className="bi bi-person" style={{ marginRight: '8px', fontSize: '23px' }}></i>
               About
             </Link>
           </li>
           <li>
-             <Link href="/skills" className="nav-link" onClick={closeMenu}>
-             <i className="bi bi-person" style={{ marginRight: '8px', fontSize: '23px' }}></i> 
-             Skills
-             </Link>
-         </li>
+            <Link href="/skills" className="nav-link" onClick={closeMenu}>
+              <i className="bi bi-person" style={{ marginRight: '8px', fontSize: '23px' }}></i>
+              Skills
+            </Link>
+          </li>
           <li>
             <Link href="/projects" className="nav-link" onClick={closeMenu}>
               <i className="bi bi-code-slash" style={{ marginRight: '15px', fontSize: '23px' }}></i>
@@ -77,7 +77,7 @@ const Navbar = () => {
           <li>
             <div className="resume-container">
               <a
-                href="https://docs.google.com/document/d/1hXIAfesbOFMY2b5rrTsvSImxTnzYOdhR/edit"
+                href="/resume/Karanveer_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="resume-button"
@@ -100,7 +100,7 @@ const Navbar = () => {
         <Link href="/contact" onClick={closeMenu}>Contact</Link>
         
         <a
-          href="https://docs.google.com/document/d/1hXIAfesbOFMY2b5rrTsvSImxTnzYOdhR/edit"
+          href="/resume/Karanveer_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="resume-button"
