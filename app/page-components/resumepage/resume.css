@@ -1,0 +1,93 @@
+/* Smooth scroll for entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Top wrapper with space for navbar */
+.resume-page-wrapper {
+  padding-top: 100px; /* space for navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+}
+
+/* Fullscreen PDF viewer */
+.pdf-wrapper {
+  width: 100vw;
+  height: calc(100vh - 100px); /* 100vh minus navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Actual container around iframe */
+.pdf-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+/* The iframe showing the PDF */
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  transform: scale(1.2); /* ✅ makes PDF content bigger */
+  transform-origin: top center;
+}
+
+/* Control buttons */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.resume-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1);
+}
+
+.resume-btn:hover {
+  transform: scale(1.05);
+}
+
+.resume-btn.purple {
+  background-color: #6b21a8;
+}
+
+.resume-btn.purple:hover {
+  background-color: #581c87;
+}
+
+.resume-btn.dark {
+  background-color: #111827;
+}
+
+.resume-btn.dark:hover {
+  background-color: #1f2937;
+}
+
+.icon {
+  font-size: 1.25rem;
+}
