@@ -1,5 +1,6 @@
 import React from "react";
 import "./skillspage.css";
+import SectionDivider from "@/app/sectiondivider/divider";
 
 // Language Icons
 import { FaHtml5, FaCss3Alt, FaJs, FaPython, FaJava } from 'react-icons/fa';
@@ -30,12 +31,10 @@ const skills = [
   { name: "CSS", icon: <FaCss3Alt color="white" />, category: "language" },
   { name: "JavaScript", icon: <FaJs color="white" />, category: "language" },
   { name: "TypeScript", icon: <SiTypescript color="white" />, category: "language" },
-  { name: "Java", icon: <FaJava color="white" />, category: "language" },
   { name: "Python", icon: <FaPython color="white" />, category: "language" },
 
   { name: "VS Code", icon: <SiVisualstudiocode color="white" />, category: "tool" },
   { name: "Tailwind", icon: <SiTailwindcss color="white" />, category: "tool" },
-  { name: "Bootstrap", icon: <SiBootstrap color="white" />, category: "tool" },
   { name: "Node.js", icon: <FaNodeJs color="white" />, category: "tool" },
   { name: "Next.js", icon: <SiNextdotjs color="white" />, category: "tool" },
   { name: "React", icon: <FaReact color="white" />, category: "tool" },
@@ -48,7 +47,6 @@ const skills = [
   { name: "Blender", icon: <SiBlender color="white" />, category: "learning" },
   { name: "Figma", icon: <SiFigma color="white" />, category: "learning" }
 ];
-
 const SimpleSkillsGrid = () => {
   return (
     <div className="skills-container">
@@ -62,8 +60,8 @@ const SimpleSkillsGrid = () => {
       
       {/* Languages */}
       <div className="category-section">
-        <h2>&lt;<span>Languages/</span>&gt;</h2>
-        <div className="skills-grid">
+      <SectionDivider text="<Languages/>" size="medium"  bounceIntensity="subtle" />
+      <div className="skills-grid">
           {skills
             .filter((skill) => skill.category === "language")
             .map((skill, index) => (
@@ -74,7 +72,8 @@ const SimpleSkillsGrid = () => {
 
       {/* Tools */}
       <div className="category-section">
-        <h2>&lt;<span>Tools/</span>&gt;</h2>
+      <SectionDivider text="<Tools/>" size="medium"  bounceIntensity="subtle" />
+
         <div className="skills-grid">
           {skills
             .filter((skill) => skill.category === "tool")
@@ -86,7 +85,7 @@ const SimpleSkillsGrid = () => {
 
       {/* Learning */}
       <div className="category-section">
-        <h2>&lt;<span>Learning/</span>&gt;</h2>
+      <SectionDivider text="<Learning/>" size="medium"  bounceIntensity="subtle" />
         <div className="skills-grid">
           {skills
             .filter((skill) => skill.category === "learning")

@@ -1,16 +1,26 @@
 import React from 'react';
-import './divider.css'; // Your CSS file
+import './divider.css';
 
-// Define the props interface
 interface SectionDividerProps {
-  text: string; // The text to display above the arrow
+  text: string;
+  size?: 'small' | 'medium' | 'large';
+  color?: string;
+  bounceIntensity?: 'subtle' | 'medium' | 'strong';
 }
 
-const SectionDivider: React.FC<SectionDividerProps> = ({ text }) => {
+const SectionDivider: React.FC<SectionDividerProps> = ({
+  text,
+  size = 'medium',
+  color,
+  bounceIntensity = 'medium'
+}) => {
   return (
-    <div className="scroll-down">
-      <span>{text}</span> {/* Dynamic text */}
-      <i className="bx bx-chevron-down"></i> {/* Boxicons arrow */}
+    <div 
+      className={`scroll-down ${size} ${bounceIntensity}`}
+      style={color ? { color } : {}}
+    >
+      <span>{text}</span>
+      <i className="bx bx-chevron-down"></i>
     </div>
   );
 };
