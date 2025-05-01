@@ -38,7 +38,6 @@ const Contact = () => {
     <section className="contact-section" id="contact">
       <div className="contact-container">
         <div className="contact-content">
-          {/* Left Side - Always Visible */}
           <div className="contact-left">
             <div className="title-wrapper">
               <h2 className="section-title">
