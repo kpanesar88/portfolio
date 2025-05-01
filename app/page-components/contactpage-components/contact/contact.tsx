@@ -48,11 +48,22 @@ const Contact = () => {
               <div className="title-line"></div>
             </div>
             
-            <ul className="contact-bullets">
-              <li><span>Project collaborations</span> - Let's build something amazing</li>
-              <li><span>Job opportunities</span> - Always open to interesting offers</li>
-              <li><span>General questions</span> - About my work or open-source projects</li>
-            </ul>
+  <ul className="contact-bullets">
+  <li>
+    <span>Want to collaborate?</span>
+    <span className="desktop-only"> - I'd love to team up on something special! </span>
+  </li>
+  <li>
+    <span>Job opportunities?</span>
+    <span className="desktop-only"> - Open to discussing exciting possibilities! </span>
+  </li>
+  <li>
+    <span>Got questions?</span>
+    <span className="desktop-only"> - Happy to chat about my projects or code! </span>
+  </li>
+</ul>
+
+
 
             <div className="social-buttons"> 
               <a href="https://www.linkedin.com/in/kpanesar88/" target="_blank" rel="noopener noreferrer" className="social-button" aria-label="LinkedIn">
@@ -67,7 +78,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Right Side - Form (Hidden on Mobile) */}
           <div className="contact-right">
             <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
               <div className="form-group">

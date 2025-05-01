@@ -1,262 +1,404 @@
 @import '../../../static.css';
 
-/* Main Section Styles */
 .contact-section {
-    min-height: 93vh;
-    display: flex;
-    align-items: center;
-    padding: 6rem 2rem;
-    background-color: var(--black);
-    color: var(--light-gray);
-    scroll-margin-top: 80px;
-  }
-  
-  .contact-container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  .contact-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 4rem;
-  }
-  
-  @media (min-width: 768px) {
-    .contact-content {
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-    }
-  }
-  
-  /* Left Side Content */
-  .contact-left {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .title-wrapper {
-    margin-bottom: 3rem;
-  }
-  .section-title {
-    font-size: clamp(4rem, 10vw, 6rem);
-    font-weight: 700;
-    line-height: 1;
-    font-family: 'Courier New', monospace;
-    margin-bottom: 1.5rem;
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  .contact-title-part {
-    color: #ffffff;
-  }
-  
-  .me-title-part {
-    color: #8a2be2;
-  }
-  
-  .title-line {
-    height: 6px;
-    width: 75%;
-    background: #8a2be2;
-    margin-top: 1.5rem;
+  min-height: 93vh;
+  display: flex;
+  align-items: center;
+  padding: 6rem 2rem;
+  background-color: var(--black);
+  color: var(--light-gray);
+  scroll-margin-top: 80px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  width: 100%;
+}
+
+.contact-columns {
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-left {
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
+  animation: slideLeft 1s ease-out both;
+}
+
+.title-wrapper {
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.section-title {
+  padding-top: 1rem;
+  font-size: clamp(4rem, 10vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  animation: fadeIn 1s ease-out 0.4s both;
+}
+
+.contact-title-part {
+  color: #ffffff;
+}
+
+.me-title-part {
+  color: #8a2be2;
+}
+
+.title-line {
+  height: 6px;
+  width: 75%;
+  background: #8a2be2;
+  margin: 1.5rem auto 0;
+  animation: growLine 0.8s ease-out 0.6s both;
+}
+
+.contact-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.contact-bullets li {
+  position: relative;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #b3b3b3;
+  list-style: none;
+  padding-left: 0 !important;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.contact-bullets li:nth-child(1) { animation-delay: 0.2s; }
+.contact-bullets li:nth-child(2) { animation-delay: 0.4s; }
+.contact-bullets li:nth-child(3) { animation-delay: 0.6s; }
+
+.contact-bullets li span {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.contact-bullets li span.highlighted {
+  color: #8a2be2 !important;
+}
+
+.contact-bullets li .desktop-only {
+  color: #cccccc !important;
+  font-weight: normal;
+}
+
+.contact-bullets li a {
+  color: #8a2be2;
+  text-decoration: underline;
+  margin-left: 0.4rem;
+}
+
+.contact-bullets li a:hover {
+  color: #a95eff;
+  text-decoration: underline;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.social-buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  margin-top: 0.2rem;
+  animation: fadeInUp 1s ease-out 1s both;
+}
+
+.social-buttons {
+  display: inline-flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  white-space: nowrap;
+  padding: 0 1rem 1rem;
+  justify-content: center;
+}
+
+.social-buttons::-webkit-scrollbar {
+  display: none;
+}
+
+.social-button {
+  min-width: 110px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  color: #8a2be2;
+  text-decoration: none;
+  border: 2px solid #8a2be2;
+  flex-shrink: 0;
+  padding: 0 1.5rem;
+  animation: scaleIn 0.5s ease forwards;
+}
+
+.social-button:hover {
+  background-color: #8a2be2;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(138, 43, 226, 0.3);
+}
+
+.social-icon {
+  font-size: 4.1rem;
+}
+
+.social-icon i {
+  color: inherit;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: slideRight 1s ease-out 0.3s both;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1.1rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8a2be2;
+  box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.submit-btn {
+  background-color: #8a2be2;
+  color: white;
+  border: none;
+  padding: 1.1rem 2rem;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.submit-btn:hover {
+  background-color: var(--purple);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.2);
+}
+
+.submit-btn:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.status-message {
+  text-align: center;
+  padding: 0.9rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.status-message.success {
+  background-color: rgba(46, 125, 50, 0.2);
+  color: #81c784;
+}
+
+.status-message.error {
+  background-color: rgba(211, 47, 47, 0.2);
+  color: #e57373;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes growLine {
+  from { width: 0; }
+  to { width: 75%; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 360px) {
+  .contact-section {
+    padding: 4rem 1.5rem;
   }
 
-  /* Bullet Points List */
+  .social-button {
+    min-width: 95px;
+    padding: 0 1rem;
+    height: 45px;
+  }
+
+  .social-icon {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .social-button {
+    min-width: 100px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .contact-content {
+    gap: 5rem;
+  }
+
+  .social-buttons {
+    justify-content: center;
+  }
+
+  .social-button {
+    min-width: 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: stretch;
+  }
+
+  .contact-columns {
+    flex-direction: row;
+    min-height: 100%;
+  }
+
+  .contact-left,
+  .contact-right {
+    height: 100%;
+  }
+
+  .contact-left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .section-title {
+    justify-content: flex-start;
+  }
+
+  .title-line {
+    margin: 1.5rem 0 0;
+  }
+
   .contact-bullets {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 0 0.5rem 0;
+    text-align: left;
   }
-  
-  .contact-bullets li {
-    position: relative;
-    padding-left: 2.5rem;
-    margin-bottom: 1.2rem;
-    font-size: 2rem;
-    line-height: 1.6;
-    color: #b3b3b3;
+
+  .desktop-only {
+    display: inline;
   }
-  
-  .contact-bullets li span {
-    color: #ffffff;
-    font-weight: 500;
-  }
-  
-  .contact-bullets li::before {
-    content: "▹";
-    position: absolute;
-    left: 0;
-    color: #8a2be2;
-    font-size: 2.5rem;
+
+  .social-buttons-container {
+    justify-content: flex-start;
+    padding-left: 0;
   }
 
   .social-buttons {
     display: flex;
-    gap: 1rem;
-    padding-left: 0rem;
-    padding-top: 2rem;
-    margin-top: 0.2rem;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    white-space: normal;
+    padding: 0;
   }
-  
-  .social-button {
-    width: 130px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--black); /* White background by default */
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    color: #8a2be2; /* Purple icon by default */
-    text-decoration: none;
-    border: 2px solid #8a2be2; /* Purple border */
-  }
-  
-  .social-button:hover {
-    background-color: #8a2be2; /* Purple background on hover */
-    color: white; /* White icon on hover */
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(138, 43, 226, 0.3);
-  }
-  
-  .social-icon {
-    font-size: 3.5rem; /* Adjusted from 3rem to fit better in the button */
-  }
-  
-  .social-icon i {
-    color: inherit; /* Makes the icon inherit the parent color */
-  }
-  
-  /* Right Side Form */
-  .contact-right {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .form-group {
-    position: relative;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 1.1rem;
-    border: 1px solid #333;
-    border-radius: 6px;
-    font-size: 2rem;
-    transition: all 0.3s ease;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    font-family: inherit;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: #8a2be2;
-    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.3);
-  }
-  
-  .form-group textarea {
-    resize: vertical;
-    min-height: 160px;
-  }
-  
-  /* Submit Button */
-  .submit-btn {
-    background-color: #8a2be2;
-    color: white;
-    border: none;
-    padding: 1.1rem 2rem;
-    border-radius: 6px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  
-  .submit-btn:hover {
-    background-color: var(--purple);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.2);
-  }
-  
-  .submit-btn:disabled {
-    background-color: #555;
-    cursor: not-allowed;
-    transform: none;
-    box-shadow: none;
-  }
-  
-  
-  /* Status Messages */
-  .status-message {
-    text-align: center;
-    padding: 0.9rem;
-    border-radius: 6px;
-    margin-top: 1rem;
-    font-weight: 500;
-  }
-  
-  .status-message.success {
-    background-color: rgba(46, 125, 50, 0.2);
-    color: #81c784;
-  }
-  
-  .status-message.error {
-    background-color: rgba(211, 47, 47, 0.2);
-    color: #e57373;
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .contact-left {
-    animation: fadeIn 0.8s ease-out forwards;
-  }
-  
-  .contact-right {
-    animation: fadeIn 0.8s ease-out 0.2s forwards;
-    opacity: 0;
-  }
-
-@media (max-width: 480px) {
-
-}
-
-@media (min-width: 481px) and (max-width: 767px) {
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-}
-
-@media (min-width: 1025px) and (max-width: 1279px) {
-}
-
-@media (min-width: 1280px) and (max-width: 1440px) {
-}
-
-@media (min-width: 1441px) and (max-width: 1920px) {
-}
-
-@media (min-width: 1921px) {
 }
