@@ -1,14 +1,41 @@
 @import '../../../static.css';
 
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Body animation to prevent FOUC */
+body {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+}
 
 section {
     min-height: 100vh;
-    padding: 0; /* No padding */
-    margin: 0; /* No margin */
-    background-color: var(--black); /* White background */
+    padding: 0;
+    margin: 0;
+    background-color: var(--black);
     display: flex;
-    align-items: center; /* Vertically center */
-    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    justify-content: flex-start;
+    animation: fadeIn 0.8s ease-out forwards;
 }
 
 /* Center home content and adjust the gap between sections */
@@ -18,7 +45,7 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-  }
+}
 
 /* Adjust the home content */
 .home-content {
@@ -32,7 +59,7 @@ section {
 }
 
 span {
-    color: var(--purple); /* Red color for interactive elements */
+    color: var(--purple);
 }
 
 .home-img {
@@ -48,23 +75,27 @@ span {
     top: 3rem;
     width: 55rem;
     border-radius: 50%;
-    box-shadow: 0 0 10rem var(--purple); /* Red box shadow */
+    box-shadow: 0 0 10rem var(--purple);
     cursor: pointer;
     transition: 0.4s ease-in-out;
-    max-width: 100%; /* Ensure image doesn't overflow container */
+    max-width: 100%;
+    opacity: 0;
+    animation: slideInFromRight 0.8s ease-out 0.4s both;
 }
 
 .home-img img:hover {
     box-shadow: 0 0 5rem var(--purple),
                 0 0 10rem var(--purple),
-                0 0 15rem var(--purple); /* Red box shadow on hover */
+                0 0 15rem var(--purple);
 }
 
 .home-content h3 {
     margin-bottom: 2rem;
     margin-top: 1rem;
     font-size: 3.5rem;
-    color: var(--lightgray); /* Black text */
+    color: var(--lightgray);
+    opacity: 0;
+    animation: slideInFromLeft 0.8s ease-out 0.2s both;
 }
 
 .home-content h1 {
@@ -72,7 +103,9 @@ span {
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
-    color: var(--lightgray); /* Black text */
+    color: var(--lightgray);
+    opacity: 0;
+    animation: slideInFromLeft 0.8s ease-out 0.4s both;
 }
 
 .home-content p {
@@ -80,7 +113,9 @@ span {
     font-weight: 500;
     line-height: 1.8;
     max-width: 55.6rem;
-    color: var(--lightgray); /* Black text */
+    color: var(--lightgray);
+    opacity: 0;
+    animation: slideInFromLeft 0.8s ease-out 0.6s both;
 }
 
 .social-icons a {
@@ -90,30 +125,31 @@ span {
     width: 5rem;
     height: 5rem;
     background: transparent;
-    border: 0.2rem solid var(--purple); /* Red border */
-    font-size: 3rem; /* Increase font size here */
+    border: 0.2rem solid var(--purple);
+    font-size: 3rem;
     border-radius: 50%;
-    color: var(--purple); /* Black icon color */
+    color: var(--purple);
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease-in-out;
+    opacity: 0;
+    animation: slideInFromLeft 0.8s ease-out 1s both;
 }
 
-
 .social-icons a:hover {
-    color: var(--black); /* White icon color on hover */
+    color: var(--black);
     transform: scale(1.3) translateY(-0.5rem);
-    box-shadow: 0 0 2.5rem var(--purple); /* Red box shadow on hover */
-    background-color: var(--purple); /* Red background on hover */
+    box-shadow: 0 0 2.5rem var(--purple);
+    background-color: var(--purple);
 }
 
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background: var(--purple); /* Red background */
-    box-shadow: 0 0 2.5rem var(--red); /* Red shadow */
+    background: var(--purple);
+    box-shadow: 0 0 2.5rem var(--red);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: black; /* White text */
+    color: black;
     border: 0.5rem solid transparent;
     letter-spacing: 0.1rem;
     font-weight: 600;
@@ -123,7 +159,7 @@ span {
 
 .btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 5rem var(--purple); /* Red shadow on hover */
+    box-shadow: 0 0 5rem var(--purple);
 }
 
 .btn-group {
@@ -131,32 +167,32 @@ span {
     display: flex;
     gap: 1.5rem;
     align-items: center;
-    justify-content: flex-start; /* Align buttons to the left */
-    position: relative; /* Allow for positioning relative to the section */
-    width: 100%; /* Ensure it spans the width of the section */
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
     margin-left: 0;
-}  
-
+    opacity: 0;
+    animation: slideInFromLeft 0.8s ease-out 0.8s both;
+}
 
 .btn-group a:nth-of-type(2) {
-    background-color: var(--purple); /* Black background */
-    color: black; /* Set text color to black */
+    background-color: var(--purple);
+    color: black;
     border: 0.5rem solid transparent;
     box-shadow: 0 0 0.5rem transparent;
 }
 
-
 .btn-group a:nth-of-type(2):hover {
-    background-color: var(--lightgray); /* Red background on hover */
-    color: var(--black); /* Black text on hover */
-    box-shadow: 0 0 1rem var(--lightgray); /* Red shadow on hover */
+    background-color: var(--lightgray);
+    color: var(--black);
+    box-shadow: 0 0 1rem var(--lightgray);
 }
 
 .home-content p {
-    font-size: 2rem; /* Larger font size for paragraph */
-    font-weight: 500; /* Slightly bold for emphasis */
-    line-height: 1.8; /* Spacing between lines */
-    color: var(--lightgray); /* Black text */
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--lightgray);
 }
 
 .scroll-down {
@@ -165,79 +201,76 @@ span {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: #ffffff; /* Change this to your preferred text color */
+    color: #ffffff;
     font-size: px;
     text-decoration: none;
-    margin-top: 20px; /* Adjust this to control spacing from the content above */
-    margin-bottom: 20px; /* Adjust this to control spacing from the content below */
-  }
-  
-  .scroll-down i {
-    font-size: 24px; /* Adjust the size of the icon */
-    margin-bottom: 5px; /* Space between the icon and the text */
-    animation: bounce 2s infinite; /* Optional: Add a bounce animation */
-  }
-  
-  .scroll-down span {
-    font-size: 14px; /* Adjust the size of the text */
-  }
-  
-  /* Optional: Add a bounce animation */
-  @keyframes bounce {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideInFromBottom 0.8s ease-out 1.2s both;
+}
+
+.scroll-down i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down span {
+    font-size: 14px;
+}
+
+@keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     40% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
     60% {
-      transform: translateY(-5px);
+        transform: translateY(-5px);
     }
-  }
-
+}
 
 @media (min-width: 0px) and (max-width: 768px) {
     .home {
         display: flex;
-        flex-direction: column; /* Stack content vertically */
-        justify-content: flex-start; /* Start from the top */
-        align-items: center;    /* Center content horizontally */
-        text-align: center;     /* Center text */
-        min-height: 100vh;      /* Ensure full height of viewport */
-        position: relative;     /* Needed to position social icons at the bottom */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        position: relative;
         padding-top: 6rem;
     }
 
     .home-content {
-        order: 1;               /* Ensure text is on top */
-        text-align: center;     /* Center text */
-        padding-top: 0;         /* Remove extra padding */
+        order: 1;
+        text-align: center;
+        padding-top: 0;
         padding-left: 0;
-        width: 100%;            /* Ensure text content spans the full width */
+        width: 100%;
     }
 
-
     .home-img {
-        order: 2;              
+        order: 2;
         padding-left: 5rem;
         padding-bottom: 10rem;
     }
-  
 
     .home-img img {
         width: 60vw;
-        height: 60vw;    
-        max-width: 100%;       
-   
+        height: 60vw;
+        max-width: 100%;
     }
 
     .home-content h3 {
         margin-bottom: 2rem;
         margin-top: 1rem;
         font-size: 2.5rem;
-        color: var(--lightgray); /* Light gray text */
+        color: var(--lightgray);
         text-align: center;
-        width: 100%;             /* Make sure it's centered horizontally */
+        width: 100%;
     }
 
     .home-content h1 {
@@ -245,7 +278,7 @@ span {
         font-weight: 700;
         margin-top: 1.5rem;
         line-height: 1;
-        color: var(--lightgray); /* Light gray text */
+        color: var(--lightgray);
         width: 100%;
     }
 
@@ -254,89 +287,84 @@ span {
         font-weight: 500;
         line-height: 1.8;
         max-width: 55.6rem;
-        color: var(--lightgray); /* Light gray text */
-        margin: 0 auto;         /* Center paragraph horizontally */
+        color: var(--lightgray);
+        margin: 0 auto;
     }
 
     .btn-group {
         padding-bottom: 10vh;
-        order: 3;               /* Buttons in third position */
+        order: 3;
         display: flex;
-        flex-direction: horizontal; /* Stack buttons vertically */
-        justify-content: center; /* Center buttons vertically */
-        align-items: center;    /* Center buttons horizontally */
-        width: 100%;            /* Make sure buttons take up full width */
+        flex-direction: horizontal;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .social-icons {
-        order: 4;               /* Move social icons to the bottom */
-        position: absolute;     /* Position icons at the bottom of the container */
-        bottom: 2rem;           /* Add some space from the bottom */
+        order: 4;
+        position: absolute;
+        bottom: 2rem;
         display: flex;
-        justify-content: center; /* Center icons horizontally */
-        width: 100%;            /* Make sure they stay centered within the container */
+        justify-content: center;
+        width: 100%;
         padding-bottom: 16vh;
         left: 1.4%;
     }
 
-    
     .arrow-icon {
         display: none;
     }
 }
 
 @media (min-width: 768px) and (max-width: 853px) {
-    /* Stack items vertically and center */
     .home-content {
-        padding-left: 2rem; /* Adjust padding */
-        text-align: center; /* Center text */
+        padding-left: 2rem;
+        text-align: center;
     }
 
     .home-img img {
-        width: 40vw; /* Scale image */
-        max-width: 100%;       
-
+        width: 40vw;
+        max-width: 100%;
     }
 
     .social-icons a {
-        font-size: 2.5rem; /* Adjust icon size */
+        font-size: 2.5rem;
     }
 
     .btn-group a {
-        padding: 1rem 2.5rem; /* Adjust button size */
+        padding: 1rem 2.5rem;
         font-size: 1.4rem;
     }
 
-    
-.home-content h3 {
-    margin-bottom: 1.5rem;
-    margin-top: 1rem;
-    font-size: 2.3rem;
-    color: var(--lightgray); /* Black text */
-}
+    .home-content h3 {
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
+        font-size: 2.3rem;
+        color: var(--lightgray);
+    }
 
-.home-content h1 {
-    font-size: 3.9rem;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    line-height: 1;
-    color: var(--lightgray); /* Black text */
-}
+    .home-content h1 {
+        font-size: 3.9rem;
+        font-weight: 700;
+        margin-top: 1.5rem;
+        line-height: 1;
+        color: var(--lightgray);
+    }
 
-.home-content p {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.8;
-    max-width: 55.6rem;
-    color: var(--lightgray); /* Black text */
-}
+    .home-content p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.8;
+        max-width: 55.6rem;
+        color: var(--lightgray);
+    }
 }
 
 @media (min-width: 854px) and (max-width: 1024px) {
-    /* Stack items vertically and center */
     .home-content {
-        padding-left: 5rem; /* Adjust padding */
-        text-align: center; /* Center text */
+        padding-left: 5rem;
+        text-align: center;
     }
 
     .home-img {
@@ -344,165 +372,146 @@ span {
     }
 
     .home-img img {
-        width: 40vw; /* Scale image */
-        max-width: 100%;       
-
+        width: 40vw;
+        max-width: 100%;
     }
 
     .social-icons a {
-        font-size: 2.5rem; /* Adjust icon size */
+        font-size: 2.5rem;
     }
 
     .btn-group a {
-        padding: 1rem 2.5rem; /* Adjust button size */
+        padding: 1rem 2.5rem;
         font-size: 1.4rem;
     }
 
-    
-.home-content h3 {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    font-size: 2.5rem;
-    color: var(--lightgray); /* Black text */
+    .home-content h3 {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        font-size: 2.5rem;
+        color: var(--lightgray);
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-top: 1.5rem;
+        line-height: 1;
+        color: var(--lightgray);
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.8;
+        max-width: 55.6rem;
+        color: var(--lightgray);
+    }
 }
 
-.home-content h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    line-height: 1;
-    color: var(--lightgray); /* Black text */
-}
-
-.home-content p {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.8;
-    max-width: 55.6rem;
-    color: var(--lightgray); /* Black text */
-}
-}
-
-  /* Tablets in Landscape */
 @media (min-width: 1025px) and (max-width: 1279px) {
-
-/* Adjust the home content */
-.home-content {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    text-align: left;
-    justify-content: center;
-    margin-top: 3rem;
-    padding-left: 5rem;
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        text-align: left;
+        justify-content: center;
+        margin-top: 3rem;
+        padding-left: 5rem;
+    }
 }
 
-
-}
-  
-  /* Small Desktops */
 @media (min-width: 1280px) and (max-width: 1440px) {
-
-/* Adjust the home content */
-.home-content {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    text-align: left;
-    justify-content: center;
-    margin-top: 3rem;
-    padding-left: 5rem;
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        text-align: left;
+        justify-content: center;
+        margin-top: 3rem;
+        padding-left: 5rem;
+    }
 }
 
-}
-  /* Standard Desktops */
 @media (min-width: 1441px) and (max-width: 1921px) {
-/* Adjust the home content */
-.home-content {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    text-align: left;
-    justify-content: center;
-    margin-top: 3rem;
-    padding-left: 14rem;
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        text-align: left;
+        justify-content: center;
+        margin-top: 3rem;
+        padding-left: 14rem;
+    }
 }
 
-}
-
-/* Ultra-Wide Screens (1921px and above) */
 @media (min-width: 1921px) {
     section {
-      justify-content: center;
-      padding-left: 25rem; /* Increased left padding */
+        justify-content: center;
+        padding-left: 25rem;
     }
-  
+
     .home {
-      max-width: 2000px; /* Increased max width */
-      padding: 4rem; /* Larger padding */
+        max-width: 2000px;
+        padding: 4rem;
     }
-  
-    /* Super-sized text */
+
     .home-content h3 {
-      font-size: 5rem; /* 42% larger */
-      margin-bottom: 3rem;
+        font-size: 5rem;
+        margin-bottom: 3rem;
     }
-  
+
     .home-content h1 {
-      font-size: 10rem; /* 43% larger */
-      line-height: 1.1;
+        font-size: 10rem;
+        line-height: 1.1;
     }
-  
+
     .home-content p {
-      font-size: 2.5rem; /* 67% larger */
-      max-width: 80rem;
-      line-height: 2;
+        font-size: 2.5rem;
+        max-width: 80rem;
+        line-height: 2;
     }
-  
-    /* Massive profile image */
+
     .home-img img {
-      width: 70rem; /* 27% larger */
-      height: 70rem;
-      box-shadow: 0 0 20rem var(--purple); /* More intense glow */
+        width: 70rem;
+        height: 70rem;
+        box-shadow: 0 0 20rem var(--purple);
     }
-  
-    /* Enlarged interactive elements */
+
     .social-icons a {
-      width: 7rem;
-      height: 7rem;
-      font-size: 4rem;
-      margin: 4rem 2rem 4rem 0;
+        width: 7rem;
+        height: 7rem;
+        font-size: 4rem;
+        margin: 4rem 2rem 4rem 0;
     }
-  
+
     .btn {
-      padding: 1.8rem 4rem;
-      font-size: 2.2rem;
-      border-radius: 5rem;
+        padding: 1.8rem 4rem;
+        font-size: 2.2rem;
+        border-radius: 5rem;
     }
-  
+
     .btn-group {
-      gap: 3rem;
-      padding-top: 4rem;
+        gap: 3rem;
+        padding-top: 4rem;
     }
-  
-    /* Enhanced hover effects */
+
     .home-img img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 15rem var(--purple),
-                  0 0 25rem var(--purple),
-                  0 0 35rem var(--purple);
+        transform: scale(1.03);
+        box-shadow: 0 0 15rem var(--purple),
+                    0 0 25rem var(--purple),
+                    0 0 35rem var(--purple);
     }
-  
+
     .social-icons a:hover {
-      transform: scale(1.5) translateY(-0.5rem);
+        transform: scale(1.5) translateY(-0.5rem);
     }
-  
-    /* Larger scroll indicator */
+
     .scroll-down i {
-      font-size: 3.5rem;
+        font-size: 3.5rem;
     }
-  
+
     .scroll-down span {
-      font-size: 2rem;
+        font-size: 2rem;
     }
-  }
+}
