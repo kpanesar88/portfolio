@@ -92,8 +92,9 @@ const ProjectsDisplay: React.FC = () => {
 
   return (
     <div className="projects-container">
-      <h1 className="projects-title">$PROJECTS</h1>
-      <div className="projects-grid">
+<h1 className="projects-title">
+  <span className="purple-text">$MY</span><span className="white-text">PROJECTS</span>
+</h1>      <div className="projects-grid">
         {projects.map((project) => {
           const { row1, row2 } = splitTechnologies(project.technologies);
           return (
