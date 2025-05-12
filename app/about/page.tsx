@@ -9,9 +9,11 @@ export default function Home() {
   return (
     <>
       <Homepage />
-      <SectionDivider text="$WHOAMI" />
-      <About /> {/* This is your about section */}
-      <SectionDivider text="$INTERESTS" />
+      <SectionDivider text="$WHOAMI" size="large" bounceIntensity='subtle' />
+      
+      <About /> {/*       <SectionDivider text="<Tools/>" size="medium"  bounceIntensity="subtle" />
+ */}
+      <SectionDivider text="$INTERESTS" size='large' bounceIntensity='medium'/>
       <Interests />
       <MoreInfo />
     </>
