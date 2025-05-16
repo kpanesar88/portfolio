@@ -14,7 +14,7 @@
   
 :root {
     --black: #121212; /* Black for text */
-    --lightgray: #C5C6C7;
+    --lightgray: #fff;
     --purple: #BB86FC;
     --teal: #03DAC5;
 }
