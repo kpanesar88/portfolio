@@ -27,7 +27,7 @@ const Contact = () => {
       setSubmitStatus({ success: true, message: '✓ Message sent successfully!' });
       setFormData({ name: '', email: '', message: '' });
       formRef.current?.reset();
-    } catch (error) {
+    } catch {
       setSubmitStatus({ success: false, message: '✗ Failed to send message. Please try again.' });
     } finally {
       setIsSubmitting(false);
@@ -47,22 +47,20 @@ const Contact = () => {
               <div className="title-line"></div>
             </div>
             
-  <ul className="contact-bullets">
-  <li>
-    <span>Want to collaborate?</span>
-    <span className="desktop-only"> - I'd love to team up on something special! </span>
-  </li>
-  <li>
-    <span>Job opportunities?</span>
-    <span className="desktop-only"> - Open to discussing exciting possibilities! </span>
-  </li>
-  <li>
-    <span>Got questions?</span>
-    <span className="desktop-only"> - Happy to chat about my projects or code! </span>
-  </li>
-</ul>
-
-
+            <ul className="contact-bullets">
+              <li>
+                <span>Want to collaborate?</span>
+                <span className="desktop-only"> - I&apos;d love to team up on something special! </span>
+              </li>
+              <li>
+                <span>Job opportunities?</span>
+                <span className="desktop-only"> - Open to discussing exciting possibilities! </span>
+              </li>
+              <li>
+                <span>Got questions?</span>
+                <span className="desktop-only"> - Happy to chat about my projects or code! </span>
+              </li>
+            </ul>
 
             <div className="social-buttons"> 
               <a href="https://www.linkedin.com/in/kpanesar88/" target="_blank" rel="noopener noreferrer" className="social-button" aria-label="LinkedIn">

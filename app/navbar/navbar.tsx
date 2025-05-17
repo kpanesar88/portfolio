@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import './navbar.css';
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
-import { BsExclamationTriangle } from 'react-icons/bs';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Link from 'next/link';
 

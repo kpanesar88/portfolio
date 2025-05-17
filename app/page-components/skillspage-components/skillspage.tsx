@@ -4,7 +4,6 @@ import SectionDivider from "@/app/sectiondivider/divider";
 
 // Language Icons
 import { FaHtml5, FaCss3Alt, FaJs, FaPython, FaJava } from 'react-icons/fa';
-import { SiCsharp } from "@react-icons/all-files/si/SiCsharp";
 import { SiVisualstudiocode } from "@react-icons/all-files/si/SiVisualstudiocode";
 
 // Tool Icons
@@ -17,10 +16,8 @@ import {
   SiTypescript, 
   SiCplusplus,
   SiTailwindcss,
-  SiBootstrap,
   SiNextdotjs,
   SiLinux,
-  SiGnubash,
   SiUnity,
   SiBlender,
   SiFigma,
