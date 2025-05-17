@@ -1,31 +1,36 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './navbar.css';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import dynamic from 'next/dynamic';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Link from 'next/link';
+
+// Dynamically import icons to avoid Vercel deployment issues
+const FaLinkedin = dynamic(() => import('react-icons/fa').then(mod => mod.FaLinkedin), { ssr: false });
+const FaGithub = dynamic(() => import('react-icons/fa').then(mod => mod.FaGithub), { ssr: false });
+const FaEnvelope = dynamic(() => import('react-icons/fa').then(mod => mod.FaEnvelope), { ssr: false });
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = useCallback(() => {
     setIsMenuOpen((prevState) => !prevState);
-  };
+  }, []);
 
-  const closeMenu = () => {
+  const closeMenu = useCallback(() => {
     setIsMenuOpen(false);
-  };
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768 && isMenuOpen) {
-        setIsMenuOpen(false);
+        closeMenu();
       }
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [isMenuOpen]);
+  }, [isMenuOpen, closeMenu]);
 
   return (
     <nav id="navbar" className={isMenuOpen ? 'open' : ''}>
@@ -110,13 +115,13 @@ const Navbar = () => {
 
         <div className="nav-icons">
           <a href="https://www.linkedin.com/in/karanveer-panesar-0203a1247/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="social-icon" />
+            {FaLinkedin && <FaLinkedin className="social-icon" />}
           </a>
           <a href="https://github.com/kpanesar88" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="social-icon" />
+            {FaGithub && <FaGithub className="social-icon" />}
           </a>
-          <a href="mailto:karanveerpanesar04@gmail.com" target="_blank" rel="noopener noreferrer">
-            <FaEnvelope className="social-icon" />
+          <a href="mailto:karanveerpanesar04@gmail.com">
+            {FaEnvelope && <FaEnvelope className="social-icon" />}
           </a>
         </div>
       </div>
