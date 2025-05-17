@@ -5,10 +5,21 @@ import dynamic from 'next/dynamic';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Link from 'next/link';
 
-// Dynamically import icons to avoid Vercel deployment issues
-const FaLinkedin = dynamic(() => import('react-icons/fa').then(mod => mod.FaLinkedin), { ssr: false });
-const FaGithub = dynamic(() => import('react-icons/fa').then(mod => mod.FaGithub), { ssr: false });
-const FaEnvelope = dynamic(() => import('react-icons/fa').then(mod => mod.FaEnvelope), { ssr: false });
+// Correct dynamic imports for React Icons
+const FaLinkedin = dynamic(() => import('react-icons/fa').then((mod) => mod.FaLinkedin), {
+  ssr: false,
+  loading: () => <span className="social-icon-placeholder" />
+});
+
+const FaGithub = dynamic(() => import('react-icons/fa').then((mod) => mod.FaGithub), {
+  ssr: false,
+  loading: () => <span className="social-icon-placeholder" />
+});
+
+const FaEnvelope = dynamic(() => import('react-icons/fa').then((mod) => mod.FaEnvelope), {
+  ssr: false,
+  loading: () => <span className="social-icon-placeholder" />
+});
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -115,13 +126,13 @@ const Navbar = () => {
 
         <div className="nav-icons">
           <a href="https://www.linkedin.com/in/karanveer-panesar-0203a1247/" target="_blank" rel="noopener noreferrer">
-            {FaLinkedin && <FaLinkedin className="social-icon" />}
+            <FaLinkedin className="social-icon" />
           </a>
           <a href="https://github.com/kpanesar88" target="_blank" rel="noopener noreferrer">
-            {FaGithub && <FaGithub className="social-icon" />}
+            <FaGithub className="social-icon" />
           </a>
           <a href="mailto:karanveerpanesar04@gmail.com">
-            {FaEnvelope && <FaEnvelope className="social-icon" />}
+            <FaEnvelope className="social-icon" />
           </a>
         </div>
       </div>
