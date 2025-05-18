@@ -5,21 +5,21 @@ import dynamic from 'next/dynamic';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Link from 'next/link';
 
-// Correct dynamic imports for React Icons
-const FaLinkedin = dynamic(() => import('react-icons/fa').then((mod) => mod.FaLinkedin), {
-  ssr: false,
-  loading: () => <span className="social-icon-placeholder" />
-});
+// Correct dynamic imports with proper typing
+const FaLinkedin = dynamic<React.SVGProps<SVGSVGElement>>(
+  () => import('react-icons/fa').then((mod) => mod.FaLinkedin),
+  { ssr: false, loading: () => <span className="social-icon-placeholder" /> }
+);
 
-const FaGithub = dynamic(() => import('react-icons/fa').then((mod) => mod.FaGithub), {
-  ssr: false,
-  loading: () => <span className="social-icon-placeholder" />
-});
+const FaGithub = dynamic<React.SVGProps<SVGSVGElement>>(
+  () => import('react-icons/fa').then((mod) => mod.FaGithub),
+  { ssr: false, loading: () => <span className="social-icon-placeholder" /> }
+);
 
-const FaEnvelope = dynamic(() => import('react-icons/fa').then((mod) => mod.FaEnvelope), {
-  ssr: false,
-  loading: () => <span className="social-icon-placeholder" />
-});
+const FaEnvelope = dynamic<React.SVGProps<SVGSVGElement>>(
+  () => import('react-icons/fa').then((mod) => mod.FaEnvelope),
+  { ssr: false, loading: () => <span className="social-icon-placeholder" /> }
+);
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
