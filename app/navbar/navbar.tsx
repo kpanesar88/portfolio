@@ -1,7 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import './navbar.css';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import {  FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa6'; 
+
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Link from 'next/link';
 
