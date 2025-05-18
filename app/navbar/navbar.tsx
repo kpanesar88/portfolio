@@ -1,47 +1,31 @@
 'use client';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import './navbar.css';
-import dynamic from 'next/dynamic';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Link from 'next/link';
-
-// Correct dynamic imports with proper typing
-const FaLinkedin = dynamic<React.SVGProps<SVGSVGElement>>(
-  () => import('react-icons/fa').then((mod) => mod.FaLinkedin),
-  { ssr: false, loading: () => <span className="social-icon-placeholder" /> }
-);
-
-const FaGithub = dynamic<React.SVGProps<SVGSVGElement>>(
-  () => import('react-icons/fa').then((mod) => mod.FaGithub),
-  { ssr: false, loading: () => <span className="social-icon-placeholder" /> }
-);
-
-const FaEnvelope = dynamic<React.SVGProps<SVGSVGElement>>(
-  () => import('react-icons/fa').then((mod) => mod.FaEnvelope),
-  { ssr: false, loading: () => <span className="social-icon-placeholder" /> }
-);
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = useCallback(() => {
+  const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
-  }, []);
+  };
 
-  const closeMenu = useCallback(() => {
+  const closeMenu = () => {
     setIsMenuOpen(false);
-  }, []);
+  };
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768 && isMenuOpen) {
-        closeMenu();
+        setIsMenuOpen(false);
       }
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [isMenuOpen, closeMenu]);
+  }, [isMenuOpen]);
 
   return (
     <nav id="navbar" className={isMenuOpen ? 'open' : ''}>
@@ -131,7 +115,7 @@ const Navbar = () => {
           <a href="https://github.com/kpanesar88" target="_blank" rel="noopener noreferrer">
             <FaGithub className="social-icon" />
           </a>
-          <a href="mailto:karanveerpanesar04@gmail.com">
+          <a href="mailto:karanveerpanesar04@gmail.com" target="_blank" rel="noopener noreferrer">
             <FaEnvelope className="social-icon" />
           </a>
         </div>
