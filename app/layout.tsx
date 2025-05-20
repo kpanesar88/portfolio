@@ -1,8 +1,7 @@
 // app/layout.tsx
 import Navbar from './navbar/navbar';
 import Footer from './footer/footer';
-import Template from 'app/template';
-
+import Template from './template';
 
 export default function RootLayout({
   children,
