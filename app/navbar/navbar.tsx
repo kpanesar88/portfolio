@@ -109,15 +109,6 @@ const Navbar = () => {
         >
           Resume
         </a>
-
-<div className="nav-icons">
-  <a href="https://www.linkedin.com/in/karanveer-panesar-0203a1247/" target="_blank" rel="noopener noreferrer">
-    {<FaLinkedin className="social-icon" />} {/* Wrapped in curly braces */}
-  </a>
-  <a href="https://github.com/kpanesar88" target="_blank" rel="noopener noreferrer">
-    <FaGithub className="social-icon" />
-  </a>
-</div>
       </div>
 
       <hr id="navbar-divider" />
