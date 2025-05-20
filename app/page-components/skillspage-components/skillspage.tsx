@@ -3,12 +3,11 @@ import "./skillspage.css";
 import SectionDivider from "@/app/sectiondivider/divider";
 
 // Language Icons
-import { FaHtml5, FaCss3Alt, FaJs, FaPython, FaJava } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaPython, } from 'react-icons/fa';
 import { SiVisualstudiocode } from "@react-icons/all-files/si/SiVisualstudiocode";
 
 // Tool Icons
 import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { DiEclipse } from 'react-icons/di';
 import { FaGithub } from 'react-icons/fa';
 import { SiArduino } from "react-icons/si";
 // Simple Icons
