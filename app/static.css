@@ -15,8 +15,9 @@
 :root {
     --black: #121212; /* Black for text */
     --lightgray: #fff;
-    --purple: #BB86FC;
+    --purple:#FF00FF;
     --teal: #03DAC5;
+    --homepage: #fff;
 }
 
 html {

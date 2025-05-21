@@ -76,7 +76,7 @@ span {
     top: 3rem;
     width: 55rem;
     border-radius: 50%;
-    box-shadow: 0 0 10rem var(--purple);
+    box-shadow: 0 0 10rem #fff;
     cursor: pointer;
     transition: 0.4s ease-in-out;
     max-width: 100%;
@@ -85,9 +85,9 @@ span {
 }
 
 .home-img img:hover {
-    box-shadow: 0 0 5rem var(--purple),
-                0 0 10rem var(--purple),
-                0 0 15rem var(--purple);
+    box-shadow: 0 0 5rem #fff,
+                0 0 10rem #fff,
+                0 0 15rem #fff;
 }
 
 .home-content h3 {

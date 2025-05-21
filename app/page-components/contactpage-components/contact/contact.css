@@ -67,13 +67,13 @@
 }
 
 .me-title-part {
-  color: #8a2be2;
+  color: var(--purple);
 }
 
 .title-line {
   height: 6px;
   width: 75%;
-  background: #8a2be2;
+  background: var(--purple);
   margin: 1.5rem auto 0;
   transform: scaleX(0);
   transform-origin: left;
@@ -111,7 +111,7 @@
 }
 
 .contact-bullets li span.highlighted {
-  color: #8a2be2 !important;
+  color: var(--purple) !important;
   position: relative;
 }
 
@@ -139,7 +139,7 @@
 }
 
 .contact-bullets li a {
-  color: #8a2be2;
+  color: var(--purple);
   text-decoration: underline;
   margin-left: 0.4rem;
   transition: all 0.3s ease;
@@ -160,7 +160,7 @@
 }
 
 .contact-bullets li a:hover {
-  color: #a95eff;
+  color: var(--purple);
   text-decoration: none;
 }
 
@@ -207,9 +207,9 @@
   background-color: var(--black);
   border-radius: 50px;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  color: #8a2be2;
+  color: var(--purple);
   text-decoration: none;
-  border: 2px solid #8a2be2;
+  border: 2px solid var(--purple);
   flex-shrink: 0;
   padding: 0 1.5rem;
   opacity: 0;
@@ -223,7 +223,7 @@
 .social-button:nth-child(4) { animation-delay: 1.3s; }
 
 .social-button:hover {
-  background-color: #8a2be2;
+  background-color: var(--purple);
   color: white;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 6px 12px rgba(138, 43, 226, 0.3);
@@ -274,7 +274,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #8a2be2;
+  border-color: var(--purple);
   box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2);
   transform: translateY(-2px);
 }
@@ -285,7 +285,7 @@
 }
 
 .submit-btn {
-  background-color: #8a2be2;
+  background-color: var(--purple);
   color: white;
   border: none;
   padding: 1.1rem 2rem;
