@@ -68,7 +68,7 @@ const ProjectsDisplay: React.FC = () => {
     {
       id: 5,
       title: 'FITNESS WATCH',
-      description: 'An Arduino-powered activity tracker that counts steps and burns—just the essentials in a compact circuit.',
+      description: 'An Arduino-powered activity tracker that counts steps and calories—just the essentials in a compact circuit.',
       technologies: ['C++', 'ARDUINO', 'DS3231 RTC', 'LIS3DHTR Accelerometer', 'VSCODE'],
       imageUrl: projectImages.fitness,
       codeUrl: 'https://github.com/kpanesar88/fitness-watch-arduino',
