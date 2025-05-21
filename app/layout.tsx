@@ -2,6 +2,8 @@
 import Navbar from './navbar/navbar';
 import Footer from './footer/footer';
 import Template from './template';
+import { Analytics } from "@vercel/analytics/next"
+
 
 export default function RootLayout({
   children,
@@ -10,6 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <Template>
+       <Analytics/>
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
@@ -21,6 +24,7 @@ export default function RootLayout({
         <Footer />
       </body>
     </html>
+     <Analytics/>
     </Template>
   );
 }
