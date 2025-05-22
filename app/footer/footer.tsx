@@ -13,16 +13,8 @@ const Footer: React.FC = () => {
         <link rel="icon" type="image/png" sizes="16x16" href="/images/homepage/favicon.png" />
 
         {/* Open Graph meta tags */}
-        <meta property="og:title" content="Karanveer Panesar – Portfolio" />
-        <meta property="og:description" content="Software engineer portfolio showcasing projects, skills, and resume." />
-        <meta property="og:url" content="https://kpanesar.dev" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://kpanesar.dev/images/og-preview.jpg" 
-        />
+     =
         {/* Optional Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <footer className="footer">
