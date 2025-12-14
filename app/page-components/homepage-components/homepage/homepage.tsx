@@ -39,10 +39,9 @@ const Homepage: React.FC<HomepageProps> = () => {
     const options = {
       strings: [
         "Engineering Student. ",
-        "Frontend Developer. ",
-        "Tech Innovator. ",
+        "Embedded Systems Developer. ",
         "Software Engineer. ",
-        "Hardware Enthusiast "
+        "Hardware Enthusiast. "
       ], // List of words to animate
       typeSpeed: 60, // Speed of typing
       backSpeed: 40, // Speed of backspacing
@@ -71,7 +70,7 @@ const Homepage: React.FC<HomepageProps> = () => {
             <h3 className="text-animation">I'm a <span></span></h3>
             <p><span className="arrow-icon">➤</span> Computer Engineering @ York University</p>
             <p><span className="arrow-icon">➤</span> Aspiring Software & Hardware Dev</p>
-            <p><span className="arrow-icon">➤</span> Passionate for AI Implementation</p>
+            <p><span className="arrow-icon">➤</span> Passionate about AI Integration</p>
 
             <div className="social-icons">
               <a href="https://www.linkedin.com/in/kpanesar88/" target="_blank" rel="noopener noreferrer">
@@ -119,7 +118,7 @@ const Homepage: React.FC<HomepageProps> = () => {
             <h3 className="text-animation">I'm a <span></span></h3>
             <p><span className="arrow-icon">➤</span> Computer Engineering @ York University</p>
             <p><span className="arrow-icon">➤</span> Aspiring Software & Hardware Dev</p>
-            <p><span className="arrow-icon">➤</span> Learning AI to Shape the Future.</p>
+            <p><span className="arrow-icon">➤</span> Passionate about AI Integration</p>
 
             <div className="social-icons">
               <a href="https://www.linkedin.com/in/kpanesar88/" target="_blank" rel="noopener noreferrer">

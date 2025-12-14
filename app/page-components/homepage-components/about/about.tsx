@@ -82,23 +82,23 @@ const About: React.FC = () => {
           <div className="about-points">
             <div className="point">
               <span>📍</span>
-              <p>Based in Toronto, Canada.</p>
+              <p>Spawned in Toronto, Canada</p>
             </div>
             <div className="point">
               <span>💻</span>
-              <p>Currently pursuing a Bachelor of Computer Engineering @ York University.</p>
+              <p>Studying Computer Engineering @ York University.</p>
             </div>
             <div className="point">
               <span>🛠️</span>
-              <p>Experienced in both Software and Hardware development.</p>
+              <p>I enjoy turning ideas into code and circuits that actually work.</p>
             </div>
             <div className="point">
               <span>🤖</span>
-              <p>Passionate about applying AI to hardware and software.</p>
+              <p>Fascinated by the ways AI can make everyday tech smarter.</p>
             </div>
             <div className="point">
               <span>🚀</span>
-              <p>Ready to take on new roles and shape the future of tech.</p>
+              <p>Always down for a challenge — it’s how I level up.</p>
             </div>
           </div>
 

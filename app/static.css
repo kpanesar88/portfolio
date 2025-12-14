@@ -13,11 +13,11 @@
 
   
 :root {
-    --black: #121212; /* Black for text */
-    --lightgray: #fff;
-    --purple:#FF00FF;
-    --teal: #03DAC5;
-    --homepage: #fff;
+  --black: #0e141b;
+  --lightgray: #f2f4f8;
+  --purple: #00bfff; /* Sky blue accent */
+  --teal: #7df9ff;   /* Electric aqua */
+  --homepage: #1c1f26;
 }
 
 html {
