@@ -85,9 +85,10 @@ span {
 }
 
 .home-img img:hover {
-    box-shadow: 0 0 5rem #fff,
-                0 0 10rem #fff,
-                0 0 15rem #fff;
+  box-shadow: 
+    0 0 5rem #7df9ff,    /* Electric aqua outer glow */
+    0 0 10rem #00bfff,   /* Sky blue mid-glow */
+    0 0 15rem #e6f7ff;   /* Soft frosty white core */
 }
 
 .home-content h3 {
