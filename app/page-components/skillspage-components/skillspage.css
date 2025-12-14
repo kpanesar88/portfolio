@@ -4,7 +4,7 @@
   padding: 3rem 2rem;
   font-family: 'Arial', sans-serif;
   color: hsl(0, 0%, 100%);
-  background: #121212;
+  background: var(--black);
   overflow: hidden;
 }
 
@@ -129,7 +129,7 @@
 
 .skill-card:hover {
   transform: scale(1.1) translateY(-5px);
-  box-shadow: 0 0 20px 7px rgba(138, 43, 226, 0.7);
+box-shadow: 0 0 20px 7px rgba(230, 247, 255, 0.8);
 }
 
 .skill-card:hover .skill-icon {

@@ -112,16 +112,16 @@
 
 /* Purple Gradient for Regular Cards */
 .project-card:hover:not(.hackathon-winner) {
-  transform: translateY(-8px);
-  border-color: #b57aff;
-  box-shadow: 0 12px 24px rgba(138, 43, 226, 0.6);
-  background: linear-gradient(
-    145deg,
-    rgba(98, 0, 234, 0.15) 0%,
-    rgba(138, 43, 226, 0.25) 50%,
-    rgba(177, 111, 252, 0.15) 100%
-  );
+  border-color: #7df9ff;
+box-shadow: 0 12px 28px rgba(125, 249, 255, 0.75);
+background: linear-gradient(
+  145deg,
+  rgba(125, 249, 255, 0.2) 0%,
+  rgba(0, 191, 255, 0.3) 50%,
+  rgba(230, 247, 255, 0.2) 100%
+);
 }
+
 
 /* Gold Gradient for Winner Cards */
 .project-card.hackathon-winner:hover {
@@ -262,7 +262,7 @@
 .github-link {
   background: var(--purple);
   color: white;
-  border: 2px solid #b57aff;
+border: 2px solid #7df9ff; /* Frosty aqua border */
   box-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
 }
 
@@ -285,8 +285,9 @@
 }
 
 .github-link:hover {
-  background: #9b30ff;
-  box-shadow: 0 0 15px rgba(155, 48, 255, 0.7);
+  background: #ffffff; /* Crisp white background */
+  color: #000000 !important; /* Black text/icon for contrast */
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.7); /* Arctic blue glow */
 }
 
 .technology-rows {
