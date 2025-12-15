@@ -321,7 +321,7 @@ border: 2px solid #7df9ff; /* Frosty aqua border */
 
 .technology-tag:hover {
   background: rgba(138, 43, 226, 0.2);
-  box-shadow: 0 0 12px rgba(138, 43, 226, 0.4);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
   color: #e2c4ff;
 }
 
