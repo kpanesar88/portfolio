@@ -107,7 +107,7 @@ const ProjectsDisplay: React.FC = () => {
       id: 1,
       title: 'Deep Learning Fundamentals',
       issuer: 'NVIDIA Deep Learning Institute',
-      date: '2025',
+      date: '',
       icon: <SiNvidia color="#76B900" size={40} />,
       certUrl: 'https://drive.google.com/file/d/1SNdwOgwqfpSDyTM6eEc4GG5mN0cGgync/view',
     },
@@ -115,7 +115,7 @@ const ProjectsDisplay: React.FC = () => {
       id: 2,
       title: 'Getting Started with Modern CUDA C',
       issuer: 'NVIDIA',
-      date: '2025',
+      date: '',
       icon: <SiNvidia color="#76B900" size={40} />,
       certUrl: 'https://drive.google.com/file/d/195PVBpPpEff5NPbFSmSjadcB8MCfwBnZ/view?usp=sharing',
     },
@@ -123,7 +123,7 @@ const ProjectsDisplay: React.FC = () => {
       id: 3,
       title: 'Ubuntu Linux Professional Certificate',
       issuer: 'Canonical',
-      date: '2025',
+      date: '',
       icon: (
         <Image
           src="/images/company/Canonical.png"
@@ -140,7 +140,7 @@ const ProjectsDisplay: React.FC = () => {
       id: 4,
       title: 'Career Essentials in Generative AI',
       issuer: 'Microsoft',
-      date: '2025',
+      date: '',
       icon: <FaMicrosoft color="#00A4EF" size={40} />,
       certUrl:
         'https://www.linkedin.com/learning/certificates/e933c10f3f77a26ad4c61f3f817085bde857f500b69c7bd691b46a7baaef5bb2',
@@ -149,7 +149,7 @@ const ProjectsDisplay: React.FC = () => {
       id: 5,
       title: 'Azure AI Essentials ',
       issuer: 'Microsoft',
-      date: '2025',
+      date: '',
       icon: <FaMicrosoft color="#00A4EF" size={40} />,
       certUrl:
         'https://www.linkedin.com/learning/certificates/1ac84f2d378f109aa0e3165d1c35d2b393f193ed92bf7d900a74a9a96d21060b',
@@ -157,7 +157,7 @@ const ProjectsDisplay: React.FC = () => {
     {
       id: 6,
       title: 'Career Essentials in GitHub',
-      issuer: 'GitHub',
+      issuer: '',
       date: '2025',
       icon: <FaGithub color="#ffffff" size={40} />,
       certUrl:
