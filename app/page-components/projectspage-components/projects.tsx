@@ -250,7 +250,6 @@ const ProjectsDisplay: React.FC = () => {
                   <h3>{cert.title}</h3>
                   <span className="cert-separator">—</span>
                   <span>{cert.issuer}</span>
-                  <span className="cert-separator">—</span>
                 </div>
               </div>
 
