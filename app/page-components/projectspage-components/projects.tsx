@@ -112,7 +112,7 @@ const ProjectsDisplay: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Getting Started with Modern CUDA C',
+      title: 'Getting Started with Modern CUDA C++',
       issuer: 'NVIDIA',
     
       icon: <SiNvidia color="#76B900" size={40} />,
