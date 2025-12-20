@@ -1,9 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import './navbar.css';
-import {  FaGithub, FaEnvelope } from 'react-icons/fa';
-import { FaLinkedin } from 'react-icons/fa6'; 
-
+import { FaGithub, FaEnvelope, FaSnowflake } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa6';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Link from 'next/link';
 
@@ -32,9 +31,11 @@ const Navbar = () => {
   return (
     <nav id="navbar" className={isMenuOpen ? 'open' : ''}>
       <div id="navbar-container">
-        {/* Logo Section */}
+        {/* ❄️ Snowflake Logo Section */}
         <div id="logo">
-          <Link href="/">#</Link>
+          <Link href="/">
+            <FaSnowflake className="snowflake-icon" />
+          </Link>
         </div>
 
         {/* Hamburger Menu */}
@@ -59,7 +60,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link href="/skills" className="nav-link" onClick={closeMenu}>
-              <i className="bi bi-person" style={{ marginRight: '8px', fontSize: '23px' }}></i>
+              <i className="bi bi-lightbulb" style={{ marginRight: '8px', fontSize: '23px' }}></i>
               Skills
             </Link>
           </li>
@@ -99,7 +100,6 @@ const Navbar = () => {
         <Link href="/skills" onClick={closeMenu}>Skills</Link>
         <Link href="/projects" onClick={closeMenu}>Projects</Link>
         <Link href="/contact" onClick={closeMenu}>Contact</Link>
-        
         <a
           href="/resume/Karanveer_Resume.pdf"
           target="_blank"
