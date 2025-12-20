@@ -157,8 +157,8 @@ const ProjectsDisplay: React.FC = () => {
     {
       id: 6,
       title: 'Career Essentials in GitHub',
-      issuer: '',
-      date: '2025',
+      issuer: 'GitHub',
+      date: '',
       icon: <FaGithub color="#ffffff" size={40} />,
       certUrl:
         'https://www.linkedin.com/learning/certificates/f147fc7abadb67569f92c39920883291c737c3811f207d27a4ca98bfc88b75a1',
