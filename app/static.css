@@ -8,6 +8,7 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: "Poppins", "sans-serif";    
+    
 }
 
   
@@ -20,6 +21,7 @@
 }
 
 html {
+    background: #05070d;
     font-size: 60%;
     overflow-x: hidden; /* Correct way to prevent horizontal scrolling */
     width: 100%;

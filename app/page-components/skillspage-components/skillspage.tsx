@@ -17,13 +17,14 @@ const skills = [
   { name: "Python", icon: <FaPython />, category: "language" },
   { name: "C", icon: <SiC />, category: "language" },
   { name: "C++", icon: <SiCplusplus />, category: "language" },
-  { name: "Bash", icon: <SiGnubash />, category: "language" },
 
   { name: "VS Code", icon: <SiVisualstudiocode />, category: "tool" },
   { name: "STM32", icon: <SiStmicroelectronics />, category: "tool" },
   { name: "Arduino", icon: <SiArduino />, category: "tool" },
   { name: "GitHub", icon: <FaGithub />, category: "tool" },
   { name: "Linux", icon: <SiLinux />, category: "tool" },
+  { name: "Bash", icon: <SiGnubash />, category: "language" },
+
 ];
 
 const SimpleSkillsGrid = () => {
