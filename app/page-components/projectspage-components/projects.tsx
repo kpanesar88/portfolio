@@ -89,14 +89,14 @@ const ProjectsDisplay: React.FC = () => {
       title: 'Deep Learning Fundamentals',
       issuer: 'NVIDIA Deep Learning Institute',
       icon: <SiNvidia color="#76B900" size={40} />,
-      certUrl: 'https://drive.google.com/file/d/1SNdwOgwqfpSDyTM6eEc4GG5mN0cGgync/view',
+      certUrl: 'https://drive.google.com/file/d/13eh-ylOpB3gjenOx33FlCIq4Eb93onA4/view?usp=sharing',
     },
     {
       id: 2,
       title: 'Getting Started with Modern CUDA C++',
       issuer: 'NVIDIA',
       icon: <SiNvidia color="#76B900" size={40} />,
-      certUrl: 'https://drive.google.com/file/d/195PVBpPpEff5NPbFSmSjadcB8MCfwBnZ/view?usp=sharing',
+      certUrl: 'https://drive.google.com/file/d/1hT0TRo6Vkmj_AKjcO9iKj9_5xdx1pQXX/view?usp=sharing',
     },
     {
       id: 3,
