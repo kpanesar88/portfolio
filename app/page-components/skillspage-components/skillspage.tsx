@@ -27,6 +27,8 @@ const skills = [
 
 ];
 
+//cheese
+
 const SimpleSkillsGrid = () => {
   return (
     <div id="skills" className="skills-container">
