@@ -92,7 +92,7 @@ const About: React.FC = () => {
             </div>
             <div className="point">
               <span>🛠️</span>
-              <p>I enjoy turning ideas into code and circuits that actually work.</p>
+              <p>I enjoy turning ideas into code and circuits.</p>
             </div>
             <div className="point">
               <span>🤖</span>
