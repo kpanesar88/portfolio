@@ -31,15 +31,13 @@ const Navbar = () => {
   return (
     <nav id="navbar" className={isMenuOpen ? 'open' : ''}>
       <div id="navbar-container">
-        {/* Left: Logo */}
         <div id="logo">
-          <Link href="/">
+          <Link href="#home" onClick={closeMenu}>
             <FaSnowflake className="snowflake-icon" />
           </Link>
         </div>
 
-        {/* Center: Navbar Links */}
-        <ul id="navbar-links" className={isMenuOpen ? 'active' : ''}>
+        <ul id="navbar-links">
           <li>
             <Link href="#about" className="nav-link" onClick={closeMenu}>
               <i className="bi bi-person" style={{ marginRight: '8px', fontSize: '23px' }}></i>
@@ -66,33 +64,14 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Right: Socials + Resume */}
         <div className="navbar-actions">
-          <a
-            href="https://github.com/kpanesar88"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-social-icon"
-            aria-label="GitHub"
-          >
+          <a href="https://github.com/kpanesar88" target="_blank" rel="noopener noreferrer" className="nav-social-icon">
             <FaGithub />
           </a>
-
-          <a
-            href="https://www.linkedin.com/in/kpanesar88/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-social-icon"
-            aria-label="LinkedIn"
-          >
+          <a href="https://www.linkedin.com/in/kpanesar88/" target="_blank" rel="noopener noreferrer" className="nav-social-icon">
             <FaLinkedin />
           </a>
-
-          <a
-            href="mailto:karanveerpanesar04@gmail.com"
-            className="nav-social-icon"
-            aria-label="Email"
-          >
+          <a href="mailto:karanveerpanesar04@gmail.com" className="nav-social-icon">
             <FaEnvelope />
           </a>
 
@@ -104,53 +83,43 @@ const Navbar = () => {
               className="resume-button"
             >
               <span>
+                <i className="bi bi-file-code" style={{ marginRight: '12px', fontSize: '22px' }}></i>
                 Resume
               </span>
             </a>
           </div>
         </div>
 
-        {/* Hamburger Menu */}
-        <div
+        <button
           className={`menu-icon ${isMenuOpen ? 'open' : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle menu"
-          aria-expanded={isMenuOpen ? 'true' : 'false'}
+          aria-expanded={isMenuOpen}
+          type="button"
         >
           <span className="line line1"></span>
           <span className="line line2"></span>
           <span className="line line3"></span>
-        </div>
+        </button>
       </div>
 
-      {/* Mobile Menu */}
       <div id="menu-slide" className={isMenuOpen ? 'active' : ''}>
+        <button className="menu-close-button" onClick={closeMenu} aria-label="Close menu">
+  ×
+</button>
         <Link href="#about" onClick={closeMenu}>About</Link>
         <Link href="#skills" onClick={closeMenu}>Skills</Link>
         <Link href="#projects" onClick={closeMenu}>Projects</Link>
         <Link href="#contact" onClick={closeMenu}>Contact</Link>
 
         <div className="social-hamburger">
-          <a
-            href="https://github.com/kpanesar88"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-          >
+          <a href="https://github.com/kpanesar88" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub />
           </a>
-          <a
-            href="https://www.linkedin.com/in/kpanesar88/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
+          <a href="https://www.linkedin.com/in/kpanesar88/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin />
           </a>
-          <a
-            href="mailto:karanveerpanesar04@gmail.com"
-            aria-label="Email"
-          >
+          <a href="mailto:karanveerpanesar04@gmail.com" aria-label="Email">
             <FaEnvelope />
           </a>
         </div>

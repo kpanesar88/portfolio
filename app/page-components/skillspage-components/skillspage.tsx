@@ -12,22 +12,25 @@ import {
   SiArduino,
   SiLinux,
 } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { SiAutodesk } from "react-icons/si";
+import { FaMicrochip } from "react-icons/fa";
 
 const skills = [
   { name: "Python", icon: <FaPython />, category: "language" },
   { name: "C", icon: <SiC />, category: "language" },
   { name: "C++", icon: <SiCplusplus />, category: "language" },
+  { name: "TypeScript", icon: <SiTypescript />, category: "language" },
 
   { name: "VS Code", icon: <SiVisualstudiocode />, category: "tool" },
   { name: "STM32", icon: <SiStmicroelectronics />, category: "tool" },
   { name: "Arduino", icon: <SiArduino />, category: "tool" },
   { name: "GitHub", icon: <FaGithub />, category: "tool" },
   { name: "Linux", icon: <SiLinux />, category: "tool" },
-  { name: "Bash", icon: <SiGnubash />, category: "language" },
-
+  { name: "Bash", icon: <SiGnubash />, category: "tool" },
+  { name: "PSpice", icon: <FaMicrochip />, category: "tool" },
+{ name: "Inventor", icon: <SiAutodesk />, category: "tool" },
 ];
-
-//cheese
 
 const SimpleSkillsGrid = () => {
   return (

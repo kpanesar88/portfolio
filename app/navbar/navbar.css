@@ -13,17 +13,15 @@
   align-items: center;
   width: 100%;
   padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--black);
   box-sizing: border-box;
   backdrop-filter: blur(3rem);
-  background: var(--black);
   color: var(--lightgray);
   border-bottom: 0.2rem solid var(--purple);
   transition: background-color 0.5s ease;
   column-gap: 1.5rem;
 }
 
-/* Logo Style */
 #logo {
   margin: 0;
   padding-left: 3rem;
@@ -40,7 +38,6 @@
   margin: 0;
 }
 
-/* Navbar Links */
 #navbar-links {
   display: flex;
   align-items: center;
@@ -98,7 +95,6 @@
   box-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
 }
 
-/* Right-side actions */
 .navbar-actions {
   display: flex;
   align-items: center;
@@ -107,7 +103,6 @@
   padding-right: 1rem;
 }
 
-/* Social icons */
 .nav-social-icon {
   display: inline-flex;
   justify-content: center;
@@ -134,7 +129,6 @@
   margin-left: 1.2rem;
 }
 
-/* Resume now styled like nav link */
 .resume-button {
   text-decoration: none;
   color: #ffffff;
@@ -184,7 +178,7 @@
   box-shadow: 0 0 10px rgba(250, 204, 21, 0.5);
 }
 
-/* Hamburger menu icon */
+/* Hamburger */
 .menu-icon {
   display: none;
   width: 45px;
@@ -196,9 +190,12 @@
   padding: 0.5rem;
   padding-right: 1rem;
   justify-self: end;
+  background: transparent;
+  border: none;
+  z-index: 3000;
 }
 
-/* Sliding Menu (Right side, Full height) */
+/* Sliding menu */
 #menu-slide {
   position: fixed;
   top: 0;
@@ -206,26 +203,43 @@
   width: 50%;
   height: 100%;
   background-color: var(--purple);
-  color: var(--purple);
+  color: var(--black);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: right 0.5s ease;
-  z-index: 999;
-  clip-path: inset(0 0 0 0);
+  z-index: 2000;
   overflow-y: auto;
 }
 
-/* When the menu is active and slides in */
 #menu-slide.active {
   right: 0;
-  color: var(--black);
 }
 
-/* Change color of links when menu is active */
-#menu-slide.active a {
-  color: var(--black);
+/* Close button */
+.menu-close-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: block;
+  opacity: 1 !important;
+  transform: none !important;
+  background: transparent;
+  border: none;
+  color: #000000;
+  font-size: 4rem;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 5000;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.3s ease, scale 0.3s ease;
+}
+
+.menu-close-button:hover {
+  color: #facc15;
+  scale: 1.15;
 }
 
 #menu-slide a {
@@ -233,14 +247,14 @@
   font-size: 2rem;
   padding: 1rem;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 #menu-slide a:hover {
-  color: var(--black);
+  color: #facc15;
+  transform: scale(1.05);
 }
 
-/* Divider under the navbar */
 #navbar-divider {
   width: 100%;
   border: none;
@@ -248,33 +262,34 @@
   border-top: 1px solid var(--purple);
 }
 
-/* Social icons container in the mobile menu */
 #menu-slide .social-hamburger {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 2rem 0;
-  gap: 1rem;
+  gap: 1.8rem;
 }
 
-/* Social icon styling in mobile menu */
 #menu-slide .social-hamburger a {
-  color: var(--lightgray);
-  font-size: 2.5rem;
-  margin: 0 0.5rem;
-  padding: 1rem;
-  background: var(--black);
-  border-radius: 50%;
+  color: #000000;
+  font-size: 2.8rem;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 #menu-slide .social-hamburger a:hover {
-  color: var(--purple);
-  transform: scale(1.1);
+  color: #facc15;
+  background: transparent;
+  transform: scale(1.15);
+  box-shadow: none;
 }
 
-/* Danger Icon Styles */
 .danger-icon {
   color: red;
   font-size: 3rem;
@@ -282,7 +297,6 @@
   transition: transform 0.3s ease;
 }
 
-/* Yellow Warning Text */
 .warning-text {
   color: yellow;
   font-weight: bold;
@@ -292,7 +306,6 @@
   text-align: center;
 }
 
-/* Responsive Design for Small Screens */
 @media (max-width: 768px) {
   #navbar-container {
     display: flex;
@@ -313,14 +326,13 @@
     margin: 0;
   }
 
-  /* Show burger menu on mobile */
   .menu-icon {
     display: block;
     width: 45px;
     height: 45px;
     position: relative;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 3000;
   }
 
   .menu-icon .line {
@@ -330,6 +342,7 @@
     background: var(--purple);
     border-radius: 5px;
     position: absolute;
+    left: 0;
     transition: all 0.4s ease;
   }
 
@@ -347,6 +360,7 @@
 
   .menu-icon.open .line1 {
     transform: rotate(45deg) translate(7px, 7px);
+    background: #000000;
   }
 
   .menu-icon.open .line2 {
@@ -355,76 +369,27 @@
 
   .menu-icon.open .line3 {
     transform: rotate(-45deg) translate(7px, -7px);
+    background: #000000;
   }
 
-  /* Hide desktop navbar links and right actions on mobile */
-  #navbar-links {
-    display: none;
-  }
-
+  #navbar-links,
   .navbar-actions {
     display: none;
   }
 
-  #navbar-container.open {
-    background-color: var(--purple);
-    color: var(--black);
-    transform: translateX(100%);
-    transition: transform 0.5s ease;
-  }
-
-  .nav-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-
-  .nav-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4.8rem;
-    height: 4.8rem;
-    background: transparent;
-    border: 0.2rem solid var(--black);
-    font-size: 2.8rem;
-    border-radius: 50%;
-    color: var(--black);
-    margin: 1rem;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .nav-icons a i {
-    font-size: 2.8rem;
-  }
-  
-  .nav-icons a:hover {
-    color: #ffffff;
-    transform: scale(1.25) translateY(-0.5rem);
-    box-shadow: 0 0 2.5rem var(--purple);
-    background-color: var(--purple);
-  }
-
-  #menu-slide a {
+  #menu-slide a:not(.menu-close-button) {
     opacity: 0;
     transform: translateX(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, color 0.3s ease;
   }
 
-  #menu-slide.active a {
+  #menu-slide.active a:not(.menu-close-button) {
     opacity: 1;
     transform: translateX(0);
   }
 
-  #navbar-links a {
-    font-size: 1.6rem;
-    padding: 1rem;
-  }
-
-  .menu-icon {
-    font-size: 2.2rem;
+  #menu-slide .social-hamburger a {
+    opacity: 1;
   }
 
   .social-hamburger {
@@ -432,30 +397,13 @@
     align-items: center;
     justify-content: center;
   }
-
-  .social-hamburger a {
-    margin: 1.2rem 0.5rem;
-    font-size: 2rem;
-  }
-
-  .resume-link {
-    margin-bottom: 2rem;
-  }
-
-  .nav-icons {
-    margin-top: 2rem;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1068px) {
   #navbar-links a {
-    text-decoration: none;
     color: var(--lightgray);
     font-size: 1.35rem;
     padding: 1rem 0.8rem;
-    position: relative;
-    display: inline-block;
-    transition: color 0.3s ease, transform 0.3s ease;
   }
 
   #navbar-links li {
@@ -472,7 +420,6 @@
   }
 }
 
-/* For larger screens, above 768px, the menu behaves differently */
 @media (min-width: 769px) {
   .disclaimer {
     display: none;
@@ -500,6 +447,7 @@
     color: #00bfff;
     filter: drop-shadow(0 0 15px #00bfff);
   }
+
   50% {
     color: #33ccff;
     filter: drop-shadow(0 0 28px #33ccff);

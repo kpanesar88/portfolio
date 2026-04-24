@@ -601,29 +601,5 @@ span {
         font-size: 2rem;
     }
 
-    /* Social icons container in the mobile menu */
-#menu-slide .social-hamburger {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 2rem 0;
-  gap: 1.6rem;
-}
-
-/* Social icon styling in mobile menu - no black circles */
-#menu-slide .social-hamburger a {
-  color: #ffffff;
-  font-size: 2.8rem;
-  margin: 0 0.8rem;
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-#menu-slide .social-hamburger a:hover {
-  color: #facc15;
-  transform: scale(1.15);
-}
+    
 }
